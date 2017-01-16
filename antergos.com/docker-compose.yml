@@ -1,21 +1,46 @@
 version: "2"
 volumes: 
-  website-files: 
+  nginx-conf: 
+    driver: rancher-nfs
     external: true
-  ssl-certs:
+  website-files: 
+    driver: rancher-nfs
     external: true
 services: 
   nginx: 
-    expose: 
-      - "80"
-      - "443"
+    external_links: 
+      - "mysql/pxc:mysql"
     image: "antergos/docker-wordpress:nginx-alpine"
     labels: 
       io.rancher.container.pull_image: always
-      io.rancher.sidekicks: "php-fpm"
+      io.rancher.sidekicks: "php-fpm,website-storage"
+    volumes: 
+      - "ssl-certs"
+      - "website-files"
+      - "nginx-conf"
   php-fpm: 
-    expose: 
-      - "9000"
+    environment: 
+      WORDPRESS_DB_HOST:
+      WORDPRESS_DB_NAME:
+      WORDPRESS_DB_PASSWORD:
+      WORDPRESS_DB_USER:
+    external_links: 
+      - "mysql/pxc:mysql"
     image: "antergos/docker-wordpress:php7.1-fpm-alpine"
     labels: 
       io.rancher.container.pull_image: always
+    ports: 
+      - "9000/tcp"
+    volumes: 
+      - "website-files"
+  website-storage: 
+    external_links: 
+      - "mysql/pxc:mysql"
+    image: lots0logs/antergos-website
+    labels: 
+      io.rancher.container.pull_image: always
+      io.rancher.container.start_once: "true"
+    volumes: 
+      - "website-files:/srv/antergos.com"
+      - "nginx-conf:/etc/nginx"
+
