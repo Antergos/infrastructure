@@ -6,3 +6,6 @@ services:
   php-fpm:
     scale: 3
     start_on_create: true
+  website-files:
+    scale: 1
+    start_on_create: true
