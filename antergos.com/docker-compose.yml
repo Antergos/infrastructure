@@ -13,29 +13,29 @@ services:
     image: "antergos/docker-wordpress:nginx-alpine"
     labels: 
       io.rancher.container.pull_image: always
-      io.rancher.sidekicks: "php-fpm,website-storage"
+      io.rancher.sidekicks: php-fpm
+    ports: 
+      - "80"
+      - "443"
     volumes: 
-      - "ssl-certs"
-      - "website-files"
-      - "nginx-conf"
+      - "website-files:/srv/antergos.com"
+      - "nginx-conf:/etc/nginx"
   php-fpm: 
+    external_links: 
+      - "mysql/pxc:mysql"
     environment: 
       WORDPRESS_DB_HOST:
       WORDPRESS_DB_NAME:
       WORDPRESS_DB_PASSWORD:
       WORDPRESS_DB_USER:
-    external_links: 
-      - "mysql/pxc:mysql"
     image: "antergos/docker-wordpress:php7.1-fpm-alpine"
     labels: 
       io.rancher.container.pull_image: always
     ports: 
-      - "9000/tcp"
+      - "9000"
     volumes: 
-      - "website-files"
+      - "website-files:/srv/antergos.com"
   website-storage: 
-    external_links: 
-      - "mysql/pxc:mysql"
     image: lots0logs/antergos-website
     labels: 
       io.rancher.container.pull_image: always
@@ -43,4 +43,3 @@ services:
     volumes: 
       - "website-files:/srv/antergos.com"
       - "nginx-conf:/etc/nginx"
-
