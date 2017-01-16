@@ -1,0 +1,8 @@
+version: '2'
+services:
+  nginx:
+    scale: 3
+    start_on_create: true
+  php-fpm:
+    scale: 3
+    start_on_create: true
