@@ -1,0 +1,21 @@
+version: "2"
+volumes: 
+  website-files: 
+    external: true
+  ssl-certs:
+    external: true
+services: 
+  nginx: 
+    expose: 
+      - "80"
+      - "443"
+    image: "antergos/docker-wordpress:nginx-alpine"
+    labels: 
+      io.rancher.container.pull_image: always
+      io.rancher.sidekicks: "php-fpm"
+  php-fpm: 
+    expose: 
+      - "9000"
+    image: "antergos/docker-wordpress:php7.1-fpm-alpine"
+    labels: 
+      io.rancher.container.pull_image: always
