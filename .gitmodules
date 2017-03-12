@@ -1,0 +1,6 @@
+[submodule "forum.antergos.com/nodebb-alpine"]
+	path = forum.antergos.com/nodebb-alpine
+	url = git@github.com:antergos/nodebb-alpine.git
+[submodule "data"]
+	path = data
+	url = git@github.com:lots0logs/docker-data.git

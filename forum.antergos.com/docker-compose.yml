@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+  nodebb:
+    build:
+      context: ./nodebb-alpine
+      args:
+        - NODE_ENV
+    image: antergos/nodebb-alpine
+    depends_on:
+      - redis
+    volumes:
+      - data:/data
+
+  nginx:
+    image: nginx:alpine
+    ports:
+      - '8080:8080'
+    depends_on:
+      - nodebb
+    volumes:
+      - data:/data
+
+  redis:
+    image: redis:alpine
+    volumes:
+      - data:/data
+
+volumes:
+  data:
+    driver: local-persist
+    driver_opts:
+      mountpoint: /data
