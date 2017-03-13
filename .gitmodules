@@ -2,5 +2,8 @@
 	path = forum.antergos.com/nodebb-alpine
 	url = git@github.com:antergos/nodebb-alpine.git
 [submodule "data"]
-	path = data
+	path = private
 	url = git@github.com:lots0logs/docker-data.git
+[submodule "forum.antergos.com/theme"]
+	path = forum.antergos.com/theme
+	url = git@github.com:antergos/nodebb-theme-antergos.git

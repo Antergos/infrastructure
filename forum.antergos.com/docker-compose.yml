@@ -7,27 +7,41 @@ services:
       args:
         - NODE_ENV
     image: antergos/nodebb-alpine
-    depends_on:
-      - redis
     volumes:
-      - data:/data
+      - private:/private
+      - theme:/theme
 
   nginx:
     image: nginx:alpine
+    environment:
+      NODE_ENV: "${NODE_ENV}"
     ports:
       - '8080:8080'
-    depends_on:
-      - nodebb
+    command: ["nginx", "-g", "daemon off;"]
+    entrypoint: /entrypoint/nginx
     volumes:
-      - data:/data
+      - private:/private
+      - entrypoints:/entrypoint
 
   redis:
     image: redis:alpine
+    command: redis-server --appendonly yes
+    entrypoint: /entrypoint/redis
     volumes:
-      - data:/data
+      - private:/private
+      - entrypoints:/entrypoint
 
 volumes:
-  data:
+  private:
     driver: local-persist
     driver_opts:
-      mountpoint: /data
+      mountpoint: "${PWD}/private"
+  entrypoints:
+    driver: local-persist
+    driver_opts:
+      mountpoint: "${PWD}/entrypoints"
+  theme:
+    driver: local-persist
+    driver_opts:
+      mountpoint: "${PWD}/theme"
+

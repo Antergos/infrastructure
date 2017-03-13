@@ -1,0 +1,9 @@
+#!/bin/sh
+set -e
+
+[[ -z "${NODE_ENV}" ]] && export NODE_ENV=development
+
+cp "/private/forum/nginx/${NODE_ENV}/nginx.conf" /etc/nginx/nginx.conf
+
+exec "$@"
+
