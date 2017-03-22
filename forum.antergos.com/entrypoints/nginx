@@ -3,7 +3,16 @@ set -e
 
 [[ -z "${NODE_ENV}" ]] && export NODE_ENV=development
 
-cp "/private/forum/nginx/${NODE_ENV}/nginx.conf" /etc/nginx/nginx.conf
+if [[ "${NODE_ENV}" = 'development' ]]; then
+	_URL='https://forum-staging.antergos.com'
+else
+	_URL='https://forum.antergos.com'
+fi
+
+cp /config/nginx.conf /etc/nginx
+
+sed -i "s|<URL>|${_URL}|g;
+		s|#<${NODE_ENV}> ||g" /etc/nginx.conf
 
 exec "$@"
 

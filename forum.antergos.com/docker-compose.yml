@@ -5,37 +5,51 @@ services:
     build:
       context: ./nodebb-alpine
       args:
-        - NODE_ENV
+        NODE_ENV: "${NODE_ENV:-development}"
     image: antergos/nodebb-alpine
+    secrets:
+      - nodebb_secret
     volumes:
-      - private:/private
       - theme:/theme
 
   nginx:
     image: nginx:alpine
     environment:
-      NODE_ENV: "${NODE_ENV}"
+      NODE_ENV: "${NODE_ENV:-development}"
     ports:
       - '8080:8080'
     command: ["nginx", "-g", "daemon off;"]
     entrypoint: /entrypoint/nginx
+    secrets:
+      - nginx_fullchain
+      - nginx_privkey
     volumes:
-      - private:/private
       - entrypoints:/entrypoint
+      - config:/config
 
   redis:
     image: redis:alpine
     command: redis-server --appendonly yes
     entrypoint: /entrypoint/redis
+    secrets:
+      - redis_rdb
+      - redis_aof
     volumes:
-      - private:/private
       - entrypoints:/entrypoint
 
+secrets:
+  nginx_fullchain:
+    file: "{PWD}/private/nginx/${NODE_ENV:-development}/fullchain.pem"
+  nginx_privkey:
+    file: "{PWD}/private/nginx/${NODE_ENV:-development}/privkey.pem"
+  nodebb_secret:
+    file: "${PWD}/private/nodebb/SECRET"
+  redis_rdb:
+    file: "${PWD}/private/redis/dump.rdb.tar.xz"
+  redis_aof:
+    file: "${PWD}/private/redis/appendonly.aof.tar.xz"
+
 volumes:
-  private:
-    driver: local-persist
-    driver_opts:
-      mountpoint: "${PWD}/private"
   entrypoints:
     driver: local-persist
     driver_opts:
@@ -44,4 +58,8 @@ volumes:
     driver: local-persist
     driver_opts:
       mountpoint: "${PWD}/theme"
+  config:
+    driver: local-persist
+    driver_opts:
+      mountpoint: "${PWD}/config"
 

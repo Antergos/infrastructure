@@ -2,11 +2,11 @@
 set -e
 
 # Prepare database files
-cd /private/forum
-tar -xf redis/appendonly.aof.tar.xz
-tar -xf redis/dump.rdb.tar.xz
+cd /var/run
+tar -xf secrets/redis_aof
+tar -xf secrets/redis_rdb
 
-cd redis
+cd secrets
 
 
 ##
