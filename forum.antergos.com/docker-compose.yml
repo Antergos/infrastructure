@@ -20,9 +20,11 @@ services:
       - '8080:8080'
     command: ["nginx", "-g", "daemon off;"]
     entrypoint: /entrypoint/nginx
+    depends_on:
+      - nodebb
     secrets:
-      - nginx_fullchain
-      - nginx_privkey
+      - "nginx_fullchain_${NODE_ENV}"
+      - "nginx_privkey_${NODE_ENV}"
     volumes:
       - entrypoints:/entrypoint
       - config:/config
@@ -39,15 +41,19 @@ services:
 
 secrets:
   nginx_fullchain:
-    file: "{PWD}/private/nginx/${NODE_ENV:-development}/fullchain.pem"
+    file: "./private/nginx/production/fullchain.pem"
   nginx_privkey:
-    file: "{PWD}/private/nginx/${NODE_ENV:-development}/privkey.pem"
+    file: "./private/nginx/production/privkey.pem"
+  nginx_fullchain_development:
+    file: "./private/nginx/development/fullchain.pem"
+  nginx_privkey_development:
+    file: "./private/nginx/development/privkey.pem"
   nodebb_secret:
-    file: "${PWD}/private/nodebb/SECRET"
+    file: "./private/nodebb/SECRET"
   redis_rdb:
-    file: "${PWD}/private/redis/dump.rdb.tar.xz"
+    file: "./private/redis/dump.rdb.tar.xz"
   redis_aof:
-    file: "${PWD}/private/redis/appendonly.aof.tar.xz"
+    file: "./private/redis/appendonly.aof.tar.xz"
 
 volumes:
   entrypoints:
