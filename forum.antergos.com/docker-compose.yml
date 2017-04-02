@@ -11,6 +11,7 @@ services:
       - nodebb_secret
     volumes:
       - theme:/theme
+      - entrypoints:/entrypoint
 
   nginx:
     image: nginx:alpine
