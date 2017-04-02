@@ -6,7 +6,7 @@ cd /run
 tar -xf secrets/redis_aof
 tar -xf secrets/redis_rdb
 
-cd secrets
+cd redis
 
 
 ##

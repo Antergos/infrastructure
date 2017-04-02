@@ -41,19 +41,19 @@ services:
 
 secrets:
   nginx_fullchain:
-    file: "./private/nginx/production/fullchain.pem"
+    file: ./private/nginx/production/fullchain.pem
   nginx_privkey:
-    file: "./private/nginx/production/privkey.pem"
+    file: ./private/nginx/production/privkey.pem
   nginx_fullchain_development:
-    file: "./private/nginx/development/fullchain.pem"
+    file: ./private/nginx/development/fullchain.pem
   nginx_privkey_development:
-    file: "./private/nginx/development/privkey.pem"
+    file: ./private/nginx/development/privkey.pem
   nodebb_secret:
-    file: "./private/nodebb/SECRET"
+    file: ./private/nodebb/SECRET
   redis_rdb:
-    file: "./private/redis/dump.rdb.tar.xz"
+    file: ./private/redis/dump.rdb.tar.xz
   redis_aof:
-    file: "./private/redis/appendonly.aof.tar.xz"
+    file: ./private/redis/appendonly.aof.tar.xz
 
 volumes:
   entrypoints:
