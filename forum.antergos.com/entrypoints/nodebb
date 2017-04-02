@@ -17,12 +17,11 @@ sed -i "s|<URL>|${_URL}|g;
 		s|<SECRET>|${_SECRET}|g" /nodebb/config.json
 
 
-{ cd /nodebb && ./nodebb upgrade; } || exit 1
-
-
 # Install NodeBB
-[ -e /nodebb/node_modules ] || (
-cd /nodebb
+cd /nodebb && npm install
+
+./nodebb upgrade || exit 1
+
 npm install \
 	nodebb-plugin-dbsearch \
 	nodebb-plugin-emoji-extended \
@@ -47,7 +46,6 @@ npm install \
 	nodebb-plugin-emoji-static \
 	nodebb-plugin-sso-auth0 \
 	nodebb-plugin-topic-tags
-)
 
 # Theme
 cp -r /theme /nodebb-theme-antergos
