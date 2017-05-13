@@ -46,7 +46,7 @@ if [[ ! -e /ran_once ]]; then
 		nodebb-plugin-poll \
 		nodebb-plugin-write-api \
 		nodebb-plugin-emoji-static \
-		nodebb-plugin-sso-auth0 \
+		nodebb-plugin-sso-auth0@2.0.0-beta1 \
 		nodebb-plugin-topic-tags
 
 	# Theme
