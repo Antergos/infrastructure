@@ -47,12 +47,12 @@ npm install \
 	nodebb-plugin-sso-auth0 \
 	nodebb-plugin-topic-tags
 
-./nodebb upgrade || exit 1
-
 # Theme
 cp -r /theme /nodebb-theme-antergos
 rm -rf /nodebb-theme-antergos/.git
 mv /nodebb-theme-antergos /nodebb/node_modules
+
+./nodebb upgrade || exit 1
 
 ./nodebb dev
 
