@@ -16,6 +16,8 @@ fi
 sed -i "s|<URL>|${_URL}|g;
 		s|<SECRET>|${_SECRET}|g" /nodebb/config.json
 
+# Give redis some time to come up
+sleep 10
 
 # Install NodeBB
 cd /nodebb && npm install
@@ -51,9 +53,6 @@ npm install \
 cp -r /theme /nodebb-theme-antergos
 rm -rf /nodebb-theme-antergos/.git
 mv /nodebb-theme-antergos /nodebb/node_modules
-
-# Give redis some time to come up
-sleep 10
 
 ./nodebb dev
 
