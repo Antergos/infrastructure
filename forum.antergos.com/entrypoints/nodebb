@@ -12,45 +12,50 @@ else
 fi
 
 
-# Set Config Vars
-sed -i "s|<URL>|${_URL}|g;
-		s|<SECRET>|${_SECRET}|g" /nodebb/config.json
+if [[ ! -e /ran_once ]]; then
 
-# Give redis some time to come up
-sleep 10
+	# Set Config Vars
+	sed -i "s|<URL>|${_URL}|g;
+			s|<SECRET>|${_SECRET}|g" /nodebb/config.json
 
-# Install NodeBB
-cd /nodebb && npm install
+	# Give redis some time to come up
+	sleep 10
 
-npm install \
-	nodebb-plugin-dbsearch \
-	nodebb-plugin-emoji-extended \
-	nodebb-plugin-markdown \
-	nodebb-plugin-registration-question \
-	nodebb-plugin-soundpack-default \
-	nodebb-plugin-spam-be-gone \
-	nodebb-widget-essentials \
-	nodebb-plugin-emailer-mailgun \
-	nodebb-plugin-mentions \
-	nodebb-plugin-question-and-answer \
-	nodebb-plugin-composer-default \
-	nodebb-plugin-imgur \
-	nodebb-plugin-blog-comments \
-	nodebb-plugin-gravatar \
-	nodebb-plugin-ns-likes \
-	nodebb-plugin-codeinput \
-	nodebb-plugin-emoji-apple \
-	nodebb-plugin-ns-login \
-	nodebb-plugin-poll \
-	nodebb-plugin-write-api \
-	nodebb-plugin-emoji-static \
-	nodebb-plugin-sso-auth0 \
-	nodebb-plugin-topic-tags
+	# Install NodeBB
+	cd /nodebb && npm install
 
-# Theme
-cp -r /theme /nodebb-theme-antergos
-rm -rf /nodebb-theme-antergos/.git
-mv /nodebb-theme-antergos /nodebb/node_modules
+	npm install \
+		nodebb-plugin-dbsearch \
+		nodebb-plugin-emoji-extended \
+		nodebb-plugin-markdown \
+		nodebb-plugin-registration-question \
+		nodebb-plugin-soundpack-default \
+		nodebb-plugin-spam-be-gone \
+		nodebb-widget-essentials \
+		nodebb-plugin-emailer-mailgun \
+		nodebb-plugin-mentions \
+		nodebb-plugin-question-and-answer \
+		nodebb-plugin-composer-default \
+		nodebb-plugin-imgur \
+		nodebb-plugin-blog-comments \
+		nodebb-plugin-gravatar \
+		nodebb-plugin-ns-likes \
+		nodebb-plugin-codeinput \
+		nodebb-plugin-emoji-apple \
+		nodebb-plugin-ns-login \
+		nodebb-plugin-poll \
+		nodebb-plugin-write-api \
+		nodebb-plugin-emoji-static \
+		nodebb-plugin-sso-auth0 \
+		nodebb-plugin-topic-tags
+
+	# Theme
+	cp -r /theme /nodebb-theme-antergos
+	rm -rf /nodebb-theme-antergos/.git
+	mv /nodebb-theme-antergos /nodebb/node_modules
+
+	touch /ran_once
+fi
 
 ./nodebb upgrade || exit 1
 
