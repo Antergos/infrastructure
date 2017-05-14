@@ -18,7 +18,7 @@ services:
     environment:
       NODE_ENV: "${NODE_ENV:-development}"
     ports:
-      - '8080:443'
+      - '8080:80'
     command: ["nginx", "-g", "daemon off;"]
     entrypoint: /entrypoint/nginx
     depends_on:
