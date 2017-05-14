@@ -7,6 +7,9 @@ services:
       args:
         NODE_ENV: "${NODE_ENV}"
     image: antergos/nodebb-alpine
+    environment:
+      NODE_ENV: "${NODE_ENV}"
+      DOMAIN: "${DOMAIN}"
     secrets:
       - nodebb_secret
     volumes:
