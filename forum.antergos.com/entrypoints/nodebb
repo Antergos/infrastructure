@@ -61,7 +61,7 @@ ln -sf /theme /nodebb/node_modules/nodebb-theme-antergos
 
 
 # Run NodeBB!
-./nodebb start
+node loader.js --no-silent --no-daemon
 
 #while true
 #do
