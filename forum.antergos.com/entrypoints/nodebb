@@ -15,6 +15,10 @@ cp /config/config.json .
 sed -i "s|<DOMAIN>|${_DOMAIN}|g;
 		s|<SECRET>|${_SECRET}|g" config.json
 
+# Static Resources
+[[ -e build ]] || mkdir build
+[[ -e build/public ]] || ln -s /public build/public
+
 # Give redis some time to come up
 sleep 10
 
@@ -52,13 +56,11 @@ ln -s /theme /nodebb/node_modules/nodebb-theme-antergos
 #cp -r /nodebb-theme-antergos /nodebb/node_modules
 #rm -rf /nodebb/node_modules/nodebb-theme-antergos/.git
 
-# NodeBB Upgrade
+# Make sure database schema is up-to-date
 ./nodebb upgrade
 
-# Static Resources
-mv -f build/public/* /public
-ln -s /public build/public
 
+# Run NodeBB!
 ./nodebb dev
 
 #while true
