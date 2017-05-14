@@ -39,6 +39,8 @@ yarn add \
 	nodebb-plugin-sso-auth0@beta \
 	nodebb-plugin-topic-tags
 
+yarn upgrade nodebb-plugin-sso-auth0@beta
+
 # Set Config Vars
 sed -i "s|<URL>|${_URL}|g;
 		s|<SECRET>|${_SECRET}|g" /nodebb/config.json
