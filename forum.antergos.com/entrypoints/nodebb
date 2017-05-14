@@ -51,7 +51,7 @@ yarn add \
 	nodebb-plugin-topic-tags
 
 # Theme
-ln -s /theme /nodebb/node_modules/nodebb-theme-antergos
+ln -sf /theme /nodebb/node_modules/nodebb-theme-antergos
 #cp -r /theme /nodebb-theme-antergos
 #cp -r /nodebb-theme-antergos /nodebb/node_modules
 #rm -rf /nodebb/node_modules/nodebb-theme-antergos/.git
