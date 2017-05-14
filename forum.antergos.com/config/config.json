@@ -1,0 +1,13 @@
+{
+	"url": "https://<DOMAIN>",
+	"cookieDomain": "<DOMAIN>",
+	"secret": "<SECRET>",
+	"database": "redis",
+	"redis": {
+		"host": "redis",
+		"port": "6379",
+		"password": "",
+		"database": "0"
+	}
+}
+

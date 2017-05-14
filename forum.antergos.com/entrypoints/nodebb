@@ -2,17 +2,24 @@
 set -e
 
 [[ -z "${NODE_ENV}" ]] && export NODE_ENV='development'
+[[ -z "${_DOMAIN}" ]] && export _DOMAIN='forum-staging.antergos.com'
 
 _SECRET=$(cat /run/secrets/nodebb_secret)
 
-if [[ "${NODE_ENV}" = 'development' ]]; then
-	_URL='https://forum-staging.antergos.com'
-else
-	_URL='https://forum.antergos.com'
-fi
+cd /nodebb
+
+# Copy config into place
+cp /config/config.json .
+
+# Set Config Vars
+sed -i "s|<DOMAIN>|${_DOMAIN}|g;
+		s|<SECRET>|${_SECRET}|g" config.json
+
+# Give redis some time to come up
+sleep 10
 
 # Install NodeBB
-cd /nodebb && yarn
+yarn
 
 yarn add \
 	nodebb-plugin-dbsearch \
@@ -39,21 +46,14 @@ yarn add \
 	nodebb-plugin-sso-auth0@beta \
 	nodebb-plugin-topic-tags
 
-yarn upgrade nodebb-plugin-sso-auth0@beta
 
-# Set Config Vars
-sed -i "s|<URL>|${_URL}|g;
-		s|<SECRET>|${_SECRET}|g" /nodebb/config.json
-
-# Give redis some time to come up
-sleep 10
 
 # Theme
 cp -r /theme /nodebb-theme-antergos
 cp -r /nodebb-theme-antergos /nodebb/node_modules
 rm -rf /nodebb/node_modules/nodebb-theme-antergos/.git
 
-./nodebb upgrade || exit 1
+./nodebb upgrade
 
 ./nodebb dev
 

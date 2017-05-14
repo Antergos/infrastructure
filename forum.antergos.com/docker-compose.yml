@@ -10,6 +10,7 @@ services:
     secrets:
       - nodebb_secret
     volumes:
+      - config:/config
       - theme:/theme
       - entrypoints:/entrypoint
 

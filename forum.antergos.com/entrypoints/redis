@@ -1,10 +1,13 @@
 #!/bin/sh
 set -e
 
-# Prepare database files
 cd /run
-tar -xf secrets/redis_aof
-tar -xf secrets/redis_rdb
+
+if [[ ! -e redis ]]; then
+	# Prepare database files
+	tar -xf secrets/redis_aof
+	tar -xf secrets/redis_rdb
+fi
 
 cd redis
 
