@@ -5,7 +5,7 @@ services:
     build:
       context: ./nodebb-alpine
       args:
-        NODE_ENV: "${NODE_ENV:-development}"
+        NODE_ENV: "${NODE_ENV}"
     image: antergos/nodebb-alpine
     secrets:
       - nodebb_secret
@@ -19,7 +19,7 @@ services:
   nginx:
     image: nginx:alpine
     environment:
-      NODE_ENV: "${NODE_ENV:-development}"
+      NODE_ENV: "${NODE_ENV}"
     ports:
       - '8080:80'
     command: ["nginx", "-g", "daemon off;"]
