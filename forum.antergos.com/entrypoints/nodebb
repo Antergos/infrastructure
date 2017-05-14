@@ -43,17 +43,21 @@ yarn add \
 	nodebb-plugin-poll \
 	nodebb-plugin-write-api \
 	nodebb-plugin-emoji-static \
-	nodebb-plugin-sso-auth0@beta \
+	nodebb-plugin-sso-auth0 \
 	nodebb-plugin-topic-tags
 
-
-
 # Theme
-cp -r /theme /nodebb-theme-antergos
-cp -r /nodebb-theme-antergos /nodebb/node_modules
-rm -rf /nodebb/node_modules/nodebb-theme-antergos/.git
+ln -s /theme /nodebb/node_modules/nodebb-theme-antergos
+#cp -r /theme /nodebb-theme-antergos
+#cp -r /nodebb-theme-antergos /nodebb/node_modules
+#rm -rf /nodebb/node_modules/nodebb-theme-antergos/.git
 
+# NodeBB Upgrade
 ./nodebb upgrade
+
+# Static Resources
+mv -f build/public/* /public
+ln -s /public build/public
 
 ./nodebb dev
 

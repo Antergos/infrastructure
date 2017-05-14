@@ -1,0 +1,180 @@
+[2015-04-13 19:13:02] [cnchi] INFO: Using GTK v3.16.1
+[2015-04-13 19:13:02] [cnchi] INFO: Using pyalpm v0.7 as interface to libalpm v9.0.1
+[2015-04-13 19:13:02] [updater] WARNING: Could not find 'update.info' file. Cnchi will not be able to update itself.
+[2015-04-13 19:13:02] [main_window] INFO: Cnchi installer version 0.8.16
+[2015-04-13 19:13:02] [gtkbasebox] DEBUG: Loading 'welcome' screen
+[2015-04-13 19:13:02] [gtkbasebox] DEBUG: Loading 'language' screen
+[2015-04-13 19:13:16] [gtkbasebox] DEBUG: Loading 'location' screen
+[2015-04-13 19:13:16] [gtkbasebox] DEBUG: Loading 'check' screen
+[2015-04-13 19:13:16] [gtkbasebox] DEBUG: Loading 'desktop' screen
+[2015-04-13 19:13:16] [gtkbasebox] DEBUG: Loading 'features' screen
+[2015-04-13 19:13:16] [gtkbasebox] DEBUG: Loading 'keymap' screen
+[2015-04-13 19:13:16] [gtkbasebox] DEBUG: Loading 'timezone' screen
+[2015-04-13 19:13:16] [gtkbasebox] DEBUG: Loading 'ask' screen
+[2015-04-13 19:13:16] [gtkbasebox] DEBUG: Loading 'automatic' screen
+[2015-04-13 19:13:16] [gtkbasebox] DEBUG: Loading 'advanced' screen
+[2015-04-13 19:13:16] [gtkbasebox] DEBUG: Loading 'user_info' screen
+[2015-04-13 19:13:16] [gtkbasebox] DEBUG: Loading 'slides' screen
+[2015-04-13 19:13:16] [timezone] DEBUG: We have connection. Let's get our timezone
+[2015-04-13 19:13:16] [timezone] DEBUG: Timezone (latitude 49.9667, longitude 8.9578) detected.
+[2015-04-13 19:13:18] [check] INFO: We have Internet connection.
+[2015-04-13 19:13:18] [check] INFO: We're connected to a power source.
+[2015-04-13 19:13:18] [check] INFO: We have enough disk space.
+[2015-04-13 19:13:18] [connectionpool] INFO: Starting new HTTP connection (1): www.archlinux.org
+[2015-04-13 19:13:19] [connectionpool] DEBUG: "GET /mirrors/status/json/ HTTP/1.1" 301 366
+[2015-04-13 19:13:19] [connectionpool] INFO: Starting new HTTPS connection (1): www.archlinux.org
+[2015-04-13 19:13:20] [connectionpool] DEBUG: "GET /mirrors/status/json/ HTTP/1.1" 200 None
+[2015-04-13 19:13:20] [rank_mirrors] DEBUG: Auto mirror selection has been run successfully
+[2015-04-13 19:13:27] [location] DEBUG: Selected location: German (DE), Germany
+[2015-04-13 19:13:27] [location] INFO: locale changed to : de_DE.UTF-8
+[2015-04-13 19:13:27] [location] DEBUG: Selected country: Germany
+[2015-04-13 19:13:27] [timezone] INFO: location changed to : Europe/Berlin
+[2015-04-13 19:13:29] [timezone] DEBUG: timezone human zone: Berlin
+[2015-04-13 19:13:29] [timezone] DEBUG: timezone country: DE
+[2015-04-13 19:13:29] [timezone] DEBUG: timezone zone: Europe/Berlin
+[2015-04-13 19:13:29] [timezone] DEBUG: timezone human country: Germany
+[2015-04-13 19:13:29] [timezone] DEBUG: timezone comment: most locations
+[2015-04-13 19:13:29] [timezone] DEBUG: timezone latitude: 52.3
+[2015-04-13 19:13:29] [timezone] DEBUG: timezone longitude: 13.22
+[2015-04-13 19:13:29] [misc] INFO: locale changed to : de_DE.UTF-8
+[2015-04-13 19:13:29] [misc] INFO: locale changed to : de_DE.UTF-8
+[2015-04-13 19:13:29] [keymap] INFO: keyboard_layout is Germany
+[2015-04-13 19:13:32] [desktop] INFO: Cnchi will install Antergos with the 'gnome' desktop
+[2015-04-13 19:13:42] [features] DEBUG: Selected 'aur' feature to install
+[2015-04-13 19:13:42] [features] DEBUG: Selected 'bluetooth' feature to install
+[2015-04-13 19:13:42] [features] DEBUG: Selected 'cups' feature to install
+[2015-04-13 19:13:42] [features] DEBUG: Selected 'firefox' feature to install
+[2015-04-13 19:13:42] [features] DEBUG: Selected 'firewall' feature to install
+[2015-04-13 19:13:42] [features] DEBUG: Selected 'fonts' feature to install
+[2015-04-13 19:13:42] [features] DEBUG: Selected 'office' feature to install
+[2015-04-13 19:13:42] [features] DEBUG: Selected 'smb' feature to install
+[2015-04-13 19:13:48] [features] DEBUG: Selected 'aur' feature to install
+[2015-04-13 19:13:48] [features] DEBUG: Selected 'bluetooth' feature to install
+[2015-04-13 19:13:48] [features] DEBUG: Selected 'cups' feature to install
+[2015-04-13 19:13:48] [features] DEBUG: Selected 'firefox' feature to install
+[2015-04-13 19:13:48] [features] DEBUG: Selected 'firewall' feature to install
+[2015-04-13 19:13:48] [features] DEBUG: Selected 'fonts' feature to install
+[2015-04-13 19:13:48] [features] DEBUG: Selected 'office' feature to install
+[2015-04-13 19:13:48] [features] DEBUG: Selected 'smb' feature to install
+[2015-04-13 19:14:13] [advanced] DEBUG: Added /dev/sda2 to changelist: createme[No] relabel[No] fmt[Yes] mnt[/] encrypt[No]
+[2015-04-13 19:14:13] [advanced] DEBUG: Added /dev/sda1 to changelist: createme[No] relabel[No] fmt[No] mnt[/boot] encrypt[No]
+[2015-04-13 19:14:15] [advanced] INFO: Creating new ext4 filesystem in /dev/sda2 labeled antergos
+[2015-04-13 19:14:15] [advanced] INFO: 
+[2015-04-13 19:14:15] [advanced] INFO: Creating new fat32 filesystem in /dev/sda1 labeled efi
+[2015-04-13 19:14:15] [advanced] INFO: Antergos will install the bootloader gummiboot in device /dev/sda
+[2015-04-13 19:14:15] [process] DEBUG: Mounting partition /dev/sda2 into /install directory
+[2015-04-13 19:14:15] [process] DEBUG: Mounting partition /dev/sda1 into /install/boot/boot directory
+[2015-04-13 19:14:15] [process] DEBUG: Prepare pacman...
+[2015-04-13 19:14:15] [process] DEBUG: Creating a temporary pacman.conf for x86_64 architecture
+[2015-04-13 19:14:18] [pac] DEBUG: database dir '/install/var/lib/pacman/sync/' does not exist, creating it
+[2015-04-13 19:14:18] [pac] DEBUG: url: http://arch.tamcore.eu/core/os/x86_64/core.db
+[2015-04-13 19:14:18] [pac] DEBUG: maxsize: 26214400
+[2015-04-13 19:14:18] [pac] DEBUG: opened tempfile for download: /install/var/lib/pacman/sync/core.db.part (wb)
+[2015-04-13 19:14:18] [pac] DEBUG: curl returned error 0 from transfer
+[2015-04-13 19:14:18] [pac] DEBUG: response code: 200
+[2015-04-13 19:14:18] [pac] DEBUG: url: http://arch.tamcore.eu/extra/os/x86_64/extra.db
+[2015-04-13 19:14:18] [pac] DEBUG: maxsize: 26214400
+[2015-04-13 19:14:18] [pac] DEBUG: opened tempfile for download: /install/var/lib/pacman/sync/extra.db.part (wb)
+[2015-04-13 19:14:19] [pac] DEBUG: curl returned error 0 from transfer
+[2015-04-13 19:14:19] [pac] DEBUG: response code: 200
+[2015-04-13 19:14:19] [pac] DEBUG: url: http://arch.tamcore.eu/community/os/x86_64/community.db
+[2015-04-13 19:14:19] [pac] DEBUG: maxsize: 26214400
+[2015-04-13 19:14:19] [pac] DEBUG: opened tempfile for download: /install/var/lib/pacman/sync/community.db.part (wb)
+[2015-04-13 19:14:20] [pac] DEBUG: curl returned error 0 from transfer
+[2015-04-13 19:14:20] [pac] DEBUG: response code: 200
+[2015-04-13 19:14:20] [pac] DEBUG: url: http://arch.tamcore.eu/multilib/os/x86_64/multilib.db
+[2015-04-13 19:14:20] [pac] DEBUG: maxsize: 26214400
+[2015-04-13 19:14:20] [pac] DEBUG: opened tempfile for download: /install/var/lib/pacman/sync/multilib.db.part (wb)
+[2015-04-13 19:14:20] [pac] DEBUG: curl returned error 0 from transfer
+[2015-04-13 19:14:20] [pac] DEBUG: response code: 200
+[2015-04-13 19:14:20] [pac] DEBUG: url: http://mirror.de.leaseweb.net/antergos/antergos/x86_64/antergos.db
+[2015-04-13 19:14:20] [pac] DEBUG: maxsize: 26214400
+[2015-04-13 19:14:20] [pac] DEBUG: opened tempfile for download: /install/var/lib/pacman/sync/antergos.db.part (wb)
+[2015-04-13 19:14:20] [pac] DEBUG: curl returned error 0 from transfer
+[2015-04-13 19:14:20] [pac] DEBUG: response code: 200
+[2015-04-13 19:14:20] [process] DEBUG: Pacman ready
+[2015-04-13 19:14:20] [process] DEBUG: Selecting packages...
+[2015-04-13 19:14:20] [process] DEBUG: Adding 'gnome' desktop packages
+[2015-04-13 19:14:21] [process] DEBUG: Hardware module detected this drivers: ['i915', 'ModeSetting']
+[2015-04-13 19:14:21] [process] DEBUG: Hardware module added these packages : libva-intel-driver xf86-video-intel lib32-mesa libtxc_dxtn lib32-mesa-libgl
+[2015-04-13 19:14:21] [process] DEBUG: Adding filesystem packages
+[2015-04-13 19:14:21] [process] DEBUG: Check for user desired features and add them to our installation
+[2015-04-13 19:14:21] [process] DEBUG: Adding packages for 'aur' feature.
+[2015-04-13 19:14:21] [process] DEBUG: Selecting package yaourt for feature aur
+[2015-04-13 19:14:21] [process] DEBUG: Selecting package cmake for feature aur
+[2015-04-13 19:14:21] [process] DEBUG: Selecting package git for feature aur
+[2015-04-13 19:14:21] [process] DEBUG: Selecting package bzr for feature aur
+[2015-04-13 19:14:21] [process] DEBUG: Adding packages for 'bluetooth' feature.
+[2015-04-13 19:14:21] [process] DEBUG: Selecting package bluez-utils for feature bluetooth
+[2015-04-13 19:14:21] [process] DEBUG: Selecting package gnome-bluetooth for feature bluetooth
+[2015-04-13 19:14:21] [process] DEBUG: Adding packages for 'cups' feature.
+[2015-04-13 19:14:21] [process] DEBUG: Selecting package cups for feature cups
+[2015-04-13 19:14:21] [process] DEBUG: Selecting package cups-pk-helper for feature cups
+[2015-04-13 19:14:21] [process] DEBUG: Selecting package gsfonts for feature cups
+[2015-04-13 19:14:21] [process] DEBUG: Selecting package gutenprint for feature cups
+[2015-04-13 19:14:21] [process] DEBUG: Selecting package hplip for feature cups
+[2015-04-13 19:14:21] [process] DEBUG: Selecting package system-config-printer for feature cups
+[2015-04-13 19:14:21] [process] DEBUG: Selecting package splix for feature cups
+[2015-04-13 19:14:21] [process] DEBUG: Adding packages for 'firefox' feature.
+[2015-04-13 19:14:21] [process] DEBUG: Selecting package firefox for feature firefox
+[2015-04-13 19:14:21] [process] DEBUG: Adding packages for 'firewall' feature.
+[2015-04-13 19:14:21] [process] DEBUG: Selecting package gufw for feature firewall
+[2015-04-13 19:14:21] [process] DEBUG: Selecting package ufw for feature firewall
+[2015-04-13 19:14:21] [process] DEBUG: Adding packages for 'fonts' feature.
+[2015-04-13 19:14:21] [process] DEBUG: Selecting package ttf-freefont for feature fonts
+[2015-04-13 19:14:21] [process] DEBUG: Selecting package ttf-google-fonts for feature fonts
+[2015-04-13 19:14:21] [process] DEBUG: Adding packages for 'office' feature.
+[2015-04-13 19:14:21] [process] DEBUG: Selecting package libreoffice-fresh for feature office
+[2015-04-13 19:14:21] [process] DEBUG: Selecting package hunspell-en for feature office
+[2015-04-13 19:14:21] [process] DEBUG: Adding packages for 'smb' feature.
+[2015-04-13 19:14:21] [process] DEBUG: Selecting package gvfs-smb for feature smb
+[2015-04-13 19:14:21] [process] DEBUG: Add libreoffice language package
+[2015-04-13 19:14:21] [process] DEBUG: All features needed packages have been added
+[2015-04-13 19:14:21] [process] DEBUG: Adding 'gummiboot' bootloader packages
+[2015-04-13 19:14:21] [process] DEBUG: Packages selected
+[2015-04-13 19:14:21] [process] DEBUG: Downloading packages...
+[2015-04-13 19:14:21] [pac] DEBUG: loading package cache for repository 'core'
+[2015-04-13 19:14:21] [pac] DEBUG: opening archive /install/var/lib/pacman/sync/core.db
+[2015-04-13 19:14:21] [pac] DEBUG: added 208 packages to package cache for db 'core'
+[2015-04-13 19:14:21] [pac] DEBUG: loading group cache for repository 'core'
+[2015-04-13 19:14:21] [pac] DEBUG: loading package cache for repository 'extra'
+[2015-04-13 19:14:21] [pac] DEBUG: opening archive /install/var/lib/pacman/sync/extra.db
+[2015-04-13 19:14:21] [pac] DEBUG: added 3096 packages to package cache for db 'extra'
+[2015-04-13 19:14:21] [pac] DEBUG: loading package cache for repository 'community'
+[2015-04-13 19:14:21] [pac] DEBUG: opening archive /install/var/lib/pacman/sync/community.db
+[2015-04-13 19:14:21] [pac] DEBUG: added 3853 packages to package cache for db 'community'
+[2015-04-13 19:14:21] [pac] DEBUG: loading group cache for repository 'community'
+[2015-04-13 19:14:21] [pac] DEBUG: loading package cache for repository 'multilib'
+[2015-04-13 19:14:21] [pac] DEBUG: opening archive /install/var/lib/pacman/sync/multilib.db
+[2015-04-13 19:14:21] [pac] DEBUG: added 186 packages to package cache for db 'multilib'
+[2015-04-13 19:14:21] [pac] DEBUG: loading group cache for repository 'multilib'
+[2015-04-13 19:14:21] [pac] DEBUG: loading package cache for repository 'antergos'
+[2015-04-13 19:14:21] [pac] DEBUG: opening archive /install/var/lib/pacman/sync/antergos.db
+[2015-04-13 19:14:21] [pac] DEBUG: added 64 packages to package cache for db 'antergos'
+[2015-04-13 19:14:21] [pac] DEBUG: loading group cache for repository 'antergos'
+[2015-04-13 19:14:21] [pac] DEBUG: loading package cache for repository 'local'
+[2015-04-13 19:14:21] [pac] DEBUG: added 0 packages to package cache for db 'local'
+[2015-04-13 19:14:21] [pac] DEBUG: loading group cache for repository 'extra'
+[2015-04-13 19:14:33] [pac] ERROR: returning error 6 from alpm_db_get_pkg : Falsches oder NULL-Argument übergeben
+[2015-04-13 19:14:33] [pac] ERROR: returning error 6 from alpm_db_get_group : Falsches oder NULL-Argument übergeben
+[2015-04-13 19:14:33] [pac] ERROR: returning error 6 from alpm_db_get_pkg : Falsches oder NULL-Argument übergeben
+[2015-04-13 19:14:33] [pac] ERROR: returning error 6 from alpm_db_get_group : Falsches oder NULL-Argument übergeben
+[2015-04-13 19:14:33] [pac] ERROR: returning error 6 from alpm_db_get_pkg : Falsches oder NULL-Argument übergeben
+[2015-04-13 19:14:33] [pac] ERROR: returning error 6 from alpm_db_get_group : Falsches oder NULL-Argument übergeben
+[2015-04-13 19:14:33] [pac] ERROR: returning error 6 from alpm_db_get_pkg : Falsches oder NULL-Argument übergeben
+[2015-04-13 19:14:33] [pac] ERROR: returning error 6 from alpm_db_get_group : Falsches oder NULL-Argument übergeben
+[2015-04-13 19:14:33] [pac] ERROR: returning error 6 from alpm_db_get_pkg : Falsches oder NULL-Argument übergeben
+[2015-04-13 19:14:33] [pac] ERROR: returning error 6 from alpm_db_get_group : Falsches oder NULL-Argument übergeben
+[2015-04-13 19:14:33] [metalink] ERROR: Can't find these packages:  
+[2015-04-13 19:14:33] [download] ERROR: Error creating metalink for package . Installation will stop
+[2015-04-13 19:14:33] [process] ERROR: "Can't create download package list. Check log output for details"
+[2015-04-13 19:14:33] [process] ERROR: ['Traceback (most recent call last):\n', '  File "/usr/share/cnchi/cnchi/installation/process.py", line 166, in run\n    self.run_installation()\n', '  File "/usr/share/cnchi/cnchi/misc/misc.py", line 175, in helper\n    return func(*args, **kwargs)\n', '  File "/usr/share/cnchi/cnchi/installation/process.py", line 349, in run_installation\n    self.download_packages()\n', '  File "/usr/share/cnchi/cnchi/installation/process.py", line 400, in download_packages\n    self.packages, use_aria2, pacman_conf_file, pacman_cache_dir, cache_dir, self.callback_queue)\n', '  File "/usr/share/cnchi/cnchi/download/download.py", line 94, in __init__\n    raise InstallError(_("Can\'t create download package list. Check log output for details"))\n', 'misc.misc.InstallError: "Can\'t create download package list. Check log output for details"\n']
+[2015-04-13 19:14:34] [slides] INFO: Installing using the 'advanced' method
+[2015-04-13 19:14:34] [slides] INFO: Updating core database
+[2015-04-13 19:14:34] [slides] INFO: Updating extra database
+[2015-04-13 19:14:34] [slides] INFO: Updating community database
+[2015-04-13 19:14:34] [slides] INFO: Updating multilib database
+[2015-04-13 19:14:34] [slides] INFO: Updating antergos database
+[2015-04-13 19:14:34] [slides] INFO: Getting package list...
+[2015-04-13 19:14:34] [slides] INFO: Creating the list of packages to download...
+[2015-04-13 19:14:34] [show_message] ERROR: "Can't create download package list. Check log output for details"

@@ -11,8 +11,7 @@ fi
 
 cp /config/nginx.conf /etc/nginx
 
-sed -i "s|<URL>|${_URL}|g;
-		s|#<${NODE_ENV}> ||g" /etc/nginx/nginx.conf
+sed -i "s|<URL>|${_URL}|g" /etc/nginx/nginx.conf
 
 exec "$@"
 

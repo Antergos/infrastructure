@@ -1,0 +1,2 @@
+[antergos@Antergos-ISO ~]$ sudo reflector --age 5 --latest 128 --fastest 64 --number 32 --sort rate --save /etc/pacman.d/mirrorlist
+

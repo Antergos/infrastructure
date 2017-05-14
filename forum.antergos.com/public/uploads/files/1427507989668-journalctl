@@ -1,0 +1,954 @@
+-- Logs begin at Fri 2015-03-27 00:06:29 CET, end at Fri 2015-03-27 05:37:05 CET. --
+Mar 27 00:06:29 firebox systemd-journal[200]: Runtime journal is using 8.0M (max allowed 197.8M, trying to leave 296.7M free of 1.9G available → current limit 197.8M).
+Mar 27 00:06:29 firebox systemd-journal[200]: Permanent journal is using 8.0M (max allowed 2.8G, trying to leave 4.0G free of 22.4G available → current limit 2.8G).
+Mar 27 00:06:29 firebox systemd-journal[200]: Time spent on flushing to /var is 973us for 2 entries.
+Mar 27 00:06:29 firebox kernel: Initializing cgroup subsys cpuset
+Mar 27 00:06:29 firebox kernel: Initializing cgroup subsys cpu
+Mar 27 00:06:29 firebox kernel: Initializing cgroup subsys cpuacct
+Mar 27 00:06:29 firebox kernel: Linux version 3.19.2-1-ARCH (builduser@tobias) (gcc version 4.9.2 20150304 (prerelease) (GCC) ) #1 SMP PREEMPT Wed Mar 18 16:21:02 CET 2015
+Mar 27 00:06:29 firebox kernel: Command line: BOOT_IMAGE=/vmlinuz-linux root=UUID=ec3876cc-f8f2-4ee7-9c90-156352e85afe rw cryptdevice=/dev/disk/by-uuid/6226ef2a-a9d8-426f-94a7-b62ddf812a85:cryptAntergos quiet
+Mar 27 00:06:29 firebox kernel: tseg: 0000000000
+Mar 27 00:06:29 firebox kernel: e820: BIOS-provided physical RAM map:
+Mar 27 00:06:29 firebox kernel: BIOS-e820: [mem 0x0000000000000000-0x000000000009b3ff] usable
+Mar 27 00:06:29 firebox kernel: BIOS-e820: [mem 0x000000000009b400-0x000000000009ffff] reserved
+Mar 27 00:06:29 firebox kernel: BIOS-e820: [mem 0x00000000000e2000-0x00000000000fffff] reserved
+Mar 27 00:06:29 firebox kernel: BIOS-e820: [mem 0x0000000000100000-0x00000000bff8ffff] usable
+Mar 27 00:06:29 firebox kernel: BIOS-e820: [mem 0x00000000bff90000-0x00000000bff9dfff] ACPI data
+Mar 27 00:06:29 firebox kernel: BIOS-e820: [mem 0x00000000bff9e000-0x00000000bffdffff] ACPI NVS
+Mar 27 00:06:29 firebox kernel: BIOS-e820: [mem 0x00000000bffe0000-0x00000000bffedfff] reserved
+Mar 27 00:06:29 firebox kernel: BIOS-e820: [mem 0x00000000bfff0000-0x00000000bfffffff] reserved
+Mar 27 00:06:29 firebox kernel: BIOS-e820: [mem 0x00000000fec00000-0x00000000fec00fff] reserved
+Mar 27 00:06:29 firebox kernel: BIOS-e820: [mem 0x00000000fee00000-0x00000000feefffff] reserved
+Mar 27 00:06:29 firebox kernel: BIOS-e820: [mem 0x00000000fff00000-0x00000000ffffffff] reserved
+Mar 27 00:06:29 firebox kernel: BIOS-e820: [mem 0x0000000100000000-0x000000013fffffff] usable
+Mar 27 00:06:29 firebox kernel: NX (Execute Disable) protection: active
+Mar 27 00:06:29 firebox kernel: SMBIOS 2.5 present.
+Mar 27 00:06:29 firebox kernel: DMI: System manufacturer System Product Name/M2N68-AM Plus, BIOS 1802    06/10/2010
+Mar 27 00:06:29 firebox kernel: e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+Mar 27 00:06:29 firebox kernel: e820: remove [mem 0x000a0000-0x000fffff] usable
+Mar 27 00:06:29 firebox kernel: AGP: No AGP bridge found
+Mar 27 00:06:29 firebox kernel: e820: last_pfn = 0x140000 max_arch_pfn = 0x400000000
+Mar 27 00:06:29 firebox kernel: MTRR default type: uncachable
+Mar 27 00:06:29 firebox kernel: MTRR fixed ranges enabled:
+Mar 27 00:06:29 firebox kernel:   00000-9FFFF write-back
+Mar 27 00:06:29 firebox kernel:   A0000-EFFFF uncachable
+Mar 27 00:06:29 firebox kernel:   F0000-FFFFF write-protect
+Mar 27 00:06:29 firebox kernel: MTRR variable ranges enabled:
+Mar 27 00:06:29 firebox kernel:   0 base 0000000000 mask FF80000000 write-back
+Mar 27 00:06:29 firebox kernel:   1 base 0080000000 mask FFC0000000 write-back
+Mar 27 00:06:29 firebox kernel:   2 disabled
+Mar 27 00:06:29 firebox kernel:   3 disabled
+Mar 27 00:06:29 firebox kernel:   4 disabled
+Mar 27 00:06:29 firebox kernel:   5 disabled
+Mar 27 00:06:29 firebox kernel:   6 disabled
+Mar 27 00:06:29 firebox kernel:   7 disabled
+Mar 27 00:06:29 firebox kernel: TOM2: 0000000140000000 aka 5120M
+Mar 27 00:06:29 firebox kernel: PAT configuration [0-7]: WB  WC  UC- UC  WB  WC  UC- UC  
+Mar 27 00:06:29 firebox kernel: e820: update [mem 0xc0000000-0xffffffff] usable ==> reserved
+Mar 27 00:06:29 firebox kernel: e820: last_pfn = 0xbff90 max_arch_pfn = 0x400000000
+Mar 27 00:06:29 firebox kernel: found SMP MP-table at [mem 0x000ff780-0x000ff78f] mapped at [ffff8800000ff780]
+Mar 27 00:06:29 firebox kernel: Scanning 1 areas for low memory corruption
+Mar 27 00:06:29 firebox kernel: Base memory trampoline at [ffff880000095000] 95000 size 24576
+Mar 27 00:06:29 firebox kernel: init_memory_mapping: [mem 0x00000000-0x000fffff]
+Mar 27 00:06:29 firebox kernel:  [mem 0x00000000-0x000fffff] page 4k
+Mar 27 00:06:29 firebox kernel: BRK [0x01b32000, 0x01b32fff] PGTABLE
+Mar 27 00:06:29 firebox kernel: BRK [0x01b33000, 0x01b33fff] PGTABLE
+Mar 27 00:06:29 firebox kernel: BRK [0x01b34000, 0x01b34fff] PGTABLE
+Mar 27 00:06:29 firebox kernel: init_memory_mapping: [mem 0x13fe00000-0x13fffffff]
+Mar 27 00:06:29 firebox kernel:  [mem 0x13fe00000-0x13fffffff] page 2M
+Mar 27 00:06:29 firebox kernel: BRK [0x01b35000, 0x01b35fff] PGTABLE
+Mar 27 00:06:29 firebox kernel: init_memory_mapping: [mem 0x120000000-0x13fdfffff]
+Mar 27 00:06:29 firebox kernel:  [mem 0x120000000-0x13fdfffff] page 2M
+Mar 27 00:06:29 firebox kernel: init_memory_mapping: [mem 0x00100000-0xbff8ffff]
+Mar 27 00:06:29 firebox kernel:  [mem 0x00100000-0x001fffff] page 4k
+Mar 27 00:06:29 firebox kernel:  [mem 0x00200000-0xbfdfffff] page 2M
+Mar 27 00:06:29 firebox kernel:  [mem 0xbfe00000-0xbff8ffff] page 4k
+Mar 27 00:06:29 firebox kernel: init_memory_mapping: [mem 0x100000000-0x11fffffff]
+Mar 27 00:06:29 firebox kernel:  [mem 0x100000000-0x11fffffff] page 2M
+Mar 27 00:06:29 firebox kernel: RAMDISK: [mem 0x36ce0000-0x37667fff]
+Mar 27 00:06:29 firebox kernel: ACPI: Early table checksum verification disabled
+Mar 27 00:06:29 firebox kernel: ACPI: RSDP 0x00000000000FB5D0 000024 (v02 ACPIAM)
+Mar 27 00:06:29 firebox kernel: ACPI: XSDT 0x00000000BFF90100 00005C (v01 061010 XSDT2028 20100610 MSFT 00000097)
+Mar 27 00:06:29 firebox kernel: ACPI: FACP 0x00000000BFF90290 0000F4 (v03 061010 FACP2028 20100610 MSFT 00000097)
+Mar 27 00:06:29 firebox kernel: ACPI: DSDT 0x00000000BFF90460 007379 (v01 A1270  A1270000 00000000 INTL 20060113)
+Mar 27 00:06:29 firebox kernel: ACPI: FACS 0x00000000BFF9E000 000040
+Mar 27 00:06:29 firebox kernel: ACPI: APIC 0x00000000BFF90390 000090 (v01 061010 APIC2028 20100610 MSFT 00000097)
+Mar 27 00:06:29 firebox kernel: ACPI: MCFG 0x00000000BFF90420 00003C (v01 061010 OEMMCFG  20100610 MSFT 00000097)
+Mar 27 00:06:29 firebox kernel: ACPI: OEMB 0x00000000BFF9E040 000071 (v01 061010 OEMB2028 20100610 MSFT 00000097)
+Mar 27 00:06:29 firebox kernel: ACPI: SRAT 0x00000000BFF977E0 0000C8 (v01 AMD    FAM_F_10 00000002 AMD  00000001)
+Mar 27 00:06:29 firebox kernel: ACPI: HPET 0x00000000BFF978B0 000038 (v01 061010 OEMHPET0 20100610 MSFT 00000097)
+Mar 27 00:06:29 firebox kernel: ACPI: SSDT 0x00000000BFF978F0 0002CC (v01 A M I  POWERNOW 00000001 AMD  00000001)
+Mar 27 00:06:29 firebox kernel: ACPI: Local APIC address 0xfee00000
+Mar 27 00:06:29 firebox kernel: SRAT: PXM 0 -> APIC 0x00 -> Node 0
+Mar 27 00:06:29 firebox kernel: SRAT: PXM 0 -> APIC 0x01 -> Node 0
+Mar 27 00:06:29 firebox kernel: SRAT: Node 0 PXM 0 [mem 0x00000000-0x0009ffff]
+Mar 27 00:06:29 firebox kernel: SRAT: Node 0 PXM 0 [mem 0x00100000-0xbfffffff]
+Mar 27 00:06:29 firebox kernel: SRAT: Node 0 PXM 0 [mem 0x100000000-0x13fffffff]
+Mar 27 00:06:29 firebox kernel: NUMA: Node 0 [mem 0x00000000-0x0009ffff] + [mem 0x00100000-0xbfffffff] -> [mem 0x00000000-0xbfffffff]
+Mar 27 00:06:29 firebox kernel: NUMA: Node 0 [mem 0x00000000-0xbfffffff] + [mem 0x100000000-0x13fffffff] -> [mem 0x00000000-0x13fffffff]
+Mar 27 00:06:29 firebox kernel: NODE_DATA(0) allocated [mem 0x13fff9000-0x13fffcfff]
+Mar 27 00:06:29 firebox kernel:  [ffffea0000000000-ffffea0004ffffff] PMD -> [ffff88013b600000-ffff88013f5fffff] on node 0
+Mar 27 00:06:29 firebox kernel: Zone ranges:
+Mar 27 00:06:29 firebox kernel:   DMA      [mem 0x00001000-0x00ffffff]
+Mar 27 00:06:29 firebox kernel:   DMA32    [mem 0x01000000-0xffffffff]
+Mar 27 00:06:29 firebox kernel:   Normal   [mem 0x100000000-0x13fffffff]
+Mar 27 00:06:29 firebox kernel: Movable zone start for each node
+Mar 27 00:06:29 firebox kernel: Early memory node ranges
+Mar 27 00:06:29 firebox kernel:   node   0: [mem 0x00001000-0x0009afff]
+Mar 27 00:06:29 firebox kernel:   node   0: [mem 0x00100000-0xbff8ffff]
+Mar 27 00:06:29 firebox kernel:   node   0: [mem 0x100000000-0x13fffffff]
+Mar 27 00:06:29 firebox kernel: Initmem setup node 0 [mem 0x00001000-0x13fffffff]
+Mar 27 00:06:29 firebox kernel: On node 0 totalpages: 1048362
+Mar 27 00:06:29 firebox kernel:   DMA zone: 64 pages used for memmap
+Mar 27 00:06:29 firebox kernel:   DMA zone: 21 pages reserved
+Mar 27 00:06:29 firebox kernel:   DMA zone: 3994 pages, LIFO batch:0
+Mar 27 00:06:29 firebox kernel:   DMA32 zone: 12223 pages used for memmap
+Mar 27 00:06:29 firebox kernel:   DMA32 zone: 782224 pages, LIFO batch:31
+Mar 27 00:06:29 firebox kernel:   Normal zone: 4096 pages used for memmap
+Mar 27 00:06:29 firebox kernel:   Normal zone: 262144 pages, LIFO batch:31
+Mar 27 00:06:29 firebox kernel: Detected use of extended apic ids on hypertransport bus
+Mar 27 00:06:29 firebox kernel: ACPI: PM-Timer IO Port: 0x508
+Mar 27 00:06:29 firebox kernel: ACPI: Local APIC address 0xfee00000
+Mar 27 00:06:29 firebox kernel: ACPI: LAPIC (acpi_id[0x01] lapic_id[0x00] enabled)
+Mar 27 00:06:29 firebox kernel: ACPI: LAPIC (acpi_id[0x02] lapic_id[0x01] enabled)
+Mar 27 00:06:29 firebox kernel: ACPI: LAPIC (acpi_id[0x03] lapic_id[0x82] disabled)
+Mar 27 00:06:29 firebox kernel: ACPI: LAPIC (acpi_id[0x04] lapic_id[0x83] disabled)
+Mar 27 00:06:29 firebox kernel: ACPI: LAPIC (acpi_id[0x05] lapic_id[0x84] disabled)
+Mar 27 00:06:29 firebox kernel: ACPI: LAPIC (acpi_id[0x06] lapic_id[0x85] disabled)
+Mar 27 00:06:29 firebox kernel: ACPI: IOAPIC (id[0x02] address[0xfec00000] gsi_base[0])
+Mar 27 00:06:29 firebox kernel: IOAPIC[0]: apic_id 2, version 17, address 0xfec00000, GSI 0-23
+Mar 27 00:06:29 firebox kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+Mar 27 00:06:29 firebox kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 high level)
+Mar 27 00:06:29 firebox kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 14 global_irq 14 high edge)
+Mar 27 00:06:29 firebox kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 15 global_irq 15 high edge)
+Mar 27 00:06:29 firebox kernel: ACPI: IRQ0 used by override.
+Mar 27 00:06:29 firebox kernel: ACPI: IRQ9 used by override.
+Mar 27 00:06:29 firebox kernel: ACPI: IRQ14 used by override.
+Mar 27 00:06:29 firebox kernel: ACPI: IRQ15 used by override.
+Mar 27 00:06:29 firebox kernel: Using ACPI (MADT) for SMP configuration information
+Mar 27 00:06:29 firebox kernel: ACPI: HPET id: 0x10de8201 base: 0xfed00000
+Mar 27 00:06:29 firebox kernel: smpboot: Allowing 6 CPUs, 4 hotplug CPUs
+Mar 27 00:06:29 firebox kernel: PM: Registered nosave memory: [mem 0x00000000-0x00000fff]
+Mar 27 00:06:29 firebox kernel: PM: Registered nosave memory: [mem 0x0009b000-0x0009bfff]
+Mar 27 00:06:29 firebox kernel: PM: Registered nosave memory: [mem 0x0009c000-0x0009ffff]
+Mar 27 00:06:29 firebox kernel: PM: Registered nosave memory: [mem 0x000a0000-0x000e1fff]
+Mar 27 00:06:29 firebox kernel: PM: Registered nosave memory: [mem 0x000e2000-0x000fffff]
+Mar 27 00:06:29 firebox kernel: PM: Registered nosave memory: [mem 0xbff90000-0xbff9dfff]
+Mar 27 00:06:29 firebox kernel: PM: Registered nosave memory: [mem 0xbff9e000-0xbffdffff]
+Mar 27 00:06:29 firebox kernel: PM: Registered nosave memory: [mem 0xbffe0000-0xbffedfff]
+Mar 27 00:06:29 firebox kernel: PM: Registered nosave memory: [mem 0xbffee000-0xbffeffff]
+Mar 27 00:06:29 firebox kernel: PM: Registered nosave memory: [mem 0xbfff0000-0xbfffffff]
+Mar 27 00:06:29 firebox kernel: PM: Registered nosave memory: [mem 0xc0000000-0xfebfffff]
+Mar 27 00:06:29 firebox kernel: PM: Registered nosave memory: [mem 0xfec00000-0xfec00fff]
+Mar 27 00:06:29 firebox kernel: PM: Registered nosave memory: [mem 0xfec01000-0xfedfffff]
+Mar 27 00:06:29 firebox kernel: PM: Registered nosave memory: [mem 0xfee00000-0xfeefffff]
+Mar 27 00:06:29 firebox kernel: PM: Registered nosave memory: [mem 0xfef00000-0xffefffff]
+Mar 27 00:06:29 firebox kernel: PM: Registered nosave memory: [mem 0xfff00000-0xffffffff]
+Mar 27 00:06:29 firebox kernel: e820: [mem 0xc0000000-0xfebfffff] available for PCI devices
+Mar 27 00:06:29 firebox kernel: Booting paravirtualized kernel on bare hardware
+Mar 27 00:06:29 firebox kernel: setup_percpu: NR_CPUS:128 nr_cpumask_bits:128 nr_cpu_ids:6 nr_node_ids:1
+Mar 27 00:06:29 firebox kernel: PERCPU: Embedded 31 pages/cpu @ffff88013fc00000 s86336 r8192 d32448 u262144
+Mar 27 00:06:29 firebox kernel: pcpu-alloc: s86336 r8192 d32448 u262144 alloc=1*2097152
+Mar 27 00:06:29 firebox kernel: pcpu-alloc: [0] 0 1 2 3 4 5 - - 
+Mar 27 00:06:29 firebox kernel: Built 1 zonelists in Node order, mobility grouping on.  Total pages: 1031958
+Mar 27 00:06:29 firebox kernel: Policy zone: Normal
+Mar 27 00:06:29 firebox kernel: Kernel command line: BOOT_IMAGE=/vmlinuz-linux root=UUID=ec3876cc-f8f2-4ee7-9c90-156352e85afe rw cryptdevice=/dev/disk/by-uuid/6226ef2a-a9d8-426f-94a7-b62ddf812a85:cryptAntergos q
+Mar 27 00:06:29 firebox kernel: PID hash table entries: 4096 (order: 3, 32768 bytes)
+Mar 27 00:06:29 firebox kernel: AGP: Checking aperture...
+Mar 27 00:06:29 firebox kernel: AGP: No AGP bridge found
+Mar 27 00:06:29 firebox kernel: AGP: Node 0: aperture [bus addr 0xff8c000000-0xff8dffffff] (32MB)
+Mar 27 00:06:29 firebox kernel: Aperture beyond 4GB. Ignoring.
+Mar 27 00:06:29 firebox kernel: AGP: Your BIOS doesn't leave a aperture memory hole
+Mar 27 00:06:29 firebox kernel: AGP: Please enable the IOMMU option in the BIOS setup
+Mar 27 00:06:29 firebox kernel: AGP: This costs you 64MB of RAM
+Mar 27 00:06:29 firebox kernel: AGP: Mapping aperture over RAM [mem 0xb4000000-0xb7ffffff] (65536KB)
+Mar 27 00:06:29 firebox kernel: PM: Registered nosave memory: [mem 0xb4000000-0xb7ffffff]
+Mar 27 00:06:29 firebox kernel: Memory: 3973968K/4193448K available (5533K kernel code, 917K rwdata, 1744K rodata, 1164K init, 1156K bss, 219480K reserved, 0K cma-reserved)
+Mar 27 00:06:29 firebox kernel: SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=6, Nodes=1
+Mar 27 00:06:29 firebox kernel: Preemptible hierarchical RCU implementation.
+Mar 27 00:06:29 firebox kernel:         RCU dyntick-idle grace-period acceleration is enabled.
+Mar 27 00:06:29 firebox kernel:         RCU restricting CPUs from NR_CPUS=128 to nr_cpu_ids=6.
+Mar 27 00:06:29 firebox kernel: RCU: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=6
+Mar 27 00:06:29 firebox kernel: NR_IRQS:8448 nr_irqs:472 16
+Mar 27 00:06:29 firebox kernel: spurious 8259A interrupt: IRQ7.
+Mar 27 00:06:29 firebox kernel: Console: colour dummy device 80x25
+Mar 27 00:06:29 firebox kernel: console [tty0] enabled
+Mar 27 00:06:29 firebox kernel: hpet clockevent registered
+Mar 27 00:06:29 firebox kernel: tsc: Fast TSC calibration using PIT
+Mar 27 00:06:29 firebox kernel: tsc: Detected 2813.013 MHz processor
+Mar 27 00:06:29 firebox kernel: tsc: Marking TSC unstable due to TSCs unsynchronized
+Mar 27 00:06:29 firebox kernel: Calibrating delay loop (skipped), value calculated using timer frequency.. 5628.44 BogoMIPS (lpj=9376710)
+Mar 27 00:06:29 firebox kernel: pid_max: default: 32768 minimum: 301
+Mar 27 00:06:29 firebox kernel: ACPI: Core revision 20141107
+Mar 27 00:06:29 firebox kernel: ACPI: All ACPI Tables successfully acquired
+Mar 27 00:06:29 firebox kernel: Security Framework initialized
+Mar 27 00:06:29 firebox kernel: Yama: becoming mindful.
+Mar 27 00:06:29 firebox kernel: Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes)
+Mar 27 00:06:29 firebox kernel: Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes)
+Mar 27 00:06:29 firebox kernel: Mount-cache hash table entries: 8192 (order: 4, 65536 bytes)
+Mar 27 00:06:29 firebox kernel: Mountpoint-cache hash table entries: 8192 (order: 4, 65536 bytes)
+Mar 27 00:06:29 firebox kernel: Initializing cgroup subsys memory
+Mar 27 00:06:29 firebox kernel: Initializing cgroup subsys devices
+Mar 27 00:06:29 firebox kernel: Initializing cgroup subsys freezer
+Mar 27 00:06:29 firebox kernel: Initializing cgroup subsys net_cls
+Mar 27 00:06:29 firebox kernel: Initializing cgroup subsys blkio
+Mar 27 00:06:29 firebox kernel: CPU: Physical Processor ID: 0
+Mar 27 00:06:29 firebox kernel: CPU: Processor Core ID: 0
+Mar 27 00:06:29 firebox kernel: mce: CPU supports 5 MCE banks
+Mar 27 00:06:29 firebox kernel: LVT offset 0 assigned for vector 0xf9
+Mar 27 00:06:29 firebox kernel: process: using AMD E400 aware idle routine
+Mar 27 00:06:29 firebox kernel: Last level iTLB entries: 4KB 512, 2MB 8, 4MB 4
+                                Last level dTLB entries: 4KB 512, 2MB 8, 4MB 4, 1GB 0
+Mar 27 00:06:29 firebox kernel: Freeing SMP alternatives memory: 20K (ffffffff81a0a000 - ffffffff81a0f000)
+Mar 27 00:06:29 firebox kernel: ftrace: allocating 21170 entries in 83 pages
+Mar 27 00:06:29 firebox kernel: ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+Mar 27 00:06:29 firebox kernel: smpboot: CPU0: AMD Athlon(tm) 64 X2 Dual Core Processor 5600+ (fam: 0f, model: 43, stepping: 03)
+Mar 27 00:06:29 firebox kernel: Performance Events: AMD PMU driver.
+Mar 27 00:06:29 firebox kernel: ... version:                0
+Mar 27 00:06:29 firebox kernel: ... bit width:              48
+Mar 27 00:06:29 firebox kernel: ... generic registers:      4
+Mar 27 00:06:29 firebox kernel: ... value mask:             0000ffffffffffff
+Mar 27 00:06:29 firebox kernel: ... max period:             00007fffffffffff
+Mar 27 00:06:29 firebox kernel: ... fixed-purpose events:   0
+Mar 27 00:06:29 firebox kernel: ... event mask:             000000000000000f
+Mar 27 00:06:29 firebox kernel: NMI watchdog: enabled on all CPUs, permanently consumes one hw-PMU counter.
+Mar 27 00:06:29 firebox kernel: x86: Booting SMP configuration:
+Mar 27 00:06:29 firebox kernel: .... node  #0, CPUs:      #1
+Mar 27 00:06:29 firebox kernel: x86: Booted up 1 node, 2 CPUs
+Mar 27 00:06:29 firebox kernel: smpboot: Total of 2 processors activated (11256.34 BogoMIPS)
+Mar 27 00:06:29 firebox kernel: devtmpfs: initialized
+Mar 27 00:06:29 firebox kernel: PM: Registering ACPI NVS region [mem 0xbff9e000-0xbffdffff] (270336 bytes)
+Mar 27 00:06:29 firebox kernel: pinctrl core: initialized pinctrl subsystem
+Mar 27 00:06:29 firebox kernel: RTC time: 23:05:35, date: 03/26/15
+Mar 27 00:06:29 firebox kernel: NET: Registered protocol family 16
+Mar 27 00:06:29 firebox kernel: cpuidle: using governor ladder
+Mar 27 00:06:29 firebox kernel: cpuidle: using governor menu
+Mar 27 00:06:29 firebox kernel: node 0 link 0: io port [5000, ffffff]
+Mar 27 00:06:29 firebox kernel: TOM: 00000000c0000000 aka 3072M
+Mar 27 00:06:29 firebox kernel: node 0 link 0: mmio [e0000000, efffffff]
+Mar 27 00:06:29 firebox kernel: node 0 link 0: mmio [a0000, bffff]
+Mar 27 00:06:29 firebox kernel: node 0 link 0: mmio [c0000000, fe0bffff]
+Mar 27 00:06:29 firebox kernel: TOM2: 0000000140000000 aka 5120M
+Mar 27 00:06:29 firebox kernel: bus: [bus 00-07] on node 0 link 0
+Mar 27 00:06:29 firebox kernel: bus: 00 [io  0x0000-0xffff]
+Mar 27 00:06:29 firebox kernel: bus: 00 [mem 0xc0000000-0xffffffff]
+Mar 27 00:06:29 firebox kernel: bus: 00 [mem 0x000a0000-0x000bffff]
+Mar 27 00:06:29 firebox kernel: bus: 00 [mem 0x140000000-0xfcffffffff]
+Mar 27 00:06:29 firebox kernel: ACPI: bus type PCI registered
+Mar 27 00:06:29 firebox kernel: acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+Mar 27 00:06:29 firebox kernel: PCI: MMCONFIG for domain 0000 [bus 00-ff] at [mem 0xe0000000-0xefffffff] (base 0xe0000000)
+Mar 27 00:06:29 firebox kernel: PCI: not using MMCONFIG
+Mar 27 00:06:29 firebox kernel: PCI: Using configuration type 1 for base access
+Mar 27 00:06:29 firebox kernel: mtrr: your CPUs had inconsistent variable MTRR settings
+Mar 27 00:06:29 firebox kernel: mtrr: probably your BIOS does not setup all CPUs.
+Mar 27 00:06:29 firebox kernel: mtrr: corrected configuration.
+Mar 27 00:06:29 firebox kernel: ACPI: Added _OSI(Module Device)
+Mar 27 00:06:29 firebox kernel: ACPI: Added _OSI(Processor Device)
+Mar 27 00:06:29 firebox kernel: ACPI: Added _OSI(3.0 _SCP Extensions)
+Mar 27 00:06:29 firebox kernel: ACPI: Added _OSI(Processor Aggregator Device)
+Mar 27 00:06:29 firebox kernel: ACPI: Executed 1 blocks of module-level executable AML code
+Mar 27 00:06:29 firebox kernel: ACPI: Interpreter enabled
+Mar 27 00:06:29 firebox kernel: ACPI Exception: AE_NOT_FOUND, While evaluating Sleep State [\_S2_] (20141107/hwxface-580)
+Mar 27 00:06:29 firebox kernel: ACPI: (supports S0 S1 S3 S4 S5)
+Mar 27 00:06:29 firebox kernel: ACPI: Using IOAPIC for interrupt routing
+Mar 27 00:06:29 firebox kernel: PCI: MMCONFIG for domain 0000 [bus 00-ff] at [mem 0xe0000000-0xefffffff] (base 0xe0000000)
+Mar 27 00:06:29 firebox kernel: PCI: MMCONFIG at [mem 0xe0000000-0xefffffff] reserved in ACPI motherboard resources
+Mar 27 00:06:29 firebox kernel: PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+Mar 27 00:06:29 firebox kernel: ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+Mar 27 00:06:29 firebox kernel: acpi PNP0A03:00: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI]
+Mar 27 00:06:29 firebox kernel: acpi PNP0A03:00: _OSC: platform does not support [PCIeHotplug PCIeCapability]
+Mar 27 00:06:29 firebox kernel: acpi PNP0A03:00: _OSC: not requesting control; platform does not support [PCIeCapability]
+Mar 27 00:06:29 firebox kernel: acpi PNP0A03:00: _OSC: OS requested [PCIeHotplug PME AER PCIeCapability]
+Mar 27 00:06:29 firebox kernel: acpi PNP0A03:00: _OSC: platform willing to grant [PME AER]
+Mar 27 00:06:29 firebox kernel: acpi PNP0A03:00: _OSC failed (AE_SUPPORT); disabling ASPM
+Mar 27 00:06:29 firebox kernel: PCI host bridge to bus 0000:00
+Mar 27 00:06:29 firebox kernel: pci_bus 0000:00: root bus resource [bus 00-ff]
+Mar 27 00:06:29 firebox kernel: pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7]
+Mar 27 00:06:29 firebox kernel: pci_bus 0000:00: root bus resource [io  0x0d00-0xffff]
+Mar 27 00:06:29 firebox kernel: pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff]
+Mar 27 00:06:29 firebox kernel: pci_bus 0000:00: root bus resource [mem 0x000d0000-0x000dffff]
+Mar 27 00:06:29 firebox kernel: pci_bus 0000:00: root bus resource [mem 0xc0000000-0xdfffffff]
+Mar 27 00:06:29 firebox kernel: pci_bus 0000:00: root bus resource [mem 0xf0000000-0xfed44fff]
+Mar 27 00:06:29 firebox kernel: pci 0000:00:00.0: [10de:03e2] type 00 class 0x050000
+Mar 27 00:06:29 firebox kernel: pci 0000:00:01.0: [10de:03e1] type 00 class 0x060100
+Mar 27 00:06:29 firebox kernel: pci 0000:00:01.0: reg 0x10: [io  0x0900-0x09ff]
+Mar 27 00:06:29 firebox kernel: pci 0000:00:01.1: [10de:03eb] type 00 class 0x0c0500
+Mar 27 00:06:29 firebox kernel: pci 0000:00:01.1: reg 0x10: [io  0x0e00-0x0e3f]
+Mar 27 00:06:29 firebox kernel: pci 0000:00:01.1: reg 0x20: [io  0x0600-0x063f]
+Mar 27 00:06:29 firebox kernel: pci 0000:00:01.1: reg 0x24: [io  0x0700-0x073f]
+Mar 27 00:06:29 firebox kernel: pci 0000:00:01.1: PME# supported from D3hot D3cold
+Mar 27 00:06:29 firebox kernel: pci 0000:00:01.1: System wakeup disabled by ACPI
+Mar 27 00:06:29 firebox kernel: pci 0000:00:01.2: [10de:03f5] type 00 class 0x050000
+Mar 27 00:06:29 firebox kernel: pci 0000:00:02.0: [10de:03f1] type 00 class 0x0c0310
+Mar 27 00:06:29 firebox kernel: pci 0000:00:02.0: reg 0x10: [mem 0xdbffb000-0xdbffbfff]
+Mar 27 00:06:29 firebox kernel: pci 0000:00:02.0: supports D1 D2
+Mar 27 00:06:29 firebox kernel: pci 0000:00:02.0: PME# supported from D0 D1 D2 D3hot D3cold
+Mar 27 00:06:29 firebox kernel: pci 0000:00:02.0: System wakeup disabled by ACPI
+Mar 27 00:06:29 firebox kernel: pci 0000:00:02.1: [10de:03f2] type 00 class 0x0c0320
+Mar 27 00:06:29 firebox kernel: pci 0000:00:02.1: reg 0x10: [mem 0xdbffac00-0xdbffacff]
+Mar 27 00:06:29 firebox kernel: pci 0000:00:02.1: supports D1 D2
+Mar 27 00:06:29 firebox kernel: pci 0000:00:02.1: PME# supported from D0 D1 D2 D3hot D3cold
+Mar 27 00:06:29 firebox kernel: pci 0000:00:02.1: System wakeup disabled by ACPI
+Mar 27 00:06:29 firebox kernel: pci 0000:00:04.0: [10de:03f3] type 01 class 0x060401
+Mar 27 00:06:29 firebox kernel: pci 0000:00:04.0: System wakeup disabled by ACPI
+Mar 27 00:06:29 firebox kernel: pci 0000:00:05.0: [10de:03f0] type 00 class 0x040300
+Mar 27 00:06:29 firebox kernel: pci 0000:00:05.0: reg 0x10: [mem 0xdbff4000-0xdbff7fff]
+Mar 27 00:06:29 firebox kernel: pci 0000:00:05.0: PME# supported from D3hot D3cold
+Mar 27 00:06:29 firebox kernel: pci 0000:00:05.0: System wakeup disabled by ACPI
+Mar 27 00:06:29 firebox kernel: pci 0000:00:06.0: [10de:03ec] type 00 class 0x01018a
+Mar 27 00:06:29 firebox kernel: pci 0000:00:06.0: reg 0x20: [io  0xffa0-0xffaf]
+Mar 27 00:06:29 firebox kernel: pci 0000:00:06.0: legacy IDE quirk: reg 0x10: [io  0x01f0-0x01f7]
+Mar 27 00:06:29 firebox kernel: pci 0000:00:06.0: legacy IDE quirk: reg 0x14: [io  0x03f6]
+Mar 27 00:06:29 firebox kernel: pci 0000:00:06.0: legacy IDE quirk: reg 0x18: [io  0x0170-0x0177]
+Mar 27 00:06:29 firebox kernel: pci 0000:00:06.0: legacy IDE quirk: reg 0x1c: [io  0x0376]
+Mar 27 00:06:29 firebox kernel: pci 0000:00:08.0: [10de:03f6] type 00 class 0x010185
+Mar 27 00:06:29 firebox kernel: pci 0000:00:08.0: reg 0x10: [io  0xd480-0xd487]
+Mar 27 00:06:29 firebox kernel: pci 0000:00:08.0: reg 0x14: [io  0xd400-0xd403]
+Mar 27 00:06:29 firebox kernel: pci 0000:00:08.0: reg 0x18: [io  0xd080-0xd087]
+Mar 27 00:06:29 firebox kernel: pci 0000:00:08.0: reg 0x1c: [io  0xd000-0xd003]
+Mar 27 00:06:29 firebox kernel: pci 0000:00:08.0: reg 0x20: [io  0xcc00-0xcc0f]
+Mar 27 00:06:29 firebox kernel: pci 0000:00:08.0: reg 0x24: [mem 0xdbff9000-0xdbff9fff]
+Mar 27 00:06:29 firebox kernel: pci 0000:00:08.1: [10de:03f6] type 00 class 0x010185
+Mar 27 00:06:29 firebox kernel: pci 0000:00:08.1: reg 0x10: [io  0xc880-0xc887]
+Mar 27 00:06:29 firebox kernel: pci 0000:00:08.1: reg 0x14: [io  0xc800-0xc803]
+Mar 27 00:06:29 firebox kernel: pci 0000:00:08.1: reg 0x18: [io  0xc480-0xc487]
+Mar 27 00:06:29 firebox kernel: pci 0000:00:08.1: reg 0x1c: [io  0xc400-0xc403]
+Mar 27 00:06:29 firebox kernel: pci 0000:00:08.1: reg 0x20: [io  0xc080-0xc08f]
+Mar 27 00:06:29 firebox kernel: pci 0000:00:08.1: reg 0x24: [mem 0xdbff8000-0xdbff8fff]
+Mar 27 00:06:29 firebox kernel: pci 0000:00:09.0: [10de:03e8] type 01 class 0x060400
+Mar 27 00:06:29 firebox kernel: pci 0000:00:09.0: PME# supported from D0 D1 D2 D3hot D3cold
+Mar 27 00:06:29 firebox kernel: pci 0000:00:09.0: System wakeup disabled by ACPI
+Mar 27 00:06:29 firebox kernel: pci 0000:00:0b.0: [10de:03e9] type 01 class 0x060400
+Mar 27 00:06:29 firebox kernel: pci 0000:00:0b.0: PME# supported from D0 D1 D2 D3hot D3cold
+Mar 27 00:06:29 firebox kernel: pci 0000:00:0b.0: System wakeup disabled by ACPI
+Mar 27 00:06:29 firebox kernel: pci 0000:00:0c.0: [10de:03e9] type 01 class 0x060400
+Mar 27 00:06:29 firebox kernel: pci 0000:00:0c.0: PME# supported from D0 D1 D2 D3hot D3cold
+Mar 27 00:06:29 firebox kernel: pci 0000:00:0c.0: System wakeup disabled by ACPI
+Mar 27 00:06:29 firebox kernel: pci 0000:00:18.0: [1022:1100] type 00 class 0x060000
+Mar 27 00:06:29 firebox kernel: pci 0000:00:18.1: [1022:1101] type 00 class 0x060000
+Mar 27 00:06:29 firebox kernel: pci 0000:00:18.2: [1022:1102] type 00 class 0x060000
+Mar 27 00:06:29 firebox kernel: pci 0000:00:18.3: [1022:1103] type 00 class 0x060000
+Mar 27 00:06:29 firebox kernel: pci 0000:00:04.0: PCI bridge to [bus 01] (subtractive decode)
+Mar 27 00:06:29 firebox kernel: pci 0000:00:04.0:   bridge window [io  0x0000-0x0cf7] (subtractive decode)
+Mar 27 00:06:29 firebox kernel: pci 0000:00:04.0:   bridge window [io  0x0d00-0xffff] (subtractive decode)
+Mar 27 00:06:29 firebox kernel: pci 0000:00:04.0:   bridge window [mem 0x000a0000-0x000bffff] (subtractive decode)
+Mar 27 00:06:29 firebox kernel: pci 0000:00:04.0:   bridge window [mem 0x000d0000-0x000dffff] (subtractive decode)
+Mar 27 00:06:29 firebox kernel: pci 0000:00:04.0:   bridge window [mem 0xc0000000-0xdfffffff] (subtractive decode)
+Mar 27 00:06:29 firebox kernel: pci 0000:00:04.0:   bridge window [mem 0xf0000000-0xfed44fff] (subtractive decode)
+Mar 27 00:06:29 firebox kernel: pci 0000:02:00.0: [10de:0611] type 00 class 0x030000
+Mar 27 00:06:29 firebox kernel: pci 0000:02:00.0: reg 0x10: [mem 0xdf000000-0xdfffffff]
+Mar 27 00:06:29 firebox kernel: pci 0000:02:00.0: reg 0x14: [mem 0xc0000000-0xcfffffff 64bit pref]
+Mar 27 00:06:29 firebox kernel: pci 0000:02:00.0: reg 0x1c: [mem 0xdc000000-0xddffffff 64bit]
+Mar 27 00:06:29 firebox kernel: pci 0000:02:00.0: reg 0x24: [io  0xec00-0xec7f]
+Mar 27 00:06:29 firebox kernel: pci 0000:02:00.0: reg 0x30: [mem 0xdefe0000-0xdeffffff pref]
+Mar 27 00:06:29 firebox kernel: pci 0000:00:09.0: PCI bridge to [bus 02]
+Mar 27 00:06:29 firebox kernel: pci 0000:00:09.0:   bridge window [io  0xe000-0xefff]
+Mar 27 00:06:29 firebox kernel: pci 0000:00:09.0:   bridge window [mem 0xdc000000-0xdfffffff]
+Mar 27 00:06:29 firebox kernel: pci 0000:00:09.0:   bridge window [mem 0xc0000000-0xcfffffff 64bit pref]
+Mar 27 00:06:29 firebox kernel: pci 0000:00:0b.0: PCI bridge to [bus 03]
+Mar 27 00:06:29 firebox kernel: pci 0000:00:0c.0: PCI bridge to [bus 04]
+Mar 27 00:06:29 firebox kernel: pci_bus 0000:00: on NUMA node 0
+Mar 27 00:06:29 firebox kernel: ACPI: PCI Interrupt Link [LNKA] (IRQs 16 17 18 19) *0, disabled.
+Mar 27 00:06:29 firebox kernel: ACPI: PCI Interrupt Link [LNKB] (IRQs 16 17 18 19) *0, disabled.
+Mar 27 00:06:29 firebox kernel: ACPI: PCI Interrupt Link [LNKC] (IRQs 16 17 18 19) *0, disabled.
+Mar 27 00:06:29 firebox kernel: ACPI: PCI Interrupt Link [LNKD] (IRQs 16 17 18 19) *0, disabled.
+Mar 27 00:06:29 firebox kernel: ACPI: PCI Interrupt Link [LNEA] (IRQs 16 17 18 19) *0, disabled.
+Mar 27 00:06:29 firebox kernel: ACPI: PCI Interrupt Link [LNEB] (IRQs 16 17 18 19) *0, disabled.
+Mar 27 00:06:29 firebox kernel: ACPI: PCI Interrupt Link [LNEC] (IRQs 16 17 18 19) *0, disabled.
+Mar 27 00:06:29 firebox kernel: ACPI: PCI Interrupt Link [LNED] (IRQs 16 17 18 19) *11
+Mar 27 00:06:29 firebox kernel: ACPI: PCI Interrupt Link [LUB0] (IRQs 20 21 22 23) *5
+Mar 27 00:06:29 firebox kernel: ACPI: PCI Interrupt Link [LUB2] (IRQs 20 21 22 23) *11
+Mar 27 00:06:29 firebox kernel: ACPI: PCI Interrupt Link [LMAC] (IRQs 20 21 22 23) *0, disabled.
+Mar 27 00:06:29 firebox kernel: ACPI: PCI Interrupt Link [LAZA] (IRQs 20 21 22 23) *10
+Mar 27 00:06:29 firebox kernel: ACPI: PCI Interrupt Link [LMC9] (IRQs 20 21 22 23) *0, disabled.
+Mar 27 00:06:29 firebox kernel: ACPI: PCI Interrupt Link [LSMB] (IRQs 20 21 22 23) *10
+Mar 27 00:06:29 firebox kernel: ACPI: PCI Interrupt Link [LPMU] (IRQs 20 21 22 23) *0, disabled.
+Mar 27 00:06:29 firebox kernel: ACPI: PCI Interrupt Link [LSA0] (IRQs 20 21 22 23) *5
+Mar 27 00:06:29 firebox kernel: ACPI: PCI Interrupt Link [LSA1] (IRQs 20 21 22 23) *11
+Mar 27 00:06:29 firebox kernel: ACPI: PCI Interrupt Link [LATA] (IRQs 20 21 22 23) *0, disabled.
+Mar 27 00:06:29 firebox kernel: vgaarb: setting as boot device: PCI:0000:02:00.0
+Mar 27 00:06:29 firebox kernel: vgaarb: device added: PCI:0000:02:00.0,decodes=io+mem,owns=io+mem,locks=none
+Mar 27 00:06:29 firebox kernel: vgaarb: loaded
+Mar 27 00:06:29 firebox kernel: vgaarb: bridge control possible 0000:02:00.0
+Mar 27 00:06:29 firebox kernel: PCI: Using ACPI for IRQ routing
+Mar 27 00:06:29 firebox kernel: PCI: pci_cache_line_size set to 64 bytes
+Mar 27 00:06:29 firebox kernel: e820: reserve RAM buffer [mem 0x0009b400-0x0009ffff]
+Mar 27 00:06:29 firebox kernel: e820: reserve RAM buffer [mem 0xbff90000-0xbfffffff]
+Mar 27 00:06:29 firebox kernel: NetLabel: Initializing
+Mar 27 00:06:29 firebox kernel: NetLabel:  domain hash size = 128
+Mar 27 00:06:29 firebox kernel: NetLabel:  protocols = UNLABELED CIPSOv4
+Mar 27 00:06:29 firebox kernel: NetLabel:  unlabeled traffic allowed by default
+Mar 27 00:06:29 firebox kernel: HPET: 3 timers in total, 0 timers will be used for per-cpu timer
+Mar 27 00:06:29 firebox kernel: hpet0: at MMIO 0xfed00000, IRQs 2, 8, 31
+Mar 27 00:06:29 firebox kernel: hpet0: 3 comparators, 32-bit 25.000000 MHz counter
+Mar 27 00:06:29 firebox kernel: Switched to clocksource hpet
+Mar 27 00:06:29 firebox kernel: pnp: PnP ACPI init
+Mar 27 00:06:29 firebox kernel: pnp 00:00: Plug and Play ACPI device, IDs PNP0b00 (active)
+Mar 27 00:06:29 firebox kernel: pnp 00:01: [dma 0 disabled]
+Mar 27 00:06:29 firebox kernel: pnp 00:01: Plug and Play ACPI device, IDs PNP0400 (active)
+Mar 27 00:06:29 firebox kernel: pnp 00:02: disabling [io  0x0900-0x097f] because it overlaps 0000:00:01.0 BAR 0 [io  0x0900-0x09ff]
+Mar 27 00:06:29 firebox kernel: pnp 00:02: disabling [io  0x0980-0x09ff] because it overlaps 0000:00:01.0 BAR 0 [io  0x0900-0x09ff]
+Mar 27 00:06:29 firebox kernel: system 00:02: [io  0x04d0-0x04d1] has been reserved
+Mar 27 00:06:29 firebox kernel: system 00:02: [io  0x0800-0x080f] has been reserved
+Mar 27 00:06:29 firebox kernel: system 00:02: [io  0x0500-0x057f] could not be reserved
+Mar 27 00:06:29 firebox kernel: system 00:02: [io  0x0580-0x05ff] has been reserved
+Mar 27 00:06:29 firebox kernel: system 00:02: [io  0x0800-0x087f] could not be reserved
+Mar 27 00:06:29 firebox kernel: system 00:02: [io  0x0880-0x08ff] has been reserved
+Mar 27 00:06:29 firebox kernel: system 00:02: [io  0x0d00-0x0d7f] has been reserved
+Mar 27 00:06:29 firebox kernel: system 00:02: [io  0x0d80-0x0dff] has been reserved
+Mar 27 00:06:29 firebox kernel: system 00:02: [io  0x1100-0x117f] has been reserved
+Mar 27 00:06:29 firebox kernel: system 00:02: [io  0x1180-0x11ff] has been reserved
+Mar 27 00:06:29 firebox kernel: system 00:02: [mem 0x000d0000-0x000d3fff window] has been reserved
+Mar 27 00:06:29 firebox kernel: system 00:02: [mem 0x000d4000-0x000d7fff window] has been reserved
+Mar 27 00:06:29 firebox kernel: system 00:02: [mem 0x000de000-0x000dffff window] has been reserved
+Mar 27 00:06:29 firebox kernel: system 00:02: [mem 0xfec80000-0x1fd93ffff] could not be reserved
+Mar 27 00:06:29 firebox kernel: system 00:02: [mem 0xfefe0000-0xfefe01ff] has been reserved
+Mar 27 00:06:29 firebox kernel: system 00:02: [mem 0xfefe1000-0xfefe1fff] has been reserved
+Mar 27 00:06:29 firebox kernel: system 00:02: [mem 0xfee01000-0xfeefffff] has been reserved
+Mar 27 00:06:29 firebox kernel: system 00:02: Plug and Play ACPI device, IDs PNP0c02 (active)
+Mar 27 00:06:29 firebox kernel: system 00:03: [mem 0xfec00000-0xfec00fff] could not be reserved
+Mar 27 00:06:29 firebox kernel: system 00:03: [mem 0xfee00000-0xfee00fff] has been reserved
+Mar 27 00:06:29 firebox kernel: system 00:03: Plug and Play ACPI device, IDs PNP0c02 (active)
+Mar 27 00:06:29 firebox kernel: pnp 00:04: Plug and Play ACPI device, IDs PNP0303 PNP030b (active)
+Mar 27 00:06:29 firebox kernel: system 00:05: [io  0x0230-0x023f] has been reserved
+Mar 27 00:06:29 firebox kernel: system 00:05: [io  0x0290-0x029f] has been reserved
+Mar 27 00:06:29 firebox kernel: system 00:05: [io  0x0a00-0x0a0f] has been reserved
+Mar 27 00:06:29 firebox kernel: system 00:05: [io  0x0a10-0x0a1f] has been reserved
+Mar 27 00:06:29 firebox kernel: system 00:05: Plug and Play ACPI device, IDs PNP0c02 (active)
+Mar 27 00:06:29 firebox kernel: pnp 00:06: [dma 0 disabled]
+Mar 27 00:06:29 firebox kernel: pnp 00:06: Plug and Play ACPI device, IDs PNP0501 (active)
+Mar 27 00:06:29 firebox kernel: system 00:07: [mem 0xe0000000-0xefffffff] has been reserved
+Mar 27 00:06:29 firebox kernel: system 00:07: Plug and Play ACPI device, IDs PNP0c02 (active)
+Mar 27 00:06:29 firebox kernel: system 00:08: [mem 0x00000000-0x0009ffff] could not be reserved
+Mar 27 00:06:29 firebox kernel: system 00:08: [mem 0x000c0000-0x000cffff] could not be reserved
+Mar 27 00:06:29 firebox kernel: system 00:08: [mem 0x000e0000-0x000fffff] could not be reserved
+Mar 27 00:06:29 firebox kernel: system 00:08: [mem 0x00100000-0xbfffffff] could not be reserved
+Mar 27 00:06:29 firebox kernel: system 00:08: [mem 0xfed45000-0xffffffff] could not be reserved
+Mar 27 00:06:29 firebox kernel: system 00:08: Plug and Play ACPI device, IDs PNP0c01 (active)
+Mar 27 00:06:29 firebox kernel: pnp: PnP ACPI: found 9 devices
+Mar 27 00:06:29 firebox kernel: pci 0000:00:04.0: PCI bridge to [bus 01]
+Mar 27 00:06:29 firebox kernel: pci 0000:00:09.0: PCI bridge to [bus 02]
+Mar 27 00:06:29 firebox kernel: pci 0000:00:09.0:   bridge window [io  0xe000-0xefff]
+Mar 27 00:06:29 firebox kernel: pci 0000:00:09.0:   bridge window [mem 0xdc000000-0xdfffffff]
+Mar 27 00:06:29 firebox kernel: pci 0000:00:09.0:   bridge window [mem 0xc0000000-0xcfffffff 64bit pref]
+Mar 27 00:06:29 firebox kernel: pci 0000:00:0b.0: PCI bridge to [bus 03]
+Mar 27 00:06:29 firebox kernel: pci 0000:00:0c.0: PCI bridge to [bus 04]
+Mar 27 00:06:29 firebox kernel: pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7]
+Mar 27 00:06:29 firebox kernel: pci_bus 0000:00: resource 5 [io  0x0d00-0xffff]
+Mar 27 00:06:29 firebox kernel: pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000bffff]
+Mar 27 00:06:29 firebox kernel: pci_bus 0000:00: resource 7 [mem 0x000d0000-0x000dffff]
+Mar 27 00:06:29 firebox kernel: pci_bus 0000:00: resource 8 [mem 0xc0000000-0xdfffffff]
+Mar 27 00:06:29 firebox kernel: pci_bus 0000:00: resource 9 [mem 0xf0000000-0xfed44fff]
+Mar 27 00:06:29 firebox kernel: pci_bus 0000:01: resource 4 [io  0x0000-0x0cf7]
+Mar 27 00:06:29 firebox kernel: pci_bus 0000:01: resource 5 [io  0x0d00-0xffff]
+Mar 27 00:06:29 firebox kernel: pci_bus 0000:01: resource 6 [mem 0x000a0000-0x000bffff]
+Mar 27 00:06:29 firebox kernel: pci_bus 0000:01: resource 7 [mem 0x000d0000-0x000dffff]
+Mar 27 00:06:29 firebox kernel: pci_bus 0000:01: resource 8 [mem 0xc0000000-0xdfffffff]
+Mar 27 00:06:29 firebox kernel: pci_bus 0000:01: resource 9 [mem 0xf0000000-0xfed44fff]
+Mar 27 00:06:29 firebox kernel: pci_bus 0000:02: resource 0 [io  0xe000-0xefff]
+Mar 27 00:06:29 firebox kernel: pci_bus 0000:02: resource 1 [mem 0xdc000000-0xdfffffff]
+Mar 27 00:06:29 firebox kernel: pci_bus 0000:02: resource 2 [mem 0xc0000000-0xcfffffff 64bit pref]
+Mar 27 00:06:29 firebox kernel: NET: Registered protocol family 2
+Mar 27 00:06:29 firebox kernel: TCP established hash table entries: 32768 (order: 6, 262144 bytes)
+Mar 27 00:06:29 firebox kernel: TCP bind hash table entries: 32768 (order: 7, 524288 bytes)
+Mar 27 00:06:29 firebox kernel: TCP: Hash tables configured (established 32768 bind 32768)
+Mar 27 00:06:29 firebox kernel: TCP: reno registered
+Mar 27 00:06:29 firebox kernel: UDP hash table entries: 2048 (order: 4, 65536 bytes)
+Mar 27 00:06:29 firebox kernel: UDP-Lite hash table entries: 2048 (order: 4, 65536 bytes)
+Mar 27 00:06:29 firebox kernel: NET: Registered protocol family 1
+Mar 27 00:06:29 firebox kernel: ACPI: PCI Interrupt Link [LUB0] enabled at IRQ 23
+Mar 27 00:06:29 firebox kernel: ACPI: PCI Interrupt Link [LUB2] enabled at IRQ 22
+Mar 27 00:06:29 firebox kernel: pci 0000:00:00.0: Found enabled HT MSI Mapping
+Mar 27 00:06:29 firebox kernel: pci 0000:00:00.0: Found enabled HT MSI Mapping
+Mar 27 00:06:29 firebox kernel: pci 0000:00:00.0: Found enabled HT MSI Mapping
+Mar 27 00:06:29 firebox kernel: pci 0000:00:00.0: Found enabled HT MSI Mapping
+Mar 27 00:06:29 firebox kernel: pci 0000:00:00.0: Found enabled HT MSI Mapping
+Mar 27 00:06:29 firebox kernel: pci 0000:00:00.0: Found enabled HT MSI Mapping
+Mar 27 00:06:29 firebox kernel: pci 0000:00:00.0: Found enabled HT MSI Mapping
+Mar 27 00:06:29 firebox kernel: pci 0000:02:00.0: Video device with shadowed ROM
+Mar 27 00:06:29 firebox kernel: PCI: CLS 64 bytes, default 64
+Mar 27 00:06:29 firebox kernel: Unpacking initramfs...
+Mar 27 00:06:29 firebox kernel: Freeing initrd memory: 9760K (ffff880036ce0000 - ffff880037668000)
+Mar 27 00:06:29 firebox kernel: PCI-DMA: Disabling AGP.
+Mar 27 00:06:29 firebox kernel: PCI-DMA: aperture base @ b4000000 size 65536 KB
+Mar 27 00:06:29 firebox kernel: PCI-DMA: using GART IOMMU.
+Mar 27 00:06:29 firebox kernel: PCI-DMA: Reserving 64MB of IOMMU area in the AGP aperture
+Mar 27 00:06:29 firebox kernel: microcode: AMD CPU family 0xf not supported
+Mar 27 00:06:29 firebox kernel: Scanning for low memory corruption every 60 seconds
+Mar 27 00:06:29 firebox kernel: futex hash table entries: 2048 (order: 5, 131072 bytes)
+Mar 27 00:06:29 firebox kernel: Initialise system trusted keyring
+Mar 27 00:06:29 firebox kernel: HugeTLB registered 2 MB page size, pre-allocated 0 pages
+Mar 27 00:06:29 firebox kernel: zpool: loaded
+Mar 27 00:06:29 firebox kernel: zbud: loaded
+Mar 27 00:06:29 firebox kernel: VFS: Disk quotas dquot_6.5.2
+Mar 27 00:06:29 firebox kernel: VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+Mar 27 00:06:29 firebox kernel: Key type big_key registered
+Mar 27 00:06:29 firebox kernel: Block layer SCSI generic (bsg) driver version 0.4 loaded (major 252)
+Mar 27 00:06:29 firebox kernel: io scheduler noop registered
+Mar 27 00:06:29 firebox kernel: io scheduler deadline registered
+Mar 27 00:06:29 firebox kernel: io scheduler cfq registered (default)
+Mar 27 00:06:29 firebox kernel: pci_hotplug: PCI Hot Plug PCI Core version: 0.5
+Mar 27 00:06:29 firebox kernel: pciehp: PCI Express Hot Plug Controller Driver version: 0.4
+Mar 27 00:06:29 firebox kernel: vesafb: mode is 800x600x32, linelength=3200, pages=0
+Mar 27 00:06:29 firebox kernel: vesafb: scrolling: redraw
+Mar 27 00:06:29 firebox kernel: vesafb: Truecolor: size=8:8:8:8, shift=24:16:8:0
+Mar 27 00:06:29 firebox kernel: vesafb: framebuffer at 0xdd000000, mapped to 0xffffc90010780000, using 1920k, total 1920k
+Mar 27 00:06:29 firebox kernel: Console: switching to colour frame buffer device 100x37
+Mar 27 00:06:29 firebox kernel: fb0: VESA VGA frame buffer device
+Mar 27 00:06:29 firebox kernel: GHES: HEST is not enabled!
+Mar 27 00:06:29 firebox kernel: Serial: 8250/16550 driver, 4 ports, IRQ sharing disabled
+Mar 27 00:06:29 firebox kernel: 00:06: ttyS0 at I/O 0x3f8 (irq = 4, base_baud = 115200) is a 16550A
+Mar 27 00:06:29 firebox kernel: Linux agpgart interface v0.103
+Mar 27 00:06:29 firebox kernel: rtc_cmos 00:00: RTC can wake from S4
+Mar 27 00:06:29 firebox kernel: rtc_cmos 00:00: rtc core: registered rtc_cmos as rtc0
+Mar 27 00:06:29 firebox kernel: rtc_cmos 00:00: alarms up to one year, y3k, 114 bytes nvram, hpet irqs
+Mar 27 00:06:29 firebox kernel: ledtrig-cpu: registered to indicate activity on CPUs
+Mar 27 00:06:29 firebox kernel: TCP: cubic registered
+Mar 27 00:06:29 firebox kernel: NET: Registered protocol family 10
+Mar 27 00:06:29 firebox kernel: NET: Registered protocol family 17
+Mar 27 00:06:29 firebox kernel: Loading compiled-in X.509 certificates
+Mar 27 00:06:29 firebox kernel: registered taskstats version 1
+Mar 27 00:06:29 firebox kernel:   Magic number: 7:888:100
+Mar 27 00:06:29 firebox kernel: rtc_cmos 00:00: setting system clock to 2015-03-26 23:05:36 UTC (1427411136)
+Mar 27 00:06:29 firebox kernel: PM: Hibernation image not present or could not be loaded.
+Mar 27 00:06:29 firebox kernel: Freeing unused kernel memory: 1164K (ffffffff818e7000 - ffffffff81a0a000)
+Mar 27 00:06:29 firebox kernel: Write protecting the kernel read-only data: 8192k
+Mar 27 00:06:29 firebox kernel: Freeing unused kernel memory: 600K (ffff88000156a000 - ffff880001600000)
+Mar 27 00:06:29 firebox kernel: Freeing unused kernel memory: 304K (ffff8800017b4000 - ffff880001800000)
+Mar 27 00:06:29 firebox kernel: random: systemd-tmpfile urandom read with 1 bits of entropy available
+Mar 27 00:06:29 firebox kernel: device-mapper: uevent: version 1.0.3
+Mar 27 00:06:29 firebox kernel: device-mapper: ioctl: 4.29.0-ioctl (2014-10-28) initialised: dm-devel@redhat.com
+Mar 27 00:06:29 firebox kernel: sha256_ssse3: Neither AVX nor SSSE3 is available/usable.
+Mar 27 00:06:29 firebox kernel: sha512_ssse3: Neither AVX nor SSSE3 is available/usable.
+Mar 27 00:06:29 firebox kernel: i8042: PNP: PS/2 Controller [PNP0303:PS2K] at 0x60,0x64 irq 1
+Mar 27 00:06:29 firebox kernel: i8042: PNP: PS/2 appears to have AUX port disabled, if this is incorrect please boot with i8042.nopnp
+Mar 27 00:06:29 firebox kernel: serio: i8042 KBD port at 0x60,0x64 irq 1
+Mar 27 00:06:29 firebox kernel: ACPI: bus type USB registered
+Mar 27 00:06:29 firebox kernel: usbcore: registered new interface driver usbfs
+Mar 27 00:06:29 firebox kernel: usbcore: registered new interface driver hub
+Mar 27 00:06:29 firebox kernel: usbcore: registered new device driver usb
+Mar 27 00:06:29 firebox kernel: ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+Mar 27 00:06:29 firebox kernel: ehci-pci: EHCI PCI platform driver
+Mar 27 00:06:29 firebox kernel: ehci-pci 0000:00:02.1: EHCI Host Controller
+Mar 27 00:06:29 firebox kernel: ehci-pci 0000:00:02.1: new USB bus registered, assigned bus number 1
+Mar 27 00:06:29 firebox kernel: ehci-pci 0000:00:02.1: debug port 1
+Mar 27 00:06:29 firebox kernel: ehci-pci 0000:00:02.1: cache line size of 64 is not supported
+Mar 27 00:06:29 firebox kernel: ehci-pci 0000:00:02.1: irq 22, io mem 0xdbffac00
+Mar 27 00:06:29 firebox kernel: SCSI subsystem initialized
+Mar 27 00:06:29 firebox kernel: libata version 3.00 loaded.
+Mar 27 00:06:29 firebox kernel: ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+Mar 27 00:06:29 firebox kernel: ohci-pci: OHCI PCI platform driver
+Mar 27 00:06:29 firebox kernel: ehci-pci 0000:00:02.1: USB 2.0 started, EHCI 1.00
+Mar 27 00:06:29 firebox kernel: hub 1-0:1.0: USB hub found
+Mar 27 00:06:29 firebox kernel: hub 1-0:1.0: 10 ports detected
+Mar 27 00:06:29 firebox kernel: pata_amd 0000:00:06.0: version 0.4.1
+Mar 27 00:06:29 firebox kernel: scsi host0: pata_amd
+Mar 27 00:06:29 firebox kernel: scsi host1: pata_amd
+Mar 27 00:06:29 firebox kernel: ata1: PATA max UDMA/133 cmd 0x1f0 ctl 0x3f6 bmdma 0xffa0 irq 14
+Mar 27 00:06:29 firebox kernel: ata2: PATA max UDMA/133 cmd 0x170 ctl 0x376 bmdma 0xffa8 irq 15
+Mar 27 00:06:29 firebox kernel: sata_nv 0000:00:08.0: version 3.5
+Mar 27 00:06:29 firebox kernel: ACPI: PCI Interrupt Link [LSA0] enabled at IRQ 21
+Mar 27 00:06:29 firebox kernel: scsi host2: sata_nv
+Mar 27 00:06:29 firebox kernel: scsi host3: sata_nv
+Mar 27 00:06:29 firebox kernel: ata3: SATA max UDMA/133 cmd 0xd480 ctl 0xd400 bmdma 0xcc00 irq 21
+Mar 27 00:06:29 firebox kernel: ata4: SATA max UDMA/133 cmd 0xd080 ctl 0xd000 bmdma 0xcc08 irq 21
+Mar 27 00:06:29 firebox kernel: ACPI: PCI Interrupt Link [LSA1] enabled at IRQ 20
+Mar 27 00:06:29 firebox kernel: scsi host4: sata_nv
+Mar 27 00:06:29 firebox kernel: scsi host5: sata_nv
+Mar 27 00:06:29 firebox kernel: ata5: SATA max UDMA/133 cmd 0xc880 ctl 0xc800 bmdma 0xc080 irq 20
+Mar 27 00:06:29 firebox kernel: ata6: SATA max UDMA/133 cmd 0xc480 ctl 0xc400 bmdma 0xc088 irq 20
+Mar 27 00:06:29 firebox kernel: ohci-pci 0000:00:02.0: OHCI PCI host controller
+Mar 27 00:06:29 firebox kernel: ohci-pci 0000:00:02.0: new USB bus registered, assigned bus number 2
+Mar 27 00:06:29 firebox kernel: ohci-pci 0000:00:02.0: irq 23, io mem 0xdbffb000
+Mar 27 00:06:29 firebox kernel: input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input0
+Mar 27 00:06:29 firebox kernel: hub 2-0:1.0: USB hub found
+Mar 27 00:06:29 firebox kernel: hub 2-0:1.0: 10 ports detected
+Mar 27 00:06:29 firebox kernel: ata2: port disabled--ignoring
+Mar 27 00:06:29 firebox kernel: usb 1-2: new high-speed USB device number 2 using ehci-pci
+Mar 27 00:06:29 firebox kernel: ata5: SATA link down (SStatus 0 SControl 300)
+Mar 27 00:06:29 firebox kernel: hub 1-2:1.0: USB hub found
+Mar 27 00:06:29 firebox kernel: hub 1-2:1.0: 4 ports detected
+Mar 27 00:06:29 firebox kernel: ata3: SATA link up 1.5 Gbps (SStatus 113 SControl 300)
+Mar 27 00:06:29 firebox kernel: ata3.00: ATA-9: ST1000DM003-1ER162, HP51, max UDMA/100
+Mar 27 00:06:29 firebox kernel: ata3.00: 1953525168 sectors, multi 16: LBA48 NCQ (depth 0/32)
+Mar 27 00:06:29 firebox kernel: ata3.00: configured for UDMA/100
+Mar 27 00:06:29 firebox kernel: scsi 2:0:0:0: Direct-Access     ATA      ST1000DM003-1ER1 HP51 PQ: 0 ANSI: 5
+Mar 27 00:06:29 firebox kernel: usb 1-5: new high-speed USB device number 3 using ehci-pci
+Mar 27 00:06:29 firebox kernel: usb-storage 1-5:1.0: USB Mass Storage device detected
+Mar 27 00:06:29 firebox kernel: scsi host6: usb-storage 1-5:1.0
+Mar 27 00:06:29 firebox kernel: usbcore: registered new interface driver usb-storage
+Mar 27 00:06:29 firebox kernel: usbcore: registered new interface driver uas
+Mar 27 00:06:29 firebox kernel: usb 1-2.4: new high-speed USB device number 4 using ehci-pci
+Mar 27 00:06:29 firebox kernel: hub 1-2.4:1.0: USB hub found
+Mar 27 00:06:29 firebox kernel: hub 1-2.4:1.0: 4 ports detected
+Mar 27 00:06:29 firebox kernel: usb 1-9: new high-speed USB device number 5 using ehci-pci
+Mar 27 00:06:29 firebox kernel: ata4: SATA link up 1.5 Gbps (SStatus 113 SControl 300)
+Mar 27 00:06:29 firebox kernel: ata4.00: ATAPI: HL-DT-ST DVDRAM GH22NS40, NL01, max UDMA/100
+Mar 27 00:06:29 firebox kernel: ata4.00: configured for UDMA/100
+Mar 27 00:06:29 firebox kernel: scsi 3:0:0:0: CD-ROM            HL-DT-ST DVDRAM GH22NS40  NL01 PQ: 0 ANSI: 5
+Mar 27 00:06:29 firebox kernel: usb-storage 1-9:1.0: USB Mass Storage device detected
+Mar 27 00:06:29 firebox kernel: scsi host7: usb-storage 1-9:1.0
+Mar 27 00:06:29 firebox kernel: usb 1-2.4.1: new low-speed USB device number 6 using ehci-pci
+Mar 27 00:06:29 firebox kernel: hidraw: raw HID events driver (C) Jiri Kosina
+Mar 27 00:06:29 firebox kernel: usbcore: registered new interface driver usbhid
+Mar 27 00:06:29 firebox kernel: usbhid: USB HID core driver
+Mar 27 00:06:29 firebox kernel: input: HOLTEK Wireless USB Device as /devices/pci0000:00/0000:00:02.1/usb1/1-2/1-2.4/1-2.4.1/1-2.4.1:1.0/0003:04D9:A01C.0001/input/input1
+Mar 27 00:06:29 firebox kernel: ata6: SATA link down (SStatus 0 SControl 300)
+Mar 27 00:06:29 firebox kernel: sd 2:0:0:0: [sda] 1953525168 512-byte logical blocks: (1.00 TB/931 GiB)
+Mar 27 00:06:29 firebox kernel: sd 2:0:0:0: [sda] 4096-byte physical blocks
+Mar 27 00:06:29 firebox kernel: sd 2:0:0:0: [sda] Write Protect is off
+Mar 27 00:06:29 firebox kernel: sd 2:0:0:0: [sda] Mode Sense: 00 3a 00 00
+Mar 27 00:06:29 firebox kernel: sd 2:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+Mar 27 00:06:29 firebox kernel:  sda: sda1 sda2
+Mar 27 00:06:29 firebox kernel: sd 2:0:0:0: [sda] Attached SCSI disk
+Mar 27 00:06:29 firebox kernel: usb 1-10: new high-speed USB device number 7 using ehci-pci
+Mar 27 00:06:29 firebox kernel: sr 3:0:0:0: [sr0] scsi3-mmc drive: 48x/48x writer dvd-ram cd/rw xa/form2 cdda tray
+Mar 27 00:06:29 firebox kernel: cdrom: Uniform CD-ROM driver Revision: 3.20
+Mar 27 00:06:29 firebox kernel: sr 3:0:0:0: Attached scsi CD-ROM sr0
+Mar 27 00:06:29 firebox kernel: hid-generic 0003:04D9:A01C.0001: input,hidraw0: USB HID v1.10 Keyboard [HOLTEK Wireless USB Device] on usb-0000:00:02.1-2.4.1/input0
+Mar 27 00:06:29 firebox kernel: input: HOLTEK Wireless USB Device as /devices/pci0000:00/0000:00:02.1/usb1/1-2/1-2.4/1-2.4.1/1-2.4.1:1.1/0003:04D9:A01C.0002/input/input2
+Mar 27 00:06:29 firebox kernel: hid-generic 0003:04D9:A01C.0002: input,hidraw1: USB HID v1.10 Mouse [HOLTEK Wireless USB Device] on usb-0000:00:02.1-2.4.1/input1
+Mar 27 00:06:29 firebox kernel: usb 1-2.4.3: new full-speed USB device number 8 using ehci-pci
+Mar 27 00:06:29 firebox kernel: logitech-djreceiver 0003:046D:C52B.0005: hiddev0,hidraw2: USB HID v1.11 Device [Logitech USB Receiver] on usb-0000:00:02.1-2.4.3/input2
+Mar 27 00:06:29 firebox kernel: scsi 6:0:0:0: Direct-Access     SanDisk  Cruzer Force     1.27 PQ: 0 ANSI: 6
+Mar 27 00:06:29 firebox kernel: sd 6:0:0:0: [sdb] 15633408 512-byte logical blocks: (8.00 GB/7.45 GiB)
+Mar 27 00:06:29 firebox kernel: sd 6:0:0:0: [sdb] Write Protect is off
+Mar 27 00:06:29 firebox kernel: sd 6:0:0:0: [sdb] Mode Sense: 43 00 00 00
+Mar 27 00:06:29 firebox kernel: sd 6:0:0:0: [sdb] Write cache: disabled, read cache: enabled, doesn't support DPO or FUA
+Mar 27 00:06:29 firebox kernel:  sdb: sdb1 sdb2
+Mar 27 00:06:29 firebox kernel: sd 6:0:0:0: [sdb] Attached SCSI removable disk
+Mar 27 00:06:29 firebox kernel: scsi 7:0:0:0: Direct-Access     Generic  STORAGE DEVICE   0903 PQ: 0 ANSI: 6
+Mar 27 00:06:29 firebox kernel: sd 7:0:0:0: [sdc] Attached SCSI removable disk
+Mar 27 00:06:29 firebox kernel: floppy0: no floppy controllers found
+Mar 27 00:06:29 firebox kernel: random: nonblocking pool is initialized
+Mar 27 00:06:29 firebox kernel: NET: Registered protocol family 38
+Mar 27 00:06:29 firebox kernel: EXT4-fs (dm-1): mounted filesystem with ordered data mode. Opts: (null)
+Mar 27 00:06:29 firebox kernel: EXT4-fs (dm-1): re-mounted. Opts: data=ordered
+Mar 27 00:06:29 firebox systemd-journal[200]: Journal started
+Mar 27 00:06:30 firebox systemd-udevd[245]: starting version 218
+Mar 27 00:06:30 firebox ufw-init[233]: Skip starting firewall: ufw (not enabled)
+Mar 27 00:06:31 firebox kernel: input: Power Button as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0C:00/input/input3
+Mar 27 00:06:31 firebox kernel: ACPI: Power Button [PWRB]
+Mar 27 00:06:31 firebox kernel: input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input4
+Mar 27 00:06:31 firebox kernel: ACPI: Power Button [PWRF]
+Mar 27 00:06:31 firebox kernel: i2c i2c-0: nForce2 SMBus adapter at 0x600
+Mar 27 00:06:31 firebox kernel: i2c i2c-1: nForce2 SMBus adapter at 0x700
+Mar 27 00:06:31 firebox kernel: ACPI: PCI Interrupt Link [LAZA] enabled at IRQ 23
+Mar 27 00:06:31 firebox kernel: snd_hda_intel 0000:00:05.0: Disabling MSI
+Mar 27 00:06:31 firebox kernel: shpchp: Standard Hot Plug PCI Controller Driver version: 0.4
+Mar 27 00:06:31 firebox kernel: MCE: In-kernel MCE decoding enabled.
+Mar 27 00:06:31 firebox kernel: k8temp 0000:00:18.3: Temperature readouts might be wrong - check erratum #141
+Mar 27 00:06:31 firebox kernel: EDAC MC: Ver: 3.0.0
+Mar 27 00:06:31 firebox kernel: [drm] Initialized drm 1.1.0 20060810
+Mar 27 00:06:31 firebox kernel: wmi: Mapper loaded
+Mar 27 00:06:31 firebox kernel: checking generic (dd000000 1e0000) vs hw (c0000000 10000000)
+Mar 27 00:06:31 firebox kernel: checking generic (dd000000 1e0000) vs hw (dc000000 2000000)
+Mar 27 00:06:31 firebox kernel: fb: switching to nouveaufb from VESA VGA
+Mar 27 00:06:31 firebox kernel: Console: switching to colour dummy device 80x25
+Mar 27 00:06:31 firebox kernel: ACPI: PCI Interrupt Link [LNED] enabled at IRQ 19
+Mar 27 00:06:31 firebox kernel: nouveau  [  DEVICE][0000:02:00.0] BOOT0  : 0x092880a2
+Mar 27 00:06:31 firebox kernel: nouveau  [  DEVICE][0000:02:00.0] Chipset: G92 (NV92)
+Mar 27 00:06:31 firebox kernel: nouveau  [  DEVICE][0000:02:00.0] Family : NV50
+Mar 27 00:06:31 firebox kernel: parport_pc 00:01: reported by Plug and Play ACPI
+Mar 27 00:06:31 firebox kernel: parport0: PC-style at 0x378, irq 7 [PCSPP,TRISTATE]
+Mar 27 00:06:31 firebox kernel: nouveau  [   VBIOS][0000:02:00.0] using image from PRAMIN
+Mar 27 00:06:31 firebox kernel: nouveau  [   VBIOS][0000:02:00.0] BIT signature found
+Mar 27 00:06:31 firebox kernel: nouveau  [   VBIOS][0000:02:00.0] version 62.92.16.00.05
+Mar 27 00:06:31 firebox kernel: nouveau  [     PMC][0000:02:00.0] MSI interrupts enabled
+Mar 27 00:06:31 firebox kernel: nouveau  [     PFB][0000:02:00.0] RAM type: GDDR3
+Mar 27 00:06:31 firebox kernel: nouveau  [     PFB][0000:02:00.0] RAM size: 512 MiB
+Mar 27 00:06:31 firebox kernel: nouveau  [     PFB][0000:02:00.0]    ZCOMP: 4032 tags
+Mar 27 00:06:31 firebox kernel: nouveau  [    VOLT][0000:02:00.0] GPU voltage: 1050000uv
+Mar 27 00:06:32 firebox kernel: AMD64 EDAC driver v3.4.0
+Mar 27 00:06:32 firebox kernel: EDAC amd64: DRAM ECC disabled.
+Mar 27 00:06:32 firebox kernel: EDAC amd64: ECC disabled in the BIOS or no ECC capability, module will not load.
+                                 Either enable ECC checking or force module loading by setting 'ecc_enable_override'.
+                                 (Note that use of the override may cause unknown side effects.)
+Mar 27 00:06:32 firebox mtp-probe[261]: checking bus 1, device 7: "/sys/devices/pci0000:00/0000:00:02.1/usb1/1-10"
+Mar 27 00:06:32 firebox mtp-probe[261]: bus: 1, device: 7 was not an MTP device
+Mar 27 00:06:32 firebox mtp-probe[263]: checking bus 1, device 3: "/sys/devices/pci0000:00/0000:00:02.1/usb1/1-5"
+Mar 27 00:06:32 firebox mtp-probe[263]: bus: 1, device: 3 was not an MTP device
+Mar 27 00:06:32 firebox mtp-probe[264]: checking bus 1, device 5: "/sys/devices/pci0000:00/0000:00:02.1/usb1/1-9"
+Mar 27 00:06:32 firebox mtp-probe[264]: bus: 1, device: 5 was not an MTP device
+Mar 27 00:06:32 firebox mtp-probe[262]: checking bus 1, device 8: "/sys/devices/pci0000:00/0000:00:02.1/usb1/1-2/1-2.4/1-2.4.3"
+Mar 27 00:06:32 firebox mtp-probe[262]: bus: 1, device: 8 was not an MTP device
+Mar 27 00:06:32 firebox mtp-probe[265]: checking bus 1, device 6: "/sys/devices/pci0000:00/0000:00:02.1/usb1/1-2/1-2.4/1-2.4.1"
+Mar 27 00:06:32 firebox mtp-probe[265]: bus: 1, device: 6 was not an MTP device
+Mar 27 00:06:32 firebox kernel: kvm: Nested Virtualization enabled
+Mar 27 00:06:32 firebox kernel: powernow_k8: fid 0x14 (2800 MHz), vid 0x8
+Mar 27 00:06:32 firebox kernel: powernow_k8: fid 0x12 (2600 MHz), vid 0xa
+Mar 27 00:06:32 firebox kernel: powernow_k8: fid 0x10 (2400 MHz), vid 0xc
+Mar 27 00:06:32 firebox kernel: powernow_k8: fid 0xe (2200 MHz), vid 0xe
+Mar 27 00:06:32 firebox kernel: powernow_k8: fid 0xc (2000 MHz), vid 0x10
+Mar 27 00:06:32 firebox kernel: powernow_k8: fid 0xa (1800 MHz), vid 0x10
+Mar 27 00:06:32 firebox kernel: powernow_k8: fid 0x2 (1000 MHz), vid 0x12
+Mar 27 00:06:32 firebox kernel: powernow_k8: Found 1 AMD Athlon(tm) 64 X2 Dual Core Processor 5600+ (2 cpu cores) (version 2.20.00)
+Mar 27 00:06:32 firebox kernel: adt7475 4-002e: ADT7473 device, revision 1
+Mar 27 00:06:32 firebox kernel: nouveau  [  PTHERM][0000:02:00.0] Found an adt7473 at address 0x2e (controlled by lm_sensors, temp offset +8 C)
+Mar 27 00:06:32 firebox kernel: nouveau  [     I2C][0000:02:00.0] detected monitoring device: adt7473
+Mar 27 00:06:32 firebox kernel: nouveau  [  PTHERM][0000:02:00.0] FAN control: none / external
+Mar 27 00:06:32 firebox kernel: nouveau  [  PTHERM][0000:02:00.0] fan management: automatic
+Mar 27 00:06:32 firebox kernel: nouveau  [  PTHERM][0000:02:00.0] internal sensor: yes
+Mar 27 00:06:32 firebox kernel: nouveau  [     CLK][0000:02:00.0] 0f: core 600 MHz shader 1500 MHz memory 900 MHz
+Mar 27 00:06:32 firebox kernel: nouveau  [     CLK][0000:02:00.0] --: core 399 MHz shader 810 MHz memory 499 MHz
+Mar 27 00:06:32 firebox kernel: [TTM] Zone  kernel: Available graphics memory: 2025884 kiB
+Mar 27 00:06:32 firebox kernel: [TTM] Initializing pool allocator
+Mar 27 00:06:32 firebox kernel: [TTM] Initializing DMA pool allocator
+Mar 27 00:06:32 firebox kernel: nouveau  [     DRM] VRAM: 512 MiB
+Mar 27 00:06:32 firebox kernel: nouveau  [     DRM] GART: 1048576 MiB
+Mar 27 00:06:32 firebox kernel: nouveau  [     DRM] TMDS table version 2.0
+Mar 27 00:06:32 firebox kernel: nouveau  [     DRM] DCB version 4.0
+Mar 27 00:06:32 firebox kernel: nouveau  [     DRM] DCB outp 00: 02000300 00000028
+Mar 27 00:06:32 firebox kernel: nouveau  [     DRM] DCB outp 01: 01000302 00000030
+Mar 27 00:06:32 firebox kernel: nouveau  [     DRM] DCB outp 02: 04011310 00000028
+Mar 27 00:06:32 firebox kernel: nouveau  [     DRM] DCB outp 03: 02011312 00020030
+Mar 27 00:06:32 firebox kernel: nouveau  [     DRM] DCB outp 04: 010223f1 00c0c083
+Mar 27 00:06:32 firebox kernel: nouveau  [     DRM] DCB conn 00: 00001030
+Mar 27 00:06:32 firebox kernel: nouveau  [     DRM] DCB conn 01: 00002161
+Mar 27 00:06:32 firebox kernel: nouveau  [     DRM] DCB conn 02: 00000210
+Mar 27 00:06:32 firebox kernel: nouveau  [     DRM] DCB conn 03: 00000211
+Mar 27 00:06:32 firebox kernel: nouveau  [     DRM] DCB conn 04: 00000213
+Mar 27 00:06:32 firebox kernel: nouveau W[     DRM] failed to create encoder 0/1/0: -19
+Mar 27 00:06:32 firebox kernel: nouveau W[     DRM] TV-1 has no encoders, removing
+Mar 27 00:06:32 firebox kernel: [drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+Mar 27 00:06:32 firebox kernel: [drm] Driver supports precise vblank timestamp query.
+Mar 27 00:06:32 firebox kernel: sound hdaudioC0D0: autoconfig: line_outs=1 (0x14/0x0/0x0/0x0/0x0) type:line
+Mar 27 00:06:32 firebox kernel: sound hdaudioC0D0:    speaker_outs=0 (0x0/0x0/0x0/0x0/0x0)
+Mar 27 00:06:32 firebox kernel: sound hdaudioC0D0:    hp_outs=1 (0x1b/0x0/0x0/0x0/0x0)
+Mar 27 00:06:32 firebox kernel: sound hdaudioC0D0:    mono: mono_out=0x0
+Mar 27 00:06:32 firebox kernel: sound hdaudioC0D0:    dig-out=0x1e/0x0
+Mar 27 00:06:32 firebox kernel: sound hdaudioC0D0:    inputs:
+Mar 27 00:06:32 firebox kernel: sound hdaudioC0D0:      Front Mic=0x19
+Mar 27 00:06:32 firebox kernel: sound hdaudioC0D0:      Rear Mic=0x18
+Mar 27 00:06:32 firebox kernel: sound hdaudioC0D0:      Line=0x1a
+Mar 27 00:06:32 firebox kernel: nouveau  [     DRM] MM: using CRYPT for buffer copies
+Mar 27 00:06:32 firebox kernel: input: PC Speaker as /devices/platform/pcspkr/input/input5
+Mar 27 00:06:32 firebox kernel: mousedev: PS/2 mouse device common for all mice
+Mar 27 00:06:32 firebox systemd-udevd[245]: error: /dev/sdc: No medium found
+Mar 27 00:06:32 firebox kernel: ppdev: user-space parallel port driver
+Mar 27 00:06:32 firebox kernel: nouveau  [     DRM] allocated 1920x1080 fb: 0x70000, bo ffff8800ba2e5800
+Mar 27 00:06:32 firebox kernel: fbcon: nouveaufb (fb0) is primary device
+Mar 27 00:06:32 firebox kernel: Console: switching to colour frame buffer device 240x67
+Mar 27 00:06:32 firebox kernel: nouveau 0000:02:00.0: fb0: nouveaufb frame buffer device
+Mar 27 00:06:32 firebox kernel: nouveau 0000:02:00.0: registered panic notifier
+Mar 27 00:06:32 firebox kernel: [drm] Initialized nouveau 1.2.1 20120801 for 0000:02:00.0 on minor 0
+Mar 27 00:06:32 firebox kernel: input: Logitech K230 as /devices/pci0000:00/0000:00:02.1/usb1/1-2/1-2.4/1-2.4.3/1-2.4.3:1.2/0003:046D:C52B.0005/0003:046D:400D.0006/input/input6
+Mar 27 00:06:32 firebox kernel: logitech-hidpp-device 0003:046D:400D.0006: input,hidraw3: USB HID v1.11 Keyboard [Logitech K230] on usb-0000:00:02.1-2.4.3:2
+Mar 27 00:06:33 firebox kernel: EXT4-fs (sda1): mounting ext2 file system using the ext4 subsystem
+Mar 27 00:06:33 firebox kernel: EXT4-fs (sda1): mounted filesystem without journal. Opts: (null)
+Mar 27 00:06:33 firebox kernel: Adding 4055036k swap on /dev/mapper/AntergosVG-AntergosSwap.  Priority:-1 extents:1 across:4055036k FS
+Mar 27 00:06:33 firebox kernel: input: HDA NVidia Front Mic as /devices/pci0000:00/0000:00:05.0/sound/card0/input7
+Mar 27 00:06:33 firebox kernel: input: HDA NVidia Rear Mic as /devices/pci0000:00/0000:00:05.0/sound/card0/input8
+Mar 27 00:06:33 firebox kernel: input: HDA NVidia Line as /devices/pci0000:00/0000:00:05.0/sound/card0/input9
+Mar 27 00:06:33 firebox kernel: input: HDA NVidia Line Out as /devices/pci0000:00/0000:00:05.0/sound/card0/input10
+Mar 27 00:06:33 firebox kernel: input: HDA NVidia Front Headphone as /devices/pci0000:00/0000:00:05.0/sound/card0/input11
+Mar 27 00:06:33 firebox kernel: cfg80211: Calling CRDA to update world regulatory domain
+Mar 27 00:06:34 firebox kernel: usb 1-10: reset high-speed USB device number 7 using ehci-pci
+Mar 27 00:06:34 firebox kernel: ieee80211 phy0: rt2x00_set_rt: Info - RT chipset 2872, rev 0202 detected
+Mar 27 00:06:34 firebox kernel: ieee80211 phy0: rt2x00_set_rf: Info - RF chipset 0003 detected
+Mar 27 00:06:34 firebox kernel: floppy0: no floppy controllers found
+Mar 27 00:06:34 firebox kernel: ieee80211 phy0: Selected rate control algorithm 'minstrel_ht'
+Mar 27 00:06:34 firebox kernel: usbcore: registered new interface driver rt2800usb
+Mar 27 00:06:34 firebox kernel: rt2800usb 1-10:1.0 wlp0s2f1u10: renamed from wlan0
+Mar 27 00:06:34 firebox kernel: EXT4-fs (dm-3): mounted filesystem with ordered data mode. Opts: data=ordered
+Mar 27 00:06:35 firebox kernel: cfg80211: World regulatory domain updated:
+Mar 27 00:06:35 firebox kernel: cfg80211:  DFS Master region: unset
+Mar 27 00:06:35 firebox kernel: cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp), (dfs_cac_time)
+Mar 27 00:06:35 firebox kernel: cfg80211:   (2402000 KHz - 2472000 KHz @ 40000 KHz), (N/A, 2000 mBm), (N/A)
+Mar 27 00:06:35 firebox kernel: cfg80211:   (2457000 KHz - 2482000 KHz @ 40000 KHz), (N/A, 2000 mBm), (N/A)
+Mar 27 00:06:35 firebox kernel: cfg80211:   (2474000 KHz - 2494000 KHz @ 20000 KHz), (N/A, 2000 mBm), (N/A)
+Mar 27 00:06:35 firebox kernel: cfg80211:   (5170000 KHz - 5250000 KHz @ 80000 KHz, 160000 KHz AUTO), (N/A, 2000 mBm), (N/A)
+Mar 27 00:06:35 firebox kernel: cfg80211:   (5250000 KHz - 5330000 KHz @ 80000 KHz, 160000 KHz AUTO), (N/A, 2000 mBm), (0 s)
+Mar 27 00:06:35 firebox kernel: cfg80211:   (5490000 KHz - 5730000 KHz @ 160000 KHz), (N/A, 2000 mBm), (0 s)
+Mar 27 00:06:35 firebox kernel: cfg80211:   (5735000 KHz - 5835000 KHz @ 80000 KHz), (N/A, 2000 mBm), (N/A)
+Mar 27 00:06:35 firebox kernel: cfg80211:   (57240000 KHz - 63720000 KHz @ 2160000 KHz), (N/A, 0 mBm), (N/A)
+Mar 27 00:06:35 firebox lvm[297]: 3 logical volume(s) in volume group "AntergosVG" now active
+Mar 27 00:06:42 firebox alsactl[340]: /usr/bin/alsactl: load_state:1683: Cannot open /var/lib/alsa/asound.state for reading: No such file or directory
+Mar 27 00:06:42 firebox alsactl[340]: /usr/bin/alsactl: sysfs_init:48: sysfs path '/sys' is invalid
+Mar 27 00:06:42 firebox alsactl[340]: Found hardware: "HDA-Intel" "Realtek ALC887" "HDA:10ec0887,104383bc,00100202" "0x1043" "0x83bc"
+Mar 27 00:06:42 firebox alsactl[340]: Hardware is initialized using a generic method
+Mar 27 00:06:42 firebox avahi-daemon[342]: Found user 'avahi' (UID 84) and group 'avahi' (GID 84).
+Mar 27 00:06:42 firebox avahi-daemon[342]: Successfully dropped root privileges.
+Mar 27 00:06:42 firebox avahi-daemon[342]: avahi-daemon 0.6.31 starting up.
+Mar 27 00:06:42 firebox avahi-daemon[342]: WARNING: No NSS support for mDNS detected, consider installing nss-mdns!
+Mar 27 00:06:42 firebox haveged[343]: haveged: ver: 1.9.1; arch: x86; vend: AuthenticAMD; build: (gcc 4.9.2 ITV); collect: 128K
+Mar 27 00:06:42 firebox haveged[343]: haveged: cpu: (A8 VC); data: 64K (A5 V); inst: 64K (A5 V); idx: 39/40; sz: 59039/59039
+Mar 27 00:06:42 firebox haveged[343]: haveged: tot tests(BA8): A:1/1 B:1/1 continuous tests(B):  last entropy estimate 7.99749
+Mar 27 00:06:42 firebox haveged[343]: haveged: fills: 0, generated: 0
+Mar 27 00:06:43 firebox NetworkManager[341]: <info>  NetworkManager (version 1.0.0) is starting...
+Mar 27 00:06:43 firebox NetworkManager[341]: <info>  Read config: /etc/NetworkManager/NetworkManager.conf
+Mar 27 00:06:43 firebox NetworkManager[341]: <info>  WEXT support is enabled
+Mar 27 00:06:43 firebox avahi-daemon[342]: Successfully called chroot().
+Mar 27 00:06:43 firebox avahi-daemon[342]: Successfully dropped remaining capabilities.
+Mar 27 00:06:43 firebox avahi-daemon[342]: Loading service file /services/sftp-ssh.service.
+Mar 27 00:06:43 firebox avahi-daemon[342]: Loading service file /services/ssh.service.
+Mar 27 00:06:43 firebox avahi-daemon[342]: Network interface enumeration completed.
+Mar 27 00:06:43 firebox avahi-daemon[342]: Server startup complete. Host name is firebox.local. Local service cookie is 1432974536.
+Mar 27 00:06:43 firebox avahi-daemon[342]: Service "firebox" (/services/ssh.service) successfully established.
+Mar 27 00:06:43 firebox avahi-daemon[342]: Service "firebox" (/services/sftp-ssh.service) successfully established.
+Mar 27 00:06:43 firebox NetworkManager[341]: <info>  VPN: loaded org.freedesktop.NetworkManager.openvpn
+Mar 27 00:06:43 firebox NetworkManager[341]: <info>  VPN: loaded org.freedesktop.NetworkManager.pptp
+Mar 27 00:06:43 firebox NetworkManager[341]: <info>  Loaded plugin keyfile: (c) 2007 - 2013 Red Hat, Inc.  To report bugs please use the NetworkManager mailing list.
+Mar 27 00:06:43 firebox systemd-logind[344]: New seat seat0.
+Mar 27 00:06:43 firebox systemd-logind[344]: Watching system buttons on /dev/input/event4 (Power Button)
+Mar 27 00:06:43 firebox systemd-logind[344]: Watching system buttons on /dev/input/event3 (Power Button)
+Mar 27 00:06:43 firebox ModemManager[351]: <info>  ModemManager (version 1.4.6) starting in system bus...
+Mar 27 00:06:43 firebox dbus[346]: [system] Activating via systemd: service name='org.freedesktop.PolicyKit1' unit='polkit.service'
+Mar 27 00:06:43 firebox NetworkManager[341]: <info>  new connection /etc/NetworkManager/system-connections/site300
+Mar 27 00:06:43 firebox NetworkManager[341]: <info>  monitoring kernel firmware directory '/usr/lib/firmware'.
+Mar 27 00:06:43 firebox dbus[346]: [system] Activating via systemd: service name='org.freedesktop.Accounts' unit='accounts-daemon.service'
+Mar 27 00:06:43 firebox polkitd[367]: Started polkitd version 0.112
+Mar 27 00:06:43 firebox NetworkManager[341]: <info>  rfkill0: found WiFi radio killswitch (at /sys/devices/pci0000:00/0000:00:02.1/usb1/1-10/1-10:1.0/ieee80211/phy0/rfkill0) (driver rt2800usb)
+Mar 27 00:06:43 firebox NetworkManager[341]: <info>  WiFi hardware radio set enabled
+Mar 27 00:06:43 firebox NetworkManager[341]: <info>  WWAN hardware radio set enabled
+Mar 27 00:06:43 firebox NetworkManager[341]: <info>  Loaded device plugin: /usr/lib/NetworkManager/libnm-device-plugin-wifi.so
+Mar 27 00:06:43 firebox NetworkManager[341]: <info>  Loaded device plugin: /usr/lib/NetworkManager/libnm-device-plugin-bluetooth.so
+Mar 27 00:06:43 firebox NetworkManager[341]: <info>  Loaded device plugin: /usr/lib/NetworkManager/libnm-device-plugin-adsl.so
+Mar 27 00:06:43 firebox NetworkManager[341]: <info>  Loaded device plugin: /usr/lib/NetworkManager/libnm-device-plugin-team.so
+Mar 27 00:06:43 firebox NetworkManager[341]: <info>  Loaded device plugin: /usr/lib/NetworkManager/libnm-device-plugin-wwan.so
+Mar 27 00:06:43 firebox NetworkManager[341]: <info>  WiFi enabled by radio killswitch; enabled by state file
+Mar 27 00:06:43 firebox NetworkManager[341]: <info>  WWAN enabled by radio killswitch; enabled by state file
+Mar 27 00:06:43 firebox NetworkManager[341]: <info>  WiMAX enabled by radio killswitch; enabled by state file
+Mar 27 00:06:43 firebox NetworkManager[341]: <info>  Networking is enabled by state file
+Mar 27 00:06:43 firebox NetworkManager[341]: <info>  (lo): link connected
+Mar 27 00:06:43 firebox NetworkManager[341]: <info>  (lo): carrier is ON
+Mar 27 00:06:43 firebox NetworkManager[341]: <info>  (lo): new Generic device (driver: 'unknown' ifindex: 1)
+Mar 27 00:06:43 firebox NetworkManager[341]: <info>  (lo): exported as /org/freedesktop/NetworkManager/Devices/0
+Mar 27 00:06:43 firebox NetworkManager[341]: <info>  (wlp0s2f1u10): using nl80211 for WiFi device control
+Mar 27 00:06:43 firebox NetworkManager[341]: <info>  (wlp0s2f1u10): driver supports Access Point (AP) mode
+Mar 27 00:06:43 firebox NetworkManager[341]: <info>  (wlp0s2f1u10): new 802.11 WiFi device (driver: 'rt2800usb' ifindex: 2)
+Mar 27 00:06:43 firebox NetworkManager[341]: <info>  (wlp0s2f1u10): exported as /org/freedesktop/NetworkManager/Devices/1
+Mar 27 00:06:43 firebox NetworkManager[341]: <info>  (wlp0s2f1u10): device state change: unmanaged -> unavailable (reason 'managed') [10 20 2]
+Mar 27 00:06:43 firebox kernel: ieee80211 phy0: rt2x00lib_request_firmware: Info - Loading firmware file 'rt2870.bin'
+Mar 27 00:06:43 firebox kernel: ieee80211 phy0: rt2x00lib_request_firmware: Info - Firmware detected - version: 0.29
+Mar 27 00:06:43 firebox polkitd[367]: Loading rules from directory /etc/polkit-1/rules.d
+Mar 27 00:06:43 firebox polkitd[367]: Loading rules from directory /usr/share/polkit-1/rules.d
+Mar 27 00:06:43 firebox polkitd[367]: Finished loading, compiling and executing 3 rules
+Mar 27 00:06:43 firebox dbus[346]: [system] Successfully activated service 'org.freedesktop.PolicyKit1'
+Mar 27 00:06:43 firebox polkitd[367]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+Mar 27 00:06:43 firebox NetworkManager[341]: <info>  (wlp0s2f1u10): preparing device
+Mar 27 00:06:43 firebox dbus[346]: [system] Activating via systemd: service name='fi.w1.wpa_supplicant1' unit='wpa_supplicant.service'
+Mar 27 00:06:43 firebox accounts-daemon[372]: started daemon version 0.6.40
+Mar 27 00:06:43 firebox dbus[346]: [system] Successfully activated service 'org.freedesktop.Accounts'
+Mar 27 00:06:43 firebox NetworkManager[341]: <info>  ModemManager disappeared from bus
+Mar 27 00:06:43 firebox NetworkManager[341]: <info>  ModemManager available in the bus
+Mar 27 00:06:44 firebox ntpd[376]: ntpd 4.2.8p1@1.3265-o Fri Feb  6 17:14:44 UTC 2015 (1): Starting
+Mar 27 00:06:44 firebox ntpd[376]: Command line: /usr/bin/ntpd -g -u ntp:ntp
+Mar 27 00:06:44 firebox dbus[346]: [system] Successfully activated service 'fi.w1.wpa_supplicant1'
+Mar 27 00:06:44 firebox NetworkManager[341]: <info>  wpa_supplicant started
+Mar 27 00:06:44 firebox ntpd[383]: proto: precision = 0.920 usec (-20)
+Mar 27 00:06:44 firebox ntpd[383]: Listen and drop on 0 v6wildcard [::]:123
+Mar 27 00:06:44 firebox ntpd[383]: Listen and drop on 1 v4wildcard 0.0.0.0:123
+Mar 27 00:06:44 firebox ntpd[383]: Listen normally on 2 lo 127.0.0.1:123
+Mar 27 00:06:44 firebox ntpd[383]: Listen normally on 3 lo [::1]:123
+Mar 27 00:06:44 firebox ntpd[383]: Listening on routing socket on fd #20 for interface updates
+Mar 27 00:06:44 firebox NetworkManager[341]: <info>  (wlp0s2f1u10) supports 4 scan SSIDs
+Mar 27 00:06:44 firebox NetworkManager[341]: <info>  (wlp0s2f1u10): supplicant interface state: starting -> ready
+Mar 27 00:06:44 firebox NetworkManager[341]: <info>  (wlp0s2f1u10): device state change: unavailable -> disconnected (reason 'supplicant-available') [20 30 42]
+Mar 27 00:06:44 firebox NetworkManager[341]: <info>  (wlp0s2f1u10): supplicant interface state: ready -> disconnected
+Mar 27 00:06:44 firebox NetworkManager[341]: <info>  (wlp0s2f1u10) supports 4 scan SSIDs
+Mar 27 00:06:44 firebox NetworkManager[341]: <info>  startup complete
+Mar 27 00:06:45 firebox NetworkManager[341]: <info>  (wlp0s2f1u10): supplicant interface state: disconnected -> inactive
+Mar 27 00:06:45 firebox lightdm[389]: pam_unix(lightdm-greeter:session): session opened for user lightdm by (uid=0)
+Mar 27 00:06:45 firebox systemd-logind[344]: New session c1 of user lightdm.
+Mar 27 00:06:45 firebox systemd[391]: pam_unix(systemd-user:session): session opened for user lightdm by (uid=0)
+Mar 27 00:06:45 firebox systemd[391]: Starting Sockets.
+Mar 27 00:06:45 firebox systemd[391]: Reached target Sockets.
+Mar 27 00:06:45 firebox systemd[391]: Starting Paths.
+Mar 27 00:06:45 firebox systemd[391]: Reached target Paths.
+Mar 27 00:06:45 firebox systemd[391]: Starting Timers.
+Mar 27 00:06:45 firebox systemd[391]: Reached target Timers.
+Mar 27 00:06:45 firebox systemd[391]: Starting Basic System.
+Mar 27 00:06:45 firebox systemd[391]: Reached target Basic System.
+Mar 27 00:06:45 firebox systemd[391]: Starting Default.
+Mar 27 00:06:45 firebox systemd[391]: Reached target Default.
+Mar 27 00:06:45 firebox systemd[391]: Startup finished in 37ms.
+Mar 27 00:06:46 firebox ModemManager[351]: <warn>  Couldn't find support for device at '/sys/devices/pci0000:00/0000:00:02.1/usb1/1-10': not supported by any plugin
+Mar 27 00:06:46 firebox org.a11y.Bus[401]: Activating service name='org.a11y.atspi.Registry'
+Mar 27 00:06:46 firebox org.a11y.Bus[401]: Successfully activated service 'org.a11y.atspi.Registry'
+Mar 27 00:06:46 firebox org.a11y.atspi.Registry[407]: SpiRegistry daemon is running with well-known name - org.a11y.atspi.Registry
+Mar 27 00:06:49 firebox polkitd[367]: /usr/share/polkit-1/rules.d/lightdm.rules:3: action=[Action id='org.freedesktop.login1.power-off']
+Mar 27 00:06:49 firebox polkitd[367]: /usr/share/polkit-1/rules.d/lightdm.rules:4: subject=[Subject pid=414 user='lightdm' groups=lightdm, seat='seat0' session='c1' local=true active=true]
+Mar 27 00:06:49 firebox polkitd[367]: /usr/share/polkit-1/rules.d/lightdm.rules:3: action=[Action id='org.freedesktop.login1.hibernate']
+Mar 27 00:06:49 firebox polkitd[367]: /usr/share/polkit-1/rules.d/lightdm.rules:4: subject=[Subject pid=414 user='lightdm' groups=lightdm, seat='seat0' session='c1' local=true active=true]
+Mar 27 00:06:49 firebox polkitd[367]: /usr/share/polkit-1/rules.d/lightdm.rules:3: action=[Action id='org.freedesktop.login1.suspend']
+Mar 27 00:06:49 firebox polkitd[367]: /usr/share/polkit-1/rules.d/lightdm.rules:4: subject=[Subject pid=414 user='lightdm' groups=lightdm, seat='seat0' session='c1' local=true active=true]
+Mar 27 00:06:49 firebox polkitd[367]: /usr/share/polkit-1/rules.d/lightdm.rules:3: action=[Action id='org.freedesktop.login1.reboot']
+Mar 27 00:06:49 firebox polkitd[367]: /usr/share/polkit-1/rules.d/lightdm.rules:4: subject=[Subject pid=414 user='lightdm' groups=lightdm, seat='seat0' session='c1' local=true active=true]
+Mar 27 00:08:24 firebox NetworkManager[341]: <info>  Auto-activating connection 'site300'.
+Mar 27 00:08:24 firebox NetworkManager[341]: <info>  (wlp0s2f1u10): Activation: starting connection 'site300'
+Mar 27 00:08:24 firebox NetworkManager[341]: <info>  (wlp0s2f1u10): Activation: Stage 1 of 5 (Device Prepare) scheduled...
+Mar 27 00:08:24 firebox NetworkManager[341]: <info>  (wlp0s2f1u10): Activation: Stage 1 of 5 (Device Prepare) started...
+Mar 27 00:08:24 firebox NetworkManager[341]: <info>  (wlp0s2f1u10): device state change: disconnected -> prepare (reason 'none') [30 40 0]
+Mar 27 00:08:24 firebox NetworkManager[341]: <info>  NetworkManager state is now CONNECTING
+Mar 27 00:08:24 firebox NetworkManager[341]: <info>  (wlp0s2f1u10): Activation: Stage 2 of 5 (Device Configure) scheduled...
+Mar 27 00:08:24 firebox NetworkManager[341]: <info>  (wlp0s2f1u10): Activation: Stage 1 of 5 (Device Prepare) complete.
+Mar 27 00:08:24 firebox NetworkManager[341]: <info>  (wlp0s2f1u10): Activation: Stage 2 of 5 (Device Configure) starting...
+Mar 27 00:08:24 firebox NetworkManager[341]: <info>  (wlp0s2f1u10): device state change: prepare -> config (reason 'none') [40 50 0]
+Mar 27 00:08:24 firebox NetworkManager[341]: <info>  (wlp0s2f1u10): Activation: (wifi) access point 'site300' has security, but secrets are required.
+Mar 27 00:08:24 firebox NetworkManager[341]: <info>  (wlp0s2f1u10): device state change: config -> need-auth (reason 'none') [50 60 0]
+Mar 27 00:08:24 firebox NetworkManager[341]: <info>  (wlp0s2f1u10): Activation: Stage 2 of 5 (Device Configure) complete.
+Mar 27 00:08:24 firebox NetworkManager[341]: <warn>  (wlp0s2f1u10): No agents were available for this request.
+Mar 27 00:08:24 firebox NetworkManager[341]: <info>  (wlp0s2f1u10): device state change: need-auth -> failed (reason 'no-secrets') [60 120 7]
+Mar 27 00:08:24 firebox NetworkManager[341]: <info>  NetworkManager state is now DISCONNECTED
+Mar 27 00:08:24 firebox NetworkManager[341]: <warn>  (wlp0s2f1u10): Activation: failed for connection 'site300'
+Mar 27 00:08:24 firebox NetworkManager[341]: <info>  (wlp0s2f1u10): device state change: failed -> disconnected (reason 'none') [120 30 0]
+Mar 27 00:08:24 firebox NetworkManager[341]: <info>  (wlp0s2f1u10): deactivating device (reason 'none') [0]
+Mar 27 00:08:40 firebox lightdm[445]: pam_unix(lightdm:auth): authentication failure; logname= uid=0 euid=0 tty=:0 ruser= rhost=  user=firelight
+Mar 27 00:10:22 firebox systemd-logind[344]: Power key pressed.
+Mar 27 00:10:22 firebox systemd-logind[344]: Powering Off...
+Mar 27 00:10:22 firebox systemd-logind[344]: System is powering down.
+Mar 27 00:10:22 firebox org.a11y.Bus[401]: g_dbus_connection_real_closed: Remote peer vanished with error: Underlying GIOStream returned 0 bytes on an async read (g-io-error-quark, 0). Exiting.
+Mar 27 00:10:22 firebox ModemManager[351]: <info>  Caught signal, shutting down...
+Mar 27 00:10:22 firebox ntpd[383]: ntpd exiting on signal 15 (Terminated)
+Mar 27 00:10:22 firebox avahi-daemon[342]: Got SIGTERM, quitting.
+Mar 27 00:10:22 firebox avahi-daemon[342]: avahi-daemon 0.6.31 exiting.
+Mar 27 00:10:22 firebox haveged[343]: haveged: Stopping due to signal 15
+Mar 27 00:10:22 firebox haveged[343]: haveged starting up
+Mar 27 00:10:22 firebox NetworkManager[341]: <info>  ModemManager disappeared from bus
+Mar 27 00:10:22 firebox ModemManager[351]: <info>  ModemManager is shut down
+Mar 27 00:10:22 firebox NetworkManager[341]: <warn>  disconnected by the system bus.
+Mar 27 00:10:22 firebox systemd-logind[344]: Failed to abandon session scope: Connection reset by peer
+Mar 27 00:10:22 firebox NetworkManager[341]: g_dbus_connection_real_closed: Remote peer vanished with error: Error receiving message: Connection reset by peer (g-io-error-quark, 0). Exiting.
+Mar 27 00:10:22 firebox lightdm[352]: Failed to get D-Bus connection
+Mar 27 00:10:22 firebox accounts-daemon[372]: g_dbus_connection_real_closed: Remote peer vanished with error: Underlying GIOStream returned 0 bytes on an async read (g-io-error-quark, 0). Exiting.
+Mar 27 00:10:22 firebox systemd[1]: lightdm.service: main process exited, code=exited, status=1/FAILURE
+Mar 27 00:10:22 firebox systemd[1]: Unit lightdm.service entered failed state.
+Mar 27 00:10:22 firebox systemd[1]: lightdm.service failed.
+Mar 27 00:10:22 firebox systemd[1]: Requested transaction contradicts existing jobs: Transaction is destructive.
+Mar 27 00:10:22 firebox systemd[1]: lvm2-lvmetad.socket failed to queue service startup job (Maybe the service file is missing or not a non-template unit?): Transaction is destructive.
+Mar 27 00:10:22 firebox lvm[450]: Daemon lvmetad returned error 104
+Mar 27 00:10:22 firebox lvm[450]: WARNING: Failed to connect to lvmetad. Falling back to internal scanning.
+Mar 27 00:10:22 firebox systemd[1]: Unit lvm2-lvmetad.socket entered failed state.
+Mar 27 00:10:22 firebox NetworkManager[341]: <info>  caught signal 15, shutting down normally.
+Mar 27 00:10:22 firebox NetworkManager[341]: <info>  (wlp0s2f1u10): device state change: disconnected -> unmanaged (reason 'removed') [30 10 36]
+Mar 27 00:10:22 firebox NetworkManager[341]: ** (NetworkManager:341): CRITICAL **: dbus_g_proxy_call_no_reply: assertion '!DBUS_G_PROXY_DESTROYED (proxy)' failed
+Mar 27 00:10:22 firebox kernel: IPv6: ADDRCONF(NETDEV_UP): wlp0s2f1u10: link is not ready
+Mar 27 00:10:22 firebox systemd[391]: Stopping Default.
+Mar 27 00:10:22 firebox systemd[391]: Stopped target Default.
+Mar 27 00:10:22 firebox systemd[391]: Stopping Basic System.
+Mar 27 00:10:22 firebox systemd[391]: Stopped target Basic System.
+Mar 27 00:10:22 firebox systemd[391]: Stopping Paths.
+Mar 27 00:10:22 firebox systemd[391]: Stopped target Paths.
+Mar 27 00:10:22 firebox systemd[391]: Stopping Timers.
+Mar 27 00:10:22 firebox systemd[391]: Stopped target Timers.
+Mar 27 00:10:22 firebox systemd[391]: Starting Shutdown.
+Mar 27 00:10:22 firebox systemd[391]: Reached target Shutdown.
+Mar 27 00:10:22 firebox systemd[391]: Starting Exit the Session...
+Mar 27 00:10:22 firebox systemd[391]: Stopping Sockets.
+Mar 27 00:10:22 firebox systemd[391]: Stopped target Sockets.
+Mar 27 00:10:22 firebox NetworkManager[341]: <info>  exiting (success)
+Mar 27 00:10:22 firebox wpa_supplicant[379]: Successfully initialized wpa_supplicant
+Mar 27 00:10:22 firebox wpa_supplicant[379]: wlp0s2f1u10: CTRL-EVENT-REGDOM-CHANGE init=BEACON_HINT type=UNKNOWN
+Mar 27 00:10:22 firebox wpa_supplicant[379]: wlp0s2f1u10: CTRL-EVENT-TERMINATING
+Mar 27 00:10:22 firebox lvm[450]: Cannot proceed since lvmetad is not active.
+Mar 27 00:10:22 firebox systemd[1]: lvm2-pvscan@254:0.service: control process exited, code=exited status=5
+Mar 27 00:10:22 firebox systemd[1]: Unit lvm2-pvscan@254:0.service entered failed state.
+Mar 27 00:10:22 firebox systemd[1]: lvm2-pvscan@254:0.service failed.
+Mar 27 00:10:22 firebox systemd[392]: pam_unix(systemd-user:session): session closed for user lightdm
+Mar 27 00:10:22 firebox systemd[391]: Received SIGRTMIN+24 from PID 463 (kill).
+Mar 27 00:10:22 firebox mkinitcpio[451]: ==> Starting build: none
+Mar 27 00:10:22 firebox mkinitcpio[451]: -> Running build hook: [sd-shutdown]
+Mar 27 00:10:23 firebox mkinitcpio[451]: ==> Build complete.
+Mar 27 00:10:23 firebox systemd[1]: Shutting down.
+Mar 27 00:10:23 firebox systemd-journal[200]: Journal stopped

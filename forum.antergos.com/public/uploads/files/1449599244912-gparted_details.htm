@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='fr-FR' lang='fr-FR'>
+<head>
+<meta http-equiv='Content-Type' content='text/html;charset=utf-8' />
+<title>Détails de GParted</title>
+</head>
+<body>
+<p>GParted 0.23.0 --enable-libparted-dmraid --enable-online-resize</p>
+<p>Libparted 3.2</p>
+<table border='0'>
+<tr>
+<td colspan='2'>
+<b>Créer Partition primaire #1 (fat32, 7.50 Gio) sur /dev/sdb</b>&nbsp;&nbsp;00:00:02&nbsp;&nbsp;&nbsp;&nbsp;( ERREUR )
+</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>
+<table border='0'>
+<tr>
+<td colspan='2'>
+créer une partition vide&nbsp;&nbsp;00:00:01&nbsp;&nbsp;&nbsp;&nbsp;( SUCCÈS )
+</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>
+<table border='0'>
+<tr>
+<td colspan='2'>
+<i>chemin : /dev/sdb1 (partition)<br />début : 2048<br />fin : 15740927<br />taille : 15738880 (7.50 Gio)</i>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table border='0'>
+<tr>
+<td colspan='2'>
+effacer les anciennes signatures de systèmes de fichiers sur /dev/sdb1&nbsp;&nbsp;00:00:00&nbsp;&nbsp;&nbsp;&nbsp;( SUCCÈS )
+</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>
+<table border='0'>
+<tr>
+<td colspan='2'>
+write 68.00 Kio of zeros at byte offset 0&nbsp;&nbsp;00:00:00&nbsp;&nbsp;&nbsp;&nbsp;( SUCCÈS )
+</td>
+</tr>
+</table>
+<table border='0'>
+<tr>
+<td colspan='2'>
+write 4.00 Kio of zeros at byte offset 67108864&nbsp;&nbsp;00:00:00&nbsp;&nbsp;&nbsp;&nbsp;( SUCCÈS )
+</td>
+</tr>
+</table>
+<table border='0'>
+<tr>
+<td colspan='2'>
+write 4.00 Kio of zeros at byte offset 8058302464&nbsp;&nbsp;00:00:00&nbsp;&nbsp;&nbsp;&nbsp;( SUCCÈS )
+</td>
+</tr>
+</table>
+<table border='0'>
+<tr>
+<td colspan='2'>
+purger le cache du système d&apos;exploitation sur /dev/sdb&nbsp;&nbsp;00:00:00&nbsp;&nbsp;&nbsp;&nbsp;( SUCCÈS )
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table border='0'>
+<tr>
+<td colspan='2'>
+définir le type de partition sur /dev/sdb1&nbsp;&nbsp;00:00:01&nbsp;&nbsp;&nbsp;&nbsp;( SUCCÈS )
+</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>
+<table border='0'>
+<tr>
+<td colspan='2'>
+<i>nouveau type de partition : fat32</i>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table border='0'>
+<tr>
+<td colspan='2'>
+créer un nouveau système de fichiers fat32&nbsp;&nbsp;00:00:00&nbsp;&nbsp;&nbsp;&nbsp;( ERREUR )
+</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>
+<table border='0'>
+<tr>
+<td colspan='2'>
+<b><i>mkfs.fat -F32 -v -I -n &quot;           &quot; /dev/sdb1</i></b>
+</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>
+<table border='0'>
+<tr>
+<td colspan='2'>
+<i>mkfs.fat 3.0.28 (2015-05-16)<br /></i>
+</td>
+</tr>
+</table>
+<table border='0'>
+<tr>
+<td colspan='2'>
+<i>mkfs.fat: unable to open /dev/sdb1: Device or resource busy<br /></i>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<p>========================================</p>
+</body>
+</html>

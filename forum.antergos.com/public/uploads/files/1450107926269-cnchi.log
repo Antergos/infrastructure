@@ -1,0 +1,10 @@
+2015-12-14 15:22:27 [ERROR] metalink.py(124) create(): Can't find these packages: kdeplasma-applets-plasma-nm 
+2015-12-14 15:22:27 [ERROR] download.py(181) create_metalinks_list(): Error creating metalink for package kdeplasma-applets-plasma-nm. Installation will stop
+2015-12-14 15:22:27 [ERROR] download.py(204) create_metalinks_list(): Can't create download set: 'Error creating metalink for package kdeplasma-applets-plasma-nm. Installation will stop'
+2015-12-14 15:22:27 [ERROR] process.py(106) run(): 'Cannot create download package list (metalinks). Check log output for details.'
+2015-12-14 15:22:27 [ERROR] process.py(110) run(): Traceback (most recent call last):
+2015-12-14 15:22:27 [ERROR] process.py(110) run():   File "/usr/share/cnchi/cnchi/installation/process.py", line 83, in run
+    raise misc.InstallError(txt)
+2015-12-14 15:22:27 [ERROR] process.py(110) run(): misc.misc.InstallError: 'Cannot create download package list (metalinks). Check log output for details.'
+2015-12-14 15:25:18 [INFO] main_window.py(370) on_exit_button_clicked(): Quiting installer...
+

@@ -1,0 +1,66 @@
+[+0.08s] DEBUG: Logging to /var/log/lightdm/lightdm.log
+[+0.08s] DEBUG: Starting Light Display Manager 1.14.0, UID=0 PID=226
+[+0.08s] DEBUG: Loading configuration dirs from /usr/share/lightdm/lightdm.conf.d
+[+0.08s] DEBUG: Loading configuration dirs from /usr/local/share/lightdm/lightdm.conf.d
+[+0.08s] DEBUG: Loading configuration dirs from /etc/xdg/lightdm/lightdm.conf.d
+[+0.08s] DEBUG: Loading configuration from /etc/lightdm/lightdm.conf
+[+0.08s] DEBUG: Using D-Bus name org.freedesktop.DisplayManager
+[+0.21s] DEBUG: Registered seat module xlocal
+[+0.21s] DEBUG: Registered seat module xremote
+[+0.21s] DEBUG: Registered seat module unity
+[+1.25s] DEBUG: Monitoring logind for seats
+[+1.25s] DEBUG: New seat added from logind: seat0
+[+1.25s] DEBUG: Loading properties from config section SeatDefaults
+[+1.25s] DEBUG: Seat seat0: Starting
+[+1.25s] DEBUG: Seat seat0: Creating greeter session
+[+1.50s] DEBUG: Seat seat0: Creating display server of type x
+[+1.50s] DEBUG: Could not run plymouth --ping: Failed to execute child process "plymouth" (No such file or directory)
+[+1.50s] DEBUG: Using VT 1
+[+1.50s] DEBUG: Seat seat0: Starting local X display on VT 1
+[+1.50s] DEBUG: DisplayServer x-0: Logging to /var/log/lightdm/x-0.log
+[+1.53s] DEBUG: DisplayServer x-0: Writing X server authority to /run/lightdm/root/:0
+[+1.53s] DEBUG: DisplayServer x-0: Launching X Server
+[+1.53s] DEBUG: Launching process 248: /usr/sbin/X :0 -seat seat0 -auth /run/lightdm/root/:0 -nolisten tcp vt1 -novtswitch
+[+1.54s] DEBUG: DisplayServer x-0: Waiting for ready signal from X server :0
+[+1.54s] DEBUG: Acquired bus name org.freedesktop.DisplayManager
+[+1.54s] DEBUG: Registering seat with bus path /org/freedesktop/DisplayManager/Seat0
+[+6.37s] DEBUG: Loading users from org.freedesktop.Accounts
+[+6.38s] DEBUG: User /org/freedesktop/Accounts/User1000 added
+[+7.76s] DEBUG: Got signal 10 from process 248
+[+7.76s] DEBUG: DisplayServer x-0: Got signal from X server :0
+[+7.76s] DEBUG: DisplayServer x-0: Connecting to XServer :0
+[+7.77s] DEBUG: Seat seat0: Display server ready, starting session authentication
+[+7.77s] DEBUG: Session pid=296: Started with service 'lightdm-greeter', username 'lightdm'
+[+8.18s] DEBUG: Session pid=296: Authentication complete with return value 0: Success
+[+8.18s] DEBUG: Seat seat0: Session authenticated, running command
+[+8.18s] DEBUG: Session pid=296: Running command /usr/sbin/lightdm-webkit2-greeter
+[+8.18s] DEBUG: Creating shared data directory /var/lib/lightdm-data/lightdm
+[+8.18s] DEBUG: Session pid=296: Logging to /var/log/lightdm/x-0-greeter.log
+[+8.60s] DEBUG: Activating VT 1
+[+8.60s] DEBUG: Activating login1 session c1
+[+8.60s] DEBUG: Seat seat0 changes active session to c1
+[+8.60s] DEBUG: Session c1 is already active
+[+19.38s] DEBUG: Session pid=296: Greeter connected version=1.14.0 resettable=false
+[+62.92s] DEBUG: Seat seat0 changes active session to 
+[+83.50s] DEBUG: Seat seat0 changes active session to c2
+[+102.30s] DEBUG: Got signal 15 from process 1
+[+102.78s] DEBUG: Caught Terminated signal, shutting down
+[+102.78s] DEBUG: Stopping display manager
+[+102.78s] DEBUG: Seat seat0: Stopping
+[+102.78s] DEBUG: Seat seat0: Stopping display server
+[+102.78s] DEBUG: Sending signal 15 to process 248
+[+102.78s] DEBUG: Seat seat0: Stopping session
+[+102.78s] DEBUG: Session pid=296: Sending SIGTERM
+[+107.78s] DEBUG: Sending signal 9 to process 248
+[+108.01s] DEBUG: Process 248 terminated with signal 9
+[+108.01s] DEBUG: DisplayServer x-0: X server stopped
+[+108.01s] DEBUG: Releasing VT 1
+[+108.01s] DEBUG: DisplayServer x-0: Removing X server authority /run/lightdm/root/:0
+[+108.01s] DEBUG: Seat seat0: Display server stopped
+[+109.65s] DEBUG: Session pid=296: Greeter closed communication channel
+[+109.65s] DEBUG: Session pid=296: Exited with return value 0
+[+109.65s] DEBUG: Seat seat0: Session stopped
+[+109.65s] DEBUG: Seat seat0: Stopped
+[+109.65s] DEBUG: Display manager stopped
+[+109.65s] DEBUG: Stopping daemon
+[+109.74s] DEBUG: Exiting with return value 0

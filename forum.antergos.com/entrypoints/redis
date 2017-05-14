@@ -1,15 +1,13 @@
 #!/bin/sh
 set -e
 
-cd /run
+cd /private/redis
 
-if [[ ! -e redis ]]; then
-	# Prepare database files
-	tar -xf secrets/redis_aof
-	tar -xf secrets/redis_rdb
+if [[ ! -e appendonly.aof ]]; then
+	# Extract database files
+	tar -xf appendonly.aof.tar.xz
+	tar -xf dump.rdb.tar.xz
 fi
-
-cd redis
 
 
 ##

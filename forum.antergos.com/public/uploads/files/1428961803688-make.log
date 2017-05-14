@@ -1,0 +1,228 @@
+DKMS make.log for rtl8812au-4.2.2.7502.20130517 for kernel 3.19.3-3-ARCH (i686)
+Mon Apr 13 15:35:12 MDT 2015
+make: Entering directory '/usr/lib/modules/3.19.3-3-ARCH/build'
+  LD      /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/built-in.o
+  CC [M]  /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/core/rtw_cmd.o
+  CC [M]  /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/core/rtw_security.o
+  CC [M]  /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/core/rtw_debug.o
+  CC [M]  /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/core/rtw_io.o
+  CC [M]  /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/core/rtw_ioctl_query.o
+  CC [M]  /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/core/rtw_ioctl_set.o
+  CC [M]  /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/core/rtw_ieee80211.o
+  CC [M]  /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/core/rtw_mlme.o
+  CC [M]  /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/core/rtw_mlme_ext.o
+  CC [M]  /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/core/rtw_wlan_util.o
+  CC [M]  /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/core/rtw_vht.o
+  CC [M]  /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/core/rtw_pwrctrl.o
+  CC [M]  /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/core/rtw_rf.o
+  CC [M]  /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/core/rtw_recv.o
+  CC [M]  /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/core/rtw_sta_mgt.o
+  CC [M]  /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/core/rtw_ap.o
+  CC [M]  /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/core/rtw_xmit.o
+  CC [M]  /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/core/rtw_p2p.o
+  CC [M]  /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/core/rtw_tdls.o
+  CC [M]  /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/core/rtw_br_ext.o
+  CC [M]  /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/core/rtw_iol.o
+  CC [M]  /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/core/rtw_sreset.o
+  CC [M]  /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/core/efuse/rtw_efuse.o
+  CC [M]  /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/osdep_service.o
+  CC [M]  /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/os_intfs.o
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/os_intfs.c:1695:2: warning: initialization from incompatible pointer type
+  .ndo_select_queue = rtw_select_queue,
+  ^
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/os_intfs.c:1695:2: warning: (near initialization for ‘rtw_netdev_ops.ndo_select_queue’)
+  CC [M]  /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/usb_intf.o
+  CC [M]  /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/usb_ops_linux.o
+  CC [M]  /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_linux.o
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_linux.c: In function ‘rtw_mp_efuse_get’:
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_linux.c:8887:65: warning: iteration 16u invokes undefined behavior [-Waggressive-loop-optimizations]
+     sprintf(extra, "%s%02X ", extra, pEfuseHal->fakeEfuseInitMap[i+j]);
+                                                                 ^
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_linux.c:8875:3: note: containing loop
+   for (i = 0; i < EFUSE_MAP_SIZE; i += 16)
+   ^
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_linux.c:9307:69: warning: iteration 16u invokes undefined behavior [-Waggressive-loop-optimizations]
+     sprintf(extra, "%s %02X", extra, pEfuseHal->fakeEfuseModifiedMap[i+j]);
+                                                                     ^
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_linux.c:9295:3: note: containing loop
+   for (i=0; i<EFUSE_MAP_SIZE; i+=16)
+   ^
+  CC [M]  /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/xmit_linux.o
+  CC [M]  /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/mlme_linux.o
+  CC [M]  /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/recv_linux.o
+  CC [M]  /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_cfg80211.o
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_cfg80211.c: In function ‘cfg80211_rtw_add_key’:
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_cfg80211.c:1250:35: warning: passing argument 2 of ‘_rtw_memcpy’ discards ‘const’ qualifier from pointer target type
+   _rtw_memcpy(param->u.crypt.seq, params->seq, params->seq_len);
+                                   ^
+In file included from /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/include/drv_types.h:32:0,
+                 from /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_cfg80211.c:22:
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/include/osdep_service.h:167:13: note: expected ‘void *’ but argument is of type ‘const u8 *’
+ extern void _rtw_memcpy(void* dec, void* sour, u32 sz);
+             ^
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_cfg80211.c:1256:35: warning: passing argument 2 of ‘_rtw_memcpy’ discards ‘const’ qualifier from pointer target type
+   _rtw_memcpy(param->u.crypt.key, params->key, params->key_len);
+                                   ^
+In file included from /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/include/drv_types.h:32:0,
+                 from /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_cfg80211.c:22:
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/include/osdep_service.h:167:13: note: expected ‘void *’ but argument is of type ‘const u8 *’
+ extern void _rtw_memcpy(void* dec, void* sour, u32 sz);
+             ^
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_cfg80211.c: In function ‘cfg80211_rtw_connect’:
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_cfg80211.c:2550:30: warning: passing argument 2 of ‘_rtw_memcpy’ discards ‘const’ qualifier from pointer target type
+  _rtw_memcpy(ndis_ssid.Ssid, sme->ssid, sme->ssid_len);
+                              ^
+In file included from /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/include/drv_types.h:32:0,
+                 from /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_cfg80211.c:22:
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/include/osdep_service.h:167:13: note: expected ‘void *’ but argument is of type ‘const u8 *’
+ extern void _rtw_memcpy(void* dec, void* sour, u32 sz);
+             ^
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_cfg80211.c:2587:49: warning: passing argument 2 of ‘_rtw_memcmp’ discards ‘const’ qualifier from pointer target type
+    if(_rtw_memcmp(pnetwork->network.MacAddress, sme->bssid, ETH_ALEN) == _FALSE)
+                                                 ^
+In file included from /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/include/drv_types.h:32:0,
+                 from /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_cfg80211.c:22:
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/include/osdep_service.h:168:12: note: expected ‘void *’ but argument is of type ‘const u8 *’
+ extern int _rtw_memcmp(void *dst, void *src, u32 sz);
+            ^
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_cfg80211.c:2593:49: warning: passing argument 2 of ‘_rtw_memcmp’ discards ‘const’ qualifier from pointer target type
+     || _rtw_memcmp(pnetwork->network.Ssid.Ssid, sme->ssid, sme->ssid_len) == _FALSE
+                                                 ^
+In file included from /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/include/drv_types.h:32:0,
+                 from /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_cfg80211.c:22:
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/include/osdep_service.h:168:12: note: expected ‘void *’ but argument is of type ‘const u8 *’
+ extern int _rtw_memcmp(void *dst, void *src, u32 sz);
+            ^
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_cfg80211.c:2601:14: warning: assignment discards ‘const’ qualifier from pointer target type
+    src_bssid = sme->bssid;
+              ^
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_cfg80211.c:2682:42: warning: passing argument 2 of ‘rtw_cfg80211_set_wpa_ie’ discards ‘const’ qualifier from pointer target type
+  ret = rtw_cfg80211_set_wpa_ie(padapter, sme->ie, sme->ie_len);
+                                          ^
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_cfg80211.c:2243:12: note: expected ‘u8 *’ but argument is of type ‘const u8 *’
+ static int rtw_cfg80211_set_wpa_ie(_adapter *padapter, u8 *pie, size_t ielen)
+            ^
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_cfg80211.c: In function ‘cfg80211_rtw_set_pmksa’:
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_cfg80211.c:2913:20: warning: passing argument 1 of ‘_rtw_memcmp’ discards ‘const’ qualifier from pointer target type
+  if ( _rtw_memcmp( pmksa->bssid, strZeroMacAddress, ETH_ALEN ) == _TRUE )
+                    ^
+In file included from /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/include/drv_types.h:32:0,
+                 from /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_cfg80211.c:22:
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/include/osdep_service.h:168:12: note: expected ‘void *’ but argument is of type ‘const u8 *’
+ extern int _rtw_memcmp(void *dst, void *src, u32 sz);
+            ^
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_cfg80211.c:2923:59: warning: passing argument 2 of ‘_rtw_memcmp’ discards ‘const’ qualifier from pointer target type
+   if( _rtw_memcmp( psecuritypriv->PMKIDList[index].Bssid, pmksa->bssid, ETH_ALEN) ==_TRUE )
+                                                           ^
+In file included from /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/include/drv_types.h:32:0,
+                 from /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_cfg80211.c:22:
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/include/osdep_service.h:168:12: note: expected ‘void *’ but argument is of type ‘const u8 *’
+ extern int _rtw_memcmp(void *dst, void *src, u32 sz);
+            ^
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_cfg80211.c:2927:56: warning: passing argument 2 of ‘_rtw_memcpy’ discards ‘const’ qualifier from pointer target type
+    _rtw_memcpy( psecuritypriv->PMKIDList[index].PMKID, pmksa->pmkid, WLAN_PMKID_LEN);
+                                                        ^
+In file included from /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/include/drv_types.h:32:0,
+                 from /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_cfg80211.c:22:
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/include/osdep_service.h:167:13: note: expected ‘void *’ but argument is of type ‘const u8 *’
+ extern void _rtw_memcpy(void* dec, void* sour, u32 sz);
+             ^
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_cfg80211.c:2941:74: warning: passing argument 2 of ‘_rtw_memcpy’ discards ‘const’ qualifier from pointer target type
+   _rtw_memcpy(psecuritypriv->PMKIDList[psecuritypriv->PMKIDIndex].Bssid, pmksa->bssid, ETH_ALEN);
+                                                                          ^
+In file included from /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/include/drv_types.h:32:0,
+                 from /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_cfg80211.c:22:
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/include/osdep_service.h:167:13: note: expected ‘void *’ but argument is of type ‘const u8 *’
+ extern void _rtw_memcpy(void* dec, void* sour, u32 sz);
+             ^
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_cfg80211.c:2942:74: warning: passing argument 2 of ‘_rtw_memcpy’ discards ‘const’ qualifier from pointer target type
+   _rtw_memcpy(psecuritypriv->PMKIDList[psecuritypriv->PMKIDIndex].PMKID, pmksa->pmkid, WLAN_PMKID_LEN);
+                                                                          ^
+In file included from /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/include/drv_types.h:32:0,
+                 from /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_cfg80211.c:22:
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/include/osdep_service.h:167:13: note: expected ‘void *’ but argument is of type ‘const u8 *’
+ extern void _rtw_memcpy(void* dec, void* sour, u32 sz);
+             ^
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_cfg80211.c: In function ‘cfg80211_rtw_del_pmksa’:
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_cfg80211.c:2967:59: warning: passing argument 2 of ‘_rtw_memcmp’ discards ‘const’ qualifier from pointer target type
+   if( _rtw_memcmp( psecuritypriv->PMKIDList[index].Bssid, pmksa->bssid, ETH_ALEN) ==_TRUE )
+                                                           ^
+In file included from /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/include/drv_types.h:32:0,
+                 from /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_cfg80211.c:22:
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/include/osdep_service.h:168:12: note: expected ‘void *’ but argument is of type ‘const u8 *’
+ extern int _rtw_memcmp(void *dst, void *src, u32 sz);
+            ^
+In file included from /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/include/drv_types.h:141:0,
+                 from /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_cfg80211.c:22:
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_cfg80211.c: In function ‘rtw_cfg80211_rx_action_p2p’:
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/include/ioctl_cfg80211.h:114:71: error: too many arguments to function ‘cfg80211_rx_mgmt’
+   #define rtw_cfg80211_rx_mgmt(adapter, freq, sig_dbm, buf, len, gfp) cfg80211_rx_mgmt((adapter)->rtw_wdev, freq, sig_dbm, buf, len, 0, gfp)
+                                                                       ^
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_cfg80211.c:3883:2: note: in expansion of macro ‘rtw_cfg80211_rx_mgmt’
+  rtw_cfg80211_rx_mgmt(padapter, freq, 0, pmgmt_frame, frame_len, GFP_ATOMIC);
+  ^
+In file included from /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/include/osdep_service_linux.h:76:0,
+                 from /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/include/osdep_service.h:41,
+                 from /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/include/drv_types.h:32,
+                 from /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_cfg80211.c:22:
+include/net/cfg80211.h:4612:6: note: declared here
+ bool cfg80211_rx_mgmt(struct wireless_dev *wdev, int freq, int sig_dbm,
+      ^
+In file included from /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/include/drv_types.h:141:0,
+                 from /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_cfg80211.c:22:
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_cfg80211.c: In function ‘rtw_cfg80211_rx_p2p_action_public’:
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/include/ioctl_cfg80211.h:114:71: error: too many arguments to function ‘cfg80211_rx_mgmt’
+   #define rtw_cfg80211_rx_mgmt(adapter, freq, sig_dbm, buf, len, gfp) cfg80211_rx_mgmt((adapter)->rtw_wdev, freq, sig_dbm, buf, len, 0, gfp)
+                                                                       ^
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_cfg80211.c:3921:2: note: in expansion of macro ‘rtw_cfg80211_rx_mgmt’
+  rtw_cfg80211_rx_mgmt(padapter, freq, 0, pmgmt_frame, frame_len, GFP_ATOMIC);
+  ^
+In file included from /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/include/osdep_service_linux.h:76:0,
+                 from /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/include/osdep_service.h:41,
+                 from /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/include/drv_types.h:32,
+                 from /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_cfg80211.c:22:
+include/net/cfg80211.h:4612:6: note: declared here
+ bool cfg80211_rx_mgmt(struct wireless_dev *wdev, int freq, int sig_dbm,
+      ^
+In file included from /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/include/drv_types.h:141:0,
+                 from /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_cfg80211.c:22:
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_cfg80211.c: In function ‘rtw_cfg80211_rx_action’:
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/include/ioctl_cfg80211.h:114:71: error: too many arguments to function ‘cfg80211_rx_mgmt’
+   #define rtw_cfg80211_rx_mgmt(adapter, freq, sig_dbm, buf, len, gfp) cfg80211_rx_mgmt((adapter)->rtw_wdev, freq, sig_dbm, buf, len, 0, gfp)
+                                                                       ^
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_cfg80211.c:3951:2: note: in expansion of macro ‘rtw_cfg80211_rx_mgmt’
+  rtw_cfg80211_rx_mgmt(adapter, freq, 0, frame, frame_len, GFP_ATOMIC);
+  ^
+In file included from /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/include/osdep_service_linux.h:76:0,
+                 from /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/include/osdep_service.h:41,
+                 from /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/include/drv_types.h:32,
+                 from /var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_cfg80211.c:22:
+include/net/cfg80211.h:4612:6: note: declared here
+ bool cfg80211_rx_mgmt(struct wireless_dev *wdev, int freq, int sig_dbm,
+      ^
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_cfg80211.c: At top level:
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_cfg80211.c:5041:2: warning: initialization from incompatible pointer type
+  .get_station = cfg80211_rtw_get_station,
+  ^
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_cfg80211.c:5041:2: warning: (near initialization for ‘rtw_cfg80211_ops.get_station’)
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_cfg80211.c:5069:2: warning: initialization from incompatible pointer type
+  .add_station = cfg80211_rtw_add_station,
+  ^
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_cfg80211.c:5069:2: warning: (near initialization for ‘rtw_cfg80211_ops.add_station’)
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_cfg80211.c:5070:2: warning: initialization from incompatible pointer type
+  .del_station = cfg80211_rtw_del_station,
+  ^
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_cfg80211.c:5070:2: warning: (near initialization for ‘rtw_cfg80211_ops.del_station’)
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_cfg80211.c:5071:2: warning: initialization from incompatible pointer type
+  .change_station = cfg80211_rtw_change_station,
+  ^
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_cfg80211.c:5071:2: warning: (near initialization for ‘rtw_cfg80211_ops.change_station’)
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_cfg80211.c:5087:2: warning: initialization from incompatible pointer type
+  .mgmt_tx = cfg80211_rtw_mgmt_tx,
+  ^
+/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_cfg80211.c:5087:2: warning: (near initialization for ‘rtw_cfg80211_ops.mgmt_tx’)
+scripts/Makefile.build:257: recipe for target '/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_cfg80211.o' failed
+make[1]: *** [/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build/os_dep/linux/ioctl_cfg80211.o] Error 1
+Makefile:1382: recipe for target '_module_/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build' failed
+make: *** [_module_/var/lib/dkms/rtl8812au/4.2.2.7502.20130517/build] Error 2
+make: Leaving directory '/usr/lib/modules/3.19.3-3-ARCH/build'

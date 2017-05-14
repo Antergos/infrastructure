@@ -11,8 +11,10 @@ services:
       - nodebb_secret
     volumes:
       - config:/config
-      - theme:/theme
       - entrypoints:/entrypoint
+      - public:/public
+      - private:/private
+      - theme:/theme
 
   nginx:
     image: nginx:alpine
@@ -24,50 +26,43 @@ services:
     entrypoint: /entrypoint/nginx
     depends_on:
       - nodebb
-    secrets:
-      - "nginx_fullchain_${NODE_ENV}"
-      - "nginx_privkey_${NODE_ENV}"
     volumes:
-      - entrypoints:/entrypoint
       - config:/config
+      - entrypoints:/entrypoint
+      - public:/public
 
   redis:
     image: redis:alpine
     command: redis-server --appendonly yes
     entrypoint: /entrypoint/redis
-    secrets:
-      - redis_rdb
-      - redis_aof
     volumes:
+      - config:/config
       - entrypoints:/entrypoint
+      - private:/private
 
 secrets:
-  nginx_fullchain:
-    file: ./private/nginx/production/fullchain.pem
-  nginx_privkey:
-    file: ./private/nginx/production/privkey.pem
-  nginx_fullchain_development:
-    file: ./private/nginx/development/fullchain.pem
-  nginx_privkey_development:
-    file: ./private/nginx/development/privkey.pem
   nodebb_secret:
     file: ./private/nodebb/SECRET
-  redis_rdb:
-    file: ./private/redis/dump.rdb.tar.xz
-  redis_aof:
-    file: ./private/redis/appendonly.aof.tar.xz
 
 volumes:
-  entrypoints:
-    driver: local-persist
-    driver_opts:
-      mountpoint: "${PWD}/entrypoints"
-  theme:
-    driver: local-persist
-    driver_opts:
-      mountpoint: "${PWD}/theme"
   config:
     driver: local-persist
     driver_opts:
       mountpoint: "${PWD}/config"
+  entrypoints:
+    driver: local-persist
+    driver_opts:
+      mountpoint: "${PWD}/entrypoints"
+  private:
+    driver: local-persist
+    driver_opts:
+      mountpoint: "${PWD}/private"
+  public:
+    driver: local-persist
+    driver_opts:
+      mountpoint: "${PWD}/public"
+  theme:
+    driver: local-persist
+    driver_opts:
+      mountpoint: "${PWD}/theme"
 

@@ -1,0 +1,199 @@
+2015-12-11 12:25:30 [INFO] cnchi.py(265) check_gtk_version(): Using GTK v3.18.4
+2015-12-11 12:25:30 [INFO] cnchi.py(277) check_pyalpm_version(): Using pyalpm v0.7 as interface to libalpm v9.0.1
+2015-12-11 12:25:33 [INFO] main_window.py(76) __init__(): Cnchi installer version 0.12.43
+2015-12-11 12:25:33 [INFO] main_window.py(166) __init__(): Using requests to download packages
+2015-12-11 12:25:33 [DEBUG] gtkbasebox.py(58) __init__(): Loading 'welcome' screen
+2015-12-11 12:25:46 [DEBUG] gtkbasebox.py(58) __init__(): Loading 'language' screen
+2015-12-11 12:25:46 [DEBUG] gtkbasebox.py(58) __init__(): Loading 'check' screen
+2015-12-11 12:25:46 [DEBUG] gtkbasebox.py(58) __init__(): Loading 'location' screen
+2015-12-11 12:25:46 [DEBUG] gtkbasebox.py(58) __init__(): Loading 'timezone' screen
+2015-12-11 12:25:47 [DEBUG] gtkbasebox.py(58) __init__(): Loading 'keymap' screen
+2015-12-11 12:25:47 [DEBUG] gtkbasebox.py(58) __init__(): Loading 'desktop' screen
+2015-12-11 12:25:47 [DEBUG] gtkbasebox.py(58) __init__(): Loading 'features' screen
+2015-12-11 12:25:47 [DEBUG] gtkbasebox.py(58) __init__(): Loading 'ask' screen
+2015-12-11 12:25:47 [DEBUG] gtkbasebox.py(58) __init__(): Loading 'automatic' screen
+2015-12-11 12:25:47 [DEBUG] gtkbasebox.py(58) __init__(): Loading 'advanced' screen
+2015-12-11 12:25:47 [DEBUG] gtkbasebox.py(58) __init__(): Loading 'summary' screen
+2015-12-11 12:25:47 [DEBUG] gtkbasebox.py(58) __init__(): Loading 'user_info' screen
+2015-12-11 12:25:47 [DEBUG] gtkbasebox.py(58) __init__(): Loading 'slides' screen
+2015-12-11 12:25:47 [DEBUG] timezone.py(283) run(): A working network connection has been detected.
+2015-12-11 12:25:47 [DEBUG] timezone.py(292) run(): We have connection. Let's get our timezone
+2015-12-11 12:25:47 [DEBUG] rank_mirrors.py(271) run(): Updating both mirrorlists (Arch and Antergos)...
+2015-12-11 12:25:47 [DEBUG] timezone.py(313) run(): Timezone (latitude 45.7494, longitude 21.2272) detected.
+2015-12-11 12:25:50 [INFO] connectionpool.py(756) _new_conn(): Starting new HTTPS connection (1): raw.github.com
+2015-12-11 12:25:50 [DEBUG] connectionpool.py(387) _make_request(): "GET /Antergos/Cnchi/master/update.info HTTP/1.1" 301 0
+2015-12-11 12:25:50 [INFO] connectionpool.py(756) _new_conn(): Starting new HTTPS connection (1): raw.githubusercontent.com
+2015-12-11 12:25:51 [DEBUG] connectionpool.py(387) _make_request(): "GET /Antergos/Cnchi/master/update.info HTTP/1.1" 200 14771
+2015-12-11 12:25:51 [INFO] updater.py(100) __init__(): Internet version: 0.12.43
+2015-12-11 12:25:51 [DEBUG] rank_mirrors.py(274) run(): Filtering and sorting Arch mirrors...
+2015-12-11 12:25:51 [INFO] connectionpool.py(207) _new_conn(): Starting new HTTP connection (1): www.archlinux.org
+2015-12-11 12:25:51 [DEBUG] connectionpool.py(387) _make_request(): "GET /mirrors/status/json/ HTTP/1.1" 301 366
+2015-12-11 12:25:51 [INFO] connectionpool.py(756) _new_conn(): Starting new HTTPS connection (1): www.archlinux.org
+2015-12-11 12:25:51 [DEBUG] rank_mirrors.py(101) get_mirror_stats(): Failed to retrieve mirror status information: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed (_ssl.c:646)
+2015-12-11 12:25:53 [INFO] check.py(203) store_values(): We have Internet connection.
+2015-12-11 12:25:53 [INFO] check.py(204) store_values(): We're connected to a power source.
+2015-12-11 12:25:53 [INFO] check.py(205) store_values(): We have enough disk space.
+2015-12-11 12:25:53 [INFO] connectionpool.py(207) _new_conn(): Starting new HTTP connection (1): build.antergos.com
+2015-12-11 12:25:53 [DEBUG] connectionpool.py(387) _make_request(): "GET /hook?cnchi=5f44e12ab32b87a0993619870a0e2db2 HTTP/1.1" 200 None
+2015-12-11 12:25:57 [DEBUG] location.py(228) store_values(): Selected location: English (GB), United Kingdom
+2015-12-11 12:25:57 [DEBUG] location.py(211) set_locale(): Locale changed to : en_GB.UTF-8
+2015-12-11 12:25:57 [DEBUG] location.py(246) store_values(): Selected country name: United Kingdom
+2015-12-11 12:25:57 [DEBUG] location.py(247) store_values(): Selected country code: gb
+2015-12-11 12:25:57 [INFO] timezone.py(107) on_location_changed(): Location changed to : Europe/Bucharest
+2015-12-11 12:25:58 [DEBUG] timezone.py(212) log_location(): timezone human zone: Bucharest
+2015-12-11 12:25:58 [DEBUG] timezone.py(213) log_location(): timezone country: RO
+2015-12-11 12:25:58 [DEBUG] timezone.py(214) log_location(): timezone zone: Europe/Bucharest
+2015-12-11 12:25:58 [DEBUG] timezone.py(215) log_location(): timezone human country: Romania
+2015-12-11 12:25:58 [DEBUG] timezone.py(221) log_location(): timezone latitude: 44.26
+2015-12-11 12:25:58 [DEBUG] timezone.py(224) log_location(): timezone longitude: 26.06
+2015-12-11 12:25:58 [DEBUG] keymap.py(286) set_keymap(): Set keyboard to layout name 'English (UK)' (gb)
+2015-12-11 12:26:00 [DEBUG] keymap.py(286) set_keymap(): Set keyboard to layout name 'Dutch' (nl)
+2015-12-11 12:26:05 [DEBUG] keymap.py(286) set_keymap(): Set keyboard to layout name 'Portuguese (Brazil)' (br)
+2015-12-11 12:26:07 [DEBUG] keymap.py(286) set_keymap(): Set keyboard to layout name 'Romanian' (ro)
+2015-12-11 12:26:11 [DEBUG] keymap.py(286) set_keymap(): Set keyboard to layout name 'Romanian' (ro)
+2015-12-11 12:26:12 [INFO] desktop.py(208) store_values(): Cnchi will install Antergos with the 'gnome' desktop
+2015-12-11 12:26:26 [DEBUG] features.py(254) store_values(): Feature 'aur' has been selected
+2015-12-11 12:26:26 [DEBUG] features.py(254) store_values(): Feature 'bluetooth' has been selected
+2015-12-11 12:26:26 [DEBUG] features.py(254) store_values(): Feature 'cups' has been selected
+2015-12-11 12:26:26 [DEBUG] features.py(254) store_values(): Feature 'firefox' has been selected
+2015-12-11 12:26:26 [DEBUG] features.py(254) store_values(): Feature 'fonts' has been selected
+2015-12-11 12:26:26 [DEBUG] features.py(254) store_values(): Feature 'games' has been selected
+2015-12-11 12:26:26 [DEBUG] features.py(254) store_values(): Feature 'office' has been selected
+2015-12-11 12:26:26 [DEBUG] features.py(254) store_values(): Feature 'smb' has been selected
+2015-12-11 12:26:34 [DEBUG] fs_module.py(57) get_label(): Can't get partition /dev/sda1 label (or it does not have any)
+2015-12-11 12:26:34 [DEBUG] fs_module.py(57) get_label(): Can't get partition /dev/sda5 label (or it does not have any)
+2015-12-11 12:26:34 [DEBUG] fs_module.py(57) get_label(): Can't get partition /dev/sda6 label (or it does not have any)
+2015-12-11 12:26:36 [DEBUG] fs_module.py(57) get_label(): Can't get partition /dev/sda4 label (or it does not have any)
+2015-12-11 12:26:37 [DEBUG] fs_module.py(57) get_label(): Can't get partition /dev/sda3 label (or it does not have any)
+2015-12-11 12:27:01 [DEBUG] fs_module.py(57) get_label(): Can't get partition /dev/sda1 label (or it does not have any)
+2015-12-11 12:27:01 [DEBUG] fs_module.py(57) get_label(): Can't get partition /dev/sda5 label (or it does not have any)
+2015-12-11 12:27:01 [DEBUG] fs_module.py(57) get_label(): Can't get partition /dev/sda6 label (or it does not have any)
+2015-12-11 12:27:02 [DEBUG] fs_module.py(57) get_label(): Can't get partition /dev/sda4 label (or it does not have any)
+2015-12-11 12:27:02 [DEBUG] fs_module.py(57) get_label(): Can't get partition /dev/sda3 label (or it does not have any)
+2015-12-11 12:27:26 [DEBUG] fs_module.py(57) get_label(): Can't get partition /dev/sda1 label (or it does not have any)
+2015-12-11 12:27:27 [DEBUG] fs_module.py(57) get_label(): Can't get partition /dev/sda5 label (or it does not have any)
+2015-12-11 12:27:27 [DEBUG] fs_module.py(57) get_label(): Can't get partition /dev/sda6 label (or it does not have any)
+2015-12-11 12:27:28 [DEBUG] fs_module.py(57) get_label(): Can't get partition /dev/sda4 label (or it does not have any)
+2015-12-11 12:27:28 [DEBUG] fs_module.py(57) get_label(): Can't get partition /dev/sda3 label (or it does not have any)
+2015-12-11 12:27:34 [INFO] advanced.py(2013) set_bootloader(): Antergos will install the bootloader grub2 in device /dev/sda
+2015-12-11 12:27:34 [DEBUG] advanced.py(1971) get_changes(): Device /dev/sda2 will be modified, not relabeled, formatted, mounted as / and not encrypted.
+2015-12-11 12:27:34 [DEBUG] advanced.py(1971) get_changes(): Device /dev/sda7 will be modified, not relabeled, not formatted, mounted as /home and not encrypted.
+2015-12-11 12:27:38 [DEBUG] select_packages.py(113) create_package_list(): Refreshing pacman databases...
+2015-12-11 12:27:38 [DEBUG] pac.py(114) initialize_alpm(): ALPM initialised with root dir / and db path /var/lib/pacman
+2015-12-11 12:27:38 [DEBUG] pac.py(506) cb_log(): url: http://fooo.biz/archlinux/core/os/x86_64/core.db
+2015-12-11 12:27:38 [DEBUG] pac.py(506) cb_log(): maxsize: 26214400
+2015-12-11 12:27:38 [DEBUG] pac.py(506) cb_log(): opened tempfile for download: /var/lib/pacman/sync/core.db.part (wb)
+2015-12-11 12:27:38 [DEBUG] pac.py(506) cb_log(): curl returned error 0 from transfer
+2015-12-11 12:27:38 [DEBUG] pac.py(506) cb_log(): response code: 200
+2015-12-11 12:27:38 [DEBUG] pac.py(506) cb_log(): url: http://fooo.biz/archlinux/extra/os/x86_64/extra.db
+2015-12-11 12:27:38 [DEBUG] pac.py(506) cb_log(): maxsize: 26214400
+2015-12-11 12:27:38 [DEBUG] pac.py(506) cb_log(): opened tempfile for download: /var/lib/pacman/sync/extra.db.part (wb)
+2015-12-11 12:27:39 [DEBUG] pac.py(506) cb_log(): curl returned error 0 from transfer
+2015-12-11 12:27:39 [DEBUG] pac.py(506) cb_log(): response code: 200
+2015-12-11 12:27:39 [DEBUG] pac.py(506) cb_log(): url: http://fooo.biz/archlinux/community/os/x86_64/community.db
+2015-12-11 12:27:39 [DEBUG] pac.py(506) cb_log(): maxsize: 26214400
+2015-12-11 12:27:39 [DEBUG] pac.py(506) cb_log(): opened tempfile for download: /var/lib/pacman/sync/community.db.part (wb)
+2015-12-11 12:27:40 [DEBUG] pac.py(506) cb_log(): curl returned error 0 from transfer
+2015-12-11 12:27:40 [DEBUG] pac.py(506) cb_log(): response code: 200
+2015-12-11 12:27:40 [DEBUG] pac.py(506) cb_log(): url: http://mirrors.antergos.com/antergos-staging/x86_64/antergos-staging.db
+2015-12-11 12:27:40 [DEBUG] pac.py(506) cb_log(): maxsize: 26214400
+2015-12-11 12:27:40 [DEBUG] pac.py(506) cb_log(): opened tempfile for download: /var/lib/pacman/sync/antergos-staging.db.part (wb)
+2015-12-11 12:27:40 [DEBUG] pac.py(506) cb_log(): curl returned error 0 from transfer
+2015-12-11 12:27:40 [DEBUG] pac.py(506) cb_log(): response code: 200
+2015-12-11 12:27:40 [DEBUG] pac.py(506) cb_log(): url: http://mirrors.antergos.com/antergos/x86_64/antergos.db
+2015-12-11 12:27:40 [DEBUG] pac.py(506) cb_log(): maxsize: 26214400
+2015-12-11 12:27:40 [DEBUG] pac.py(506) cb_log(): opened tempfile for download: /var/lib/pacman/sync/antergos.db.part (wb)
+2015-12-11 12:27:41 [DEBUG] pac.py(506) cb_log(): curl returned error 0 from transfer
+2015-12-11 12:27:41 [DEBUG] pac.py(506) cb_log(): response code: 200
+2015-12-11 12:27:41 [DEBUG] pac.py(506) cb_log(): url: http://fooo.biz/archlinux/multilib/os/x86_64/multilib.db
+2015-12-11 12:27:41 [DEBUG] pac.py(506) cb_log(): maxsize: 26214400
+2015-12-11 12:27:41 [DEBUG] pac.py(506) cb_log(): opened tempfile for download: /var/lib/pacman/sync/multilib.db.part (wb)
+2015-12-11 12:27:41 [DEBUG] pac.py(506) cb_log(): curl returned error 0 from transfer
+2015-12-11 12:27:41 [DEBUG] pac.py(506) cb_log(): response code: 200
+2015-12-11 12:27:41 [DEBUG] select_packages.py(115) create_package_list(): Pacman ready
+2015-12-11 12:27:41 [DEBUG] select_packages.py(117) create_package_list(): Selecting packages...
+2015-12-11 12:27:41 [DEBUG] select_packages.py(166) select_packages(): Getting url http://install.antergos.com/packages-12.xml...
+2015-12-11 12:27:42 [DEBUG] select_packages.py(206) select_packages(): Adding gnome desktop packages
+2015-12-11 12:27:42 [DEBUG] hardware.py(216) __init__(): Cnchi will test 18 drivers for 23 hardware devices
+2015-12-11 12:27:42 [DEBUG] select_packages.py(241) select_packages(): Hardware module detected these drivers: ['Nouveau', 'Intel915']
+2015-12-11 12:27:42 [DEBUG] select_packages.py(246) select_packages(): Hardware module added these packages: xf86-video-nouveau, libtxc_dxtn, xf86-video-intel, libva-intel-driver, lib32-mesa, lib32-mesa-libgl
+2015-12-11 12:27:42 [DEBUG] select_packages.py(257) select_packages(): Adding filesystem packages
+2015-12-11 12:27:42 [DEBUG] select_packages.py(278) select_packages(): Adding 'grub2' bootloader packages
+2015-12-11 12:27:42 [DEBUG] select_packages.py(287) select_packages(): Check for user desired features and add them to our installation
+2015-12-11 12:27:42 [DEBUG] select_packages.py(332) add_features_packages(): Adding packages for 'aur' feature.
+2015-12-11 12:27:42 [DEBUG] select_packages.py(349) add_features_packages(): Selecting package yaourt for feature aur
+2015-12-11 12:27:42 [DEBUG] select_packages.py(349) add_features_packages(): Selecting package cmake for feature aur
+2015-12-11 12:27:42 [DEBUG] select_packages.py(349) add_features_packages(): Selecting package git for feature aur
+2015-12-11 12:27:42 [DEBUG] select_packages.py(349) add_features_packages(): Selecting package bzr for feature aur
+2015-12-11 12:27:42 [DEBUG] select_packages.py(332) add_features_packages(): Adding packages for 'bluetooth' feature.
+2015-12-11 12:27:42 [DEBUG] select_packages.py(349) add_features_packages(): Selecting package bluez-utils for feature bluetooth
+2015-12-11 12:27:42 [DEBUG] select_packages.py(349) add_features_packages(): Selecting package pulseaudio-bluetooth for feature bluetooth
+2015-12-11 12:27:42 [DEBUG] select_packages.py(349) add_features_packages(): Selecting package gnome-bluetooth for feature bluetooth
+2015-12-11 12:27:42 [DEBUG] select_packages.py(332) add_features_packages(): Adding packages for 'cups' feature.
+2015-12-11 12:27:42 [DEBUG] select_packages.py(349) add_features_packages(): Selecting package cups for feature cups
+2015-12-11 12:27:42 [DEBUG] select_packages.py(349) add_features_packages(): Selecting package cups-pk-helper for feature cups
+2015-12-11 12:27:42 [DEBUG] select_packages.py(349) add_features_packages(): Selecting package gsfonts for feature cups
+2015-12-11 12:27:42 [DEBUG] select_packages.py(349) add_features_packages(): Selecting package hplip for feature cups
+2015-12-11 12:27:42 [DEBUG] select_packages.py(349) add_features_packages(): Selecting package system-config-printer for feature cups
+2015-12-11 12:27:42 [DEBUG] select_packages.py(349) add_features_packages(): Selecting package splix for feature cups
+2015-12-11 12:27:42 [DEBUG] select_packages.py(332) add_features_packages(): Adding packages for 'firefox' feature.
+2015-12-11 12:27:42 [DEBUG] select_packages.py(349) add_features_packages(): Selecting package firefox for feature firefox
+2015-12-11 12:27:42 [DEBUG] select_packages.py(349) add_features_packages(): Selecting package flashplugin for feature firefox
+2015-12-11 12:27:42 [DEBUG] select_packages.py(332) add_features_packages(): Adding packages for 'fonts' feature.
+2015-12-11 12:27:42 [DEBUG] select_packages.py(349) add_features_packages(): Selecting package ttf-freefont for feature fonts
+2015-12-11 12:27:42 [DEBUG] select_packages.py(349) add_features_packages(): Selecting package ttf-google-fonts for feature fonts
+2015-12-11 12:27:42 [DEBUG] select_packages.py(332) add_features_packages(): Adding packages for 'games' feature.
+2015-12-11 12:27:42 [DEBUG] select_packages.py(349) add_features_packages(): Selecting package steam for feature games
+2015-12-11 12:27:42 [DEBUG] select_packages.py(349) add_features_packages(): Selecting package playonlinux for feature games
+2015-12-11 12:27:42 [DEBUG] select_packages.py(332) add_features_packages(): Adding packages for 'office' feature.
+2015-12-11 12:27:42 [DEBUG] select_packages.py(349) add_features_packages(): Selecting package libreoffice-fresh for feature office
+2015-12-11 12:27:42 [DEBUG] select_packages.py(349) add_features_packages(): Selecting package hunspell-en for feature office
+2015-12-11 12:27:42 [DEBUG] select_packages.py(332) add_features_packages(): Adding packages for 'smb' feature.
+2015-12-11 12:27:42 [DEBUG] select_packages.py(349) add_features_packages(): Selecting package gvfs-smb for feature smb
+2015-12-11 12:27:42 [DEBUG] select_packages.py(349) add_features_packages(): Selecting package python-pysmbc for feature smb
+2015-12-11 12:27:42 [DEBUG] select_packages.py(354) add_features_packages(): Add libreoffice language package
+2015-12-11 12:27:42 [DEBUG] select_packages.py(386) add_features_packages(): Add libreoffice language package
+2015-12-11 12:27:42 [DEBUG] select_packages.py(289) select_packages(): All features needed packages have been added
+2015-12-11 12:27:42 [DEBUG] select_packages.py(301) select_packages(): Conflicts list: chromium-pepper-flash, chromium, ttf-droid, libreoffice-installer
+2015-12-11 12:27:42 [DEBUG] select_packages.py(306) select_packages(): Packages list: gstreamer-vaapi,xf86-video-nouveau,system-config-printer,gnome-tweak-tool,ntfs-3g,seahorse,gnome-themes-standard,lightdm,whois,ipw2200-fw,xorg-server,pamac,totem,libgnomeui,cdrkit,orca,zd1211-firmware,gstreamer0.10-plugins,nfs-utils,gnome-documents,acpid,gnome-music,wireless_tools,bluez-utils,usb_modeswitch,net-tools,hicolor-icon-theme,reiserfsprogs,pulseaudio-bluetooth,xf86-input-synaptics,lib32-mesa,xorg-fonts,gvfs-smb,yaourt,gnome-screenshot,cmake,bijiben,git,xf86-video-vesa,bash-completion,os-prober,openssh,bind-tools,light-locker-settings,exfat-utils,gvfs-mtp,file-roller,antergos-keyring,gzip,gst-libav,unrar,haveged,tar,grub,ttf-freefont,upower,dosfstools,gnome-logs,e2fsprogs,pulseaudio-alsa,nilfs-utils,brasero,antergos-gnome-defaults-list,gnome-disk-utility,ttf-liberation,transmission-gtk,unzip,pavucontrol,libtxc_dxtn,networkmanager-pptp,pulseaudio,gnome-calculator,pidgin,alsa-utils,gnome-shell-extension-dash-to-dock,lightdm-webkit2-greeter,xdg-user-dirs-gtk,b43-fwcutter,ttf-bitstream-vera,base-devel,accountsservice,pkgfile,xf86-video-fbdev,xfsprogs,light-locker,gnome-keyring,gnome-contacts,gnome-photos,grub2-theme-antergos,sudo,mesa,ffmpegthumbnailer,libva-intel-driver,baobab,splix,gnome-font-viewer,antergos-mirrorlist,gst-plugins-bad,numix-frost-themes,gst-plugins-ugly,xscreensaver,cups-pk-helper,firefox,gnome-maps,wget,xorg-server-utils,gnome-control-center,gnome-terminal,modemmanager,playonlinux,xorg-apps,numix-icon-theme,gnome-system-monitor,gst-plugins-base,networkmanager-openvpn,mesa-vdpau,libdvdcss,ttf-google-fonts,gnome-shell-extensions,gst-plugins-good,xorg-xinit,gsfonts,antergos-wallpapers,btrfs-progs,numix-icon-theme-square,gnome-bluetooth,gnome-shell,gedit,lib32-mesa-libgl,crda,eog,bzr,wpa_actiond,gnome-weather,gnome-shell-extension-status-menu-buttons,hunspell-en,antergos-welcome,xf86-video-intel,libreoffice-fresh-en-GB,base,gnome-sound-recorder,xorg-xkill,evince,ttf-dejavu,gnome-calendar,f2fs-tools,libreoffice-fresh,jfsutils,python-pysmbc,nautilus,cups,ipw2100-fw,steam,flashplugin,network-manager-applet,gnome-backgrounds,hplip,dmraid
+2015-12-11 12:27:42 [DEBUG] select_packages.py(119) create_package_list(): Packages selected
+2015-12-11 12:27:42 [DEBUG] pac.py(114) initialize_alpm(): ALPM initialised with root dir / and db path /var/lib/pacman
+2015-12-11 12:27:42 [DEBUG] pac.py(506) cb_log(): loading package cache for repository 'core'
+2015-12-11 12:27:42 [DEBUG] pac.py(506) cb_log(): opening archive /var/lib/pacman/sync/core.db
+2015-12-11 12:27:42 [DEBUG] pac.py(506) cb_log(): added 210 packages to package cache for db 'core'
+2015-12-11 12:27:42 [DEBUG] pac.py(506) cb_log(): loading group cache for repository 'core'
+2015-12-11 12:27:42 [DEBUG] pac.py(506) cb_log(): loading package cache for repository 'extra'
+2015-12-11 12:27:42 [DEBUG] pac.py(506) cb_log(): opening archive /var/lib/pacman/sync/extra.db
+2015-12-11 12:27:42 [DEBUG] pac.py(506) cb_log(): added 3227 packages to package cache for db 'extra'
+2015-12-11 12:27:42 [DEBUG] pac.py(506) cb_log(): loading package cache for repository 'community'
+2015-12-11 12:27:42 [DEBUG] pac.py(506) cb_log(): opening archive /var/lib/pacman/sync/community.db
+2015-12-11 12:27:42 [DEBUG] pac.py(506) cb_log(): added 4639 packages to package cache for db 'community'
+2015-12-11 12:27:42 [DEBUG] pac.py(506) cb_log(): loading group cache for repository 'community'
+2015-12-11 12:27:42 [DEBUG] pac.py(506) cb_log(): loading package cache for repository 'antergos-staging'
+2015-12-11 12:27:42 [DEBUG] pac.py(506) cb_log(): opening archive /var/lib/pacman/sync/antergos-staging.db
+2015-12-11 12:27:42 [DEBUG] pac.py(506) cb_log(): added 3 packages to package cache for db 'antergos-staging'
+2015-12-11 12:27:42 [DEBUG] pac.py(506) cb_log(): loading group cache for repository 'antergos-staging'
+2015-12-11 12:27:42 [DEBUG] pac.py(506) cb_log(): loading package cache for repository 'antergos'
+2015-12-11 12:27:42 [DEBUG] pac.py(506) cb_log(): opening archive /var/lib/pacman/sync/antergos.db
+2015-12-11 12:27:42 [DEBUG] pac.py(506) cb_log(): added 95 packages to package cache for db 'antergos'
+2015-12-11 12:27:42 [DEBUG] pac.py(506) cb_log(): loading group cache for repository 'antergos'
+2015-12-11 12:27:42 [DEBUG] pac.py(506) cb_log(): loading package cache for repository 'multilib'
+2015-12-11 12:27:42 [DEBUG] pac.py(506) cb_log(): opening archive /var/lib/pacman/sync/multilib.db
+2015-12-11 12:27:43 [DEBUG] pac.py(506) cb_log(): added 215 packages to package cache for db 'multilib'
+2015-12-11 12:27:43 [DEBUG] pac.py(506) cb_log(): loading group cache for repository 'multilib'
+2015-12-11 12:27:43 [DEBUG] pac.py(506) cb_log(): loading package cache for repository 'local'
+2015-12-11 12:27:43 [DEBUG] pac.py(506) cb_log(): added 826 packages to package cache for db 'local'
+2015-12-11 12:27:43 [ERROR] download.py(204) create_metalinks_list(): Can't create download set: 'NoneType' object is not iterable
+2015-12-11 12:27:43 [ERROR] process.py(106) run(): 'Cannot create download package list (metalinks). Check log output for details.'
+2015-12-11 12:27:43 [ERROR] process.py(110) run(): Traceback (most recent call last):
+2015-12-11 12:27:43 [ERROR] process.py(110) run():   File "/usr/share/cnchi/cnchi/installation/process.py", line 83, in run
+    raise misc.InstallError(txt)
+2015-12-11 12:27:43 [ERROR] process.py(110) run(): misc.misc.InstallError: 'Cannot create download package list (metalinks). Check log output for details.'
+2015-12-11 12:27:58 [INFO] slides.py(224) manage_events_from_cb_queue(): Updating core database
+2015-12-11 12:27:58 [INFO] slides.py(224) manage_events_from_cb_queue(): Updating extra database
+2015-12-11 12:27:58 [INFO] slides.py(224) manage_events_from_cb_queue(): Updating community database
+2015-12-11 12:27:58 [INFO] slides.py(224) manage_events_from_cb_queue(): Updating antergos-staging database
+2015-12-11 12:27:58 [INFO] slides.py(224) manage_events_from_cb_queue(): Updating antergos database
+2015-12-11 12:27:58 [INFO] slides.py(224) manage_events_from_cb_queue(): Updating multilib database
+2015-12-11 12:27:58 [INFO] slides.py(224) manage_events_from_cb_queue(): Getting package list...
+2015-12-11 12:27:58 [INFO] slides.py(224) manage_events_from_cb_queue(): Creating the list of packages to download...

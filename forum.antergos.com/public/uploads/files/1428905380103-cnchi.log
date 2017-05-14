@@ -1,0 +1,148 @@
+[2015-04-13 05:00:10] [cnchi] INFO: Using GTK v3.16.1
+[2015-04-13 05:00:10] [cnchi] INFO: Using pyalpm v0.7 as interface to libalpm v9.0.1
+[2015-04-13 05:00:10] [updater] WARNING: Could not find 'update.info' file. Cnchi will not be able to update itself.
+[2015-04-13 05:00:10] [main_window] INFO: Cnchi installer version 0.8.7
+[2015-04-13 05:00:10] [gtkbasebox] DEBUG: Loading 'welcome' screen
+[2015-04-13 05:00:10] [gtkbasebox] DEBUG: Loading 'language' screen
+[2015-04-13 05:03:08] [gtkbasebox] DEBUG: Loading 'location' screen
+[2015-04-13 05:03:08] [gtkbasebox] DEBUG: Loading 'check' screen
+[2015-04-13 05:03:08] [gtkbasebox] DEBUG: Loading 'desktop' screen
+[2015-04-13 05:03:08] [gtkbasebox] DEBUG: Loading 'features' screen
+[2015-04-13 05:03:08] [gtkbasebox] DEBUG: Loading 'keymap' screen
+[2015-04-13 05:03:08] [gtkbasebox] DEBUG: Loading 'timezone' screen
+[2015-04-13 05:03:08] [gtkbasebox] DEBUG: Loading 'ask' screen
+[2015-04-13 05:03:08] [gtkbasebox] DEBUG: Loading 'automatic' screen
+[2015-04-13 05:03:08] [gtkbasebox] DEBUG: Loading 'advanced' screen
+[2015-04-13 05:03:08] [gtkbasebox] DEBUG: Loading 'user_info' screen
+[2015-04-13 05:03:08] [gtkbasebox] DEBUG: Loading 'slides' screen
+[2015-04-13 05:03:09] [timezone] DEBUG: We have connection. Let's get our timezone
+[2015-04-13 05:03:09] [timezone] DEBUG: Timezone (latitude 59.8944, longitude 30.2642) detected.
+[2015-04-13 05:03:12] [check] INFO: We have Internet connection.
+[2015-04-13 05:03:12] [check] INFO: We're connected to a power source.
+[2015-04-13 05:03:12] [check] INFO: We have enough disk space.
+[2015-04-13 05:03:12] [connectionpool] INFO: Starting new HTTP connection (1): www.archlinux.org
+[2015-04-13 05:03:12] [connectionpool] DEBUG: "GET /mirrors/status/json/ HTTP/1.1" 301 366
+[2015-04-13 05:03:12] [connectionpool] INFO: Starting new HTTPS connection (1): www.archlinux.org
+[2015-04-13 05:03:13] [connectionpool] DEBUG: "GET /mirrors/status/json/ HTTP/1.1" 200 None
+[2015-04-13 05:03:13] [rank_mirrors] DEBUG: Auto mirror selection has been run successfully
+[2015-04-13 05:03:15] [location] DEBUG: Selected location: English (IE), Ireland
+[2015-04-13 05:03:15] [location] INFO: locale changed to : en_IE.UTF-8
+[2015-04-13 05:03:15] [location] DEBUG: Selected country: Ireland
+[2015-04-13 05:03:15] [timezone] INFO: location changed to : Europe/Moscow
+[2015-04-13 05:03:18] [timezone] DEBUG: timezone human zone: Moscow
+[2015-04-13 05:03:18] [timezone] DEBUG: timezone country: RU
+[2015-04-13 05:03:18] [timezone] DEBUG: timezone zone: Europe/Moscow
+[2015-04-13 05:03:18] [timezone] DEBUG: timezone human country: Russian Federation
+[2015-04-13 05:03:18] [timezone] DEBUG: timezone comment: Moscow+00 - west Russia
+[2015-04-13 05:03:18] [timezone] DEBUG: timezone latitude: 55.4521
+[2015-04-13 05:03:18] [timezone] DEBUG: timezone longitude: 37.3704
+[2015-04-13 05:03:18] [misc] INFO: locale changed to : en_IE.UTF-8
+[2015-04-13 05:03:18] [misc] INFO: locale changed to : en_IE.UTF-8
+[2015-04-13 05:03:18] [keymap] INFO: keyboard_layout is Russia
+[2015-04-13 05:03:21] [misc] INFO: locale changed to : en_IE.UTF-8
+[2015-04-13 05:03:29] [desktop] INFO: Cnchi will install Antergos with the 'kde4' desktop
+[2015-04-13 05:03:45] [features] DEBUG: Selected 'aur' feature to install
+[2015-04-13 05:03:45] [features] DEBUG: Selected 'bluetooth' feature to install
+[2015-04-13 05:03:45] [features] DEBUG: Selected 'cups' feature to install
+[2015-04-13 05:03:45] [features] DEBUG: Selected 'firefox' feature to install
+[2015-04-13 05:03:45] [features] DEBUG: Selected 'firewall' feature to install
+[2015-04-13 05:03:45] [features] DEBUG: Selected 'office' feature to install
+[2015-04-13 05:05:54] [advanced] DEBUG: Added /dev/sda13 to changelist: createme[No] relabel[No] fmt[Yes] mnt[/] encrypt[No]
+[2015-04-13 05:05:54] [show_message] INFO: /dev/sda16 is mounted in '/run/media/antergos/sda16'.
+To continue it has to be unmounted.
+Click Yes to unmount, or No to return
+
+[2015-04-13 05:06:06] [advanced] DEBUG: /run/media/antergos/sda16 unmounted
+[2015-04-13 05:06:06] [advanced] DEBUG: Added /dev/sda16 to changelist: createme[No] relabel[No] fmt[No] mnt[/1st] encrypt[No]
+[2015-04-13 05:06:06] [advanced] DEBUG: Added /dev/sda3 to changelist: createme[No] relabel[No] fmt[No] mnt[swap] encrypt[No]
+[2015-04-13 05:06:16] [advanced] INFO: Creating new ext4 filesystem in /dev/sda13 labeled ark
+[2015-04-13 05:06:21] [advanced] INFO: 
+[2015-04-13 05:06:21] [advanced] INFO: Creating new ext4 filesystem in /dev/sda16 labeled sda16
+[2015-04-13 05:06:21] [advanced] INFO: Creating new swap filesystem in /dev/sda3
+[2015-04-13 05:06:21] [advanced] WARNING: Cnchi will not install any bootloader
+[2015-04-13 05:06:21] [process] DEBUG: Mounting partition /dev/sda13 into /install directory
+[2015-04-13 05:06:22] [process] DEBUG: Activating swap in /dev/sda3
+[2015-04-13 05:06:22] [process] DEBUG: Mounting partition /dev/sda16 into /1st directory
+[2015-04-13 05:06:22] [process] DEBUG: Prepare pacman...
+[2015-04-13 05:06:22] [process] DEBUG: Creating a temporary pacman.conf for x86_64 architecture
+[2015-04-13 05:06:25] [pac] DEBUG: database dir '/install/var/lib/pacman/sync/' does not exist, creating it
+[2015-04-13 05:06:25] [pac] DEBUG: url: http://mirror.archlinux.no/core/os/x86_64/core.db
+[2015-04-13 05:06:25] [pac] DEBUG: maxsize: 26214400
+[2015-04-13 05:06:25] [pac] DEBUG: opened tempfile for download: /install/var/lib/pacman/sync/core.db.part (wb)
+[2015-04-13 05:06:25] [pac] DEBUG: curl returned error 0 from transfer
+[2015-04-13 05:06:25] [pac] DEBUG: response code: 200
+[2015-04-13 05:06:25] [pac] DEBUG: url: http://mirror.archlinux.no/extra/os/x86_64/extra.db
+[2015-04-13 05:06:25] [pac] DEBUG: maxsize: 26214400
+[2015-04-13 05:06:25] [pac] DEBUG: opened tempfile for download: /install/var/lib/pacman/sync/extra.db.part (wb)
+[2015-04-13 05:06:26] [pac] DEBUG: curl returned error 0 from transfer
+[2015-04-13 05:06:26] [pac] DEBUG: response code: 200
+[2015-04-13 05:06:26] [pac] DEBUG: url: http://mirror.archlinux.no/community/os/x86_64/community.db
+[2015-04-13 05:06:26] [pac] DEBUG: maxsize: 26214400
+[2015-04-13 05:06:26] [pac] DEBUG: opened tempfile for download: /install/var/lib/pacman/sync/community.db.part (wb)
+[2015-04-13 05:06:27] [pac] DEBUG: curl returned error 0 from transfer
+[2015-04-13 05:06:27] [pac] DEBUG: response code: 200
+[2015-04-13 05:06:27] [pac] DEBUG: url: http://mirror.archlinux.no/multilib/os/x86_64/multilib.db
+[2015-04-13 05:06:27] [pac] DEBUG: maxsize: 26214400
+[2015-04-13 05:06:27] [pac] DEBUG: opened tempfile for download: /install/var/lib/pacman/sync/multilib.db.part (wb)
+[2015-04-13 05:06:27] [pac] DEBUG: curl returned error 0 from transfer
+[2015-04-13 05:06:27] [pac] DEBUG: response code: 200
+[2015-04-13 05:06:27] [pac] DEBUG: url: http://ftp2.nluug.nl/os/Linux/distr/antergos/antergos/x86_64/antergos.db
+[2015-04-13 05:06:27] [pac] DEBUG: maxsize: 26214400
+[2015-04-13 05:06:27] [pac] DEBUG: opened tempfile for download: /install/var/lib/pacman/sync/antergos.db.part (wb)
+[2015-04-13 05:06:28] [pac] DEBUG: curl returned error 0 from transfer
+[2015-04-13 05:06:28] [pac] DEBUG: response code: 200
+[2015-04-13 05:06:28] [process] DEBUG: Pacman ready
+[2015-04-13 05:06:28] [process] DEBUG: Selecting packages...
+[2015-04-13 05:06:29] [process] DEBUG: Hardware module detected this drivers: ['i915', 'ModeSetting']
+[2015-04-13 05:06:29] [process] DEBUG: Hardware module added these packages : lib32-mesa libtxc_dxtn xf86-video-intel lib32-mesa-libgl libva-intel-driver
+[2015-04-13 05:06:29] [process] DEBUG: Adding filesystem packages
+[2015-04-13 05:06:30] [process] DEBUG: Check for user desired features and add them to our installation
+[2015-04-13 05:06:30] [process] DEBUG: Add libreoffice language package
+[2015-04-13 05:06:30] [process] DEBUG: All features needed packages have been added
+[2015-04-13 05:06:30] [process] DEBUG: Packages selected
+[2015-04-13 05:06:30] [process] DEBUG: Downloading packages...
+[2015-04-13 05:06:30] [pac] DEBUG: loading package cache for repository 'core'
+[2015-04-13 05:06:30] [pac] DEBUG: opening archive /install/var/lib/pacman/sync/core.db
+[2015-04-13 05:06:30] [pac] DEBUG: added 208 packages to package cache for db 'core'
+[2015-04-13 05:06:30] [pac] DEBUG: loading group cache for repository 'core'
+[2015-04-13 05:06:30] [pac] DEBUG: loading package cache for repository 'extra'
+[2015-04-13 05:06:30] [pac] DEBUG: opening archive /install/var/lib/pacman/sync/extra.db
+[2015-04-13 05:06:30] [pac] DEBUG: added 3096 packages to package cache for db 'extra'
+[2015-04-13 05:06:30] [pac] DEBUG: loading package cache for repository 'community'
+[2015-04-13 05:06:30] [pac] DEBUG: opening archive /install/var/lib/pacman/sync/community.db
+[2015-04-13 05:06:30] [pac] DEBUG: added 3853 packages to package cache for db 'community'
+[2015-04-13 05:06:30] [pac] DEBUG: loading group cache for repository 'community'
+[2015-04-13 05:06:30] [pac] DEBUG: loading package cache for repository 'multilib'
+[2015-04-13 05:06:30] [pac] DEBUG: opening archive /install/var/lib/pacman/sync/multilib.db
+[2015-04-13 05:06:30] [pac] DEBUG: added 186 packages to package cache for db 'multilib'
+[2015-04-13 05:06:30] [pac] DEBUG: loading group cache for repository 'multilib'
+[2015-04-13 05:06:30] [pac] DEBUG: loading package cache for repository 'antergos'
+[2015-04-13 05:06:30] [pac] DEBUG: opening archive /install/var/lib/pacman/sync/antergos.db
+[2015-04-13 05:06:30] [pac] DEBUG: added 64 packages to package cache for db 'antergos'
+[2015-04-13 05:06:30] [pac] DEBUG: loading group cache for repository 'antergos'
+[2015-04-13 05:06:30] [pac] DEBUG: loading package cache for repository 'local'
+[2015-04-13 05:06:30] [pac] DEBUG: added 0 packages to package cache for db 'local'
+[2015-04-13 05:06:30] [pac] DEBUG: loading group cache for repository 'extra'
+[2015-04-13 05:06:30] [pac] ERROR: returning error 6 from alpm_db_get_pkg : wrong or NULL argument passed
+[2015-04-13 05:06:30] [pac] ERROR: returning error 6 from alpm_db_get_group : wrong or NULL argument passed
+[2015-04-13 05:06:30] [pac] ERROR: returning error 6 from alpm_db_get_pkg : wrong or NULL argument passed
+[2015-04-13 05:06:30] [pac] ERROR: returning error 6 from alpm_db_get_group : wrong or NULL argument passed
+[2015-04-13 05:06:30] [pac] ERROR: returning error 6 from alpm_db_get_pkg : wrong or NULL argument passed
+[2015-04-13 05:06:30] [pac] ERROR: returning error 6 from alpm_db_get_group : wrong or NULL argument passed
+[2015-04-13 05:06:30] [pac] ERROR: returning error 6 from alpm_db_get_pkg : wrong or NULL argument passed
+[2015-04-13 05:06:30] [pac] ERROR: returning error 6 from alpm_db_get_group : wrong or NULL argument passed
+[2015-04-13 05:06:30] [pac] ERROR: returning error 6 from alpm_db_get_pkg : wrong or NULL argument passed
+[2015-04-13 05:06:30] [pac] ERROR: returning error 6 from alpm_db_get_group : wrong or NULL argument passed
+[2015-04-13 05:06:30] [metalink] ERROR: Can't find these packages:  
+[2015-04-13 05:06:30] [download] ERROR: Error creating metalink for package . Installation will stop
+[2015-04-13 05:06:30] [process] ERROR: "Can't create download package list. Check log output for details"
+[2015-04-13 05:06:30] [process] ERROR: ['Traceback (most recent call last):\n', '  File "/usr/share/cnchi/cnchi/installation/process.py", line 166, in run\n    self.run_installation()\n', '  File "/usr/share/cnchi/cnchi/misc/misc.py", line 175, in helper\n    return func(*args, **kwargs)\n', '  File "/usr/share/cnchi/cnchi/installation/process.py", line 349, in run_installation\n    self.download_packages()\n', '  File "/usr/share/cnchi/cnchi/installation/process.py", line 400, in download_packages\n    self.packages, use_aria2, pacman_conf_file, pacman_cache_dir, cache_dir, self.callback_queue)\n', '  File "/usr/share/cnchi/cnchi/download/download.py", line 94, in __init__\n    raise InstallError(_("Can\'t create download package list. Check log output for details"))\n', 'misc.misc.InstallError: "Can\'t create download package list. Check log output for details"\n']
+[2015-04-13 05:06:58] [slides] INFO: Installing using the 'advanced' method
+[2015-04-13 05:06:58] [slides] INFO: Updating core database
+[2015-04-13 05:06:58] [slides] INFO: Updating extra database
+[2015-04-13 05:06:58] [slides] INFO: Updating community database
+[2015-04-13 05:06:58] [slides] INFO: Updating multilib database
+[2015-04-13 05:06:58] [slides] INFO: Updating antergos database
+[2015-04-13 05:06:58] [slides] INFO: Getting package list...
+[2015-04-13 05:06:58] [slides] INFO: Creating the list of packages to download...
+[2015-04-13 05:06:58] [show_message] ERROR: "Can't create download package list. Check log output for details"

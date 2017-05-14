@@ -1,0 +1,5 @@
+[2015-04-12 23:26:24] [cnchi] INFO: Using GTK v3.16.1
+[2015-04-12 23:26:24] [cnchi] INFO: Using pyalpm v0.7 as interface to libalpm v9.0.1
+[2015-04-12 23:26:24] [updater] WARNING: Could not find 'update.info' file. Cnchi will not be able to update itself.
+[2015-04-12 23:26:25] [main_window] INFO: Cnchi installer version 0.7.303
+[2015-04-12 23:26:25] [gtkbasebox] DEBUG: Loading 'welcome' screen
