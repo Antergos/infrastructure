@@ -61,7 +61,7 @@ ln -s /theme /nodebb/node_modules/nodebb-theme-antergos
 
 
 # Run NodeBB!
-./nodebb dev
+./nodebb start
 
 #while true
 #do
