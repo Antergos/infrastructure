@@ -11,54 +11,53 @@ else
 	_URL='https://forum.antergos.com'
 fi
 
+# Install NodeBB
+cd /nodebb && yarn
 
-if [[ ! -e /ran_once ]]; then
+yarn add \
+	nodebb-plugin-dbsearch \
+	nodebb-plugin-emoji-extended \
+	nodebb-plugin-markdown \
+	nodebb-plugin-registration-question \
+	nodebb-plugin-soundpack-default \
+	nodebb-plugin-spam-be-gone \
+	nodebb-widget-essentials \
+	nodebb-plugin-emailer-mailgun \
+	nodebb-plugin-mentions \
+	nodebb-plugin-question-and-answer \
+	nodebb-plugin-composer-default \
+	nodebb-plugin-imgur \
+	nodebb-plugin-blog-comments \
+	nodebb-plugin-gravatar \
+	nodebb-plugin-ns-likes \
+	nodebb-plugin-codeinput \
+	nodebb-plugin-emoji-apple \
+	nodebb-plugin-ns-login \
+	nodebb-plugin-poll \
+	nodebb-plugin-write-api \
+	nodebb-plugin-emoji-static \
+	nodebb-plugin-sso-auth0@beta \
+	nodebb-plugin-topic-tags
 
-	# Set Config Vars
-	sed -i "s|<URL>|${_URL}|g;
-			s|<SECRET>|${_SECRET}|g" /nodebb/config.json
+# Set Config Vars
+sed -i "s|<URL>|${_URL}|g;
+		s|<SECRET>|${_SECRET}|g" /nodebb/config.json
 
-	# Give redis some time to come up
-	sleep 10
+# Give redis some time to come up
+sleep 10
 
-	# Install NodeBB
-	cd /nodebb && npm install
-
-	npm install \
-		nodebb-plugin-dbsearch \
-		nodebb-plugin-emoji-extended \
-		nodebb-plugin-markdown \
-		nodebb-plugin-registration-question \
-		nodebb-plugin-soundpack-default \
-		nodebb-plugin-spam-be-gone \
-		nodebb-widget-essentials \
-		nodebb-plugin-emailer-mailgun \
-		nodebb-plugin-mentions \
-		nodebb-plugin-question-and-answer \
-		nodebb-plugin-composer-default \
-		nodebb-plugin-imgur \
-		nodebb-plugin-blog-comments \
-		nodebb-plugin-gravatar \
-		nodebb-plugin-ns-likes \
-		nodebb-plugin-codeinput \
-		nodebb-plugin-emoji-apple \
-		nodebb-plugin-ns-login \
-		nodebb-plugin-poll \
-		nodebb-plugin-write-api \
-		nodebb-plugin-emoji-static \
-		nodebb-plugin-sso-auth0@beta \
-		nodebb-plugin-topic-tags
-
-	# Theme
-	cp -r /theme /nodebb-theme-antergos
-	rm -rf /nodebb-theme-antergos/.git
-	mv /nodebb-theme-antergos /nodebb/node_modules
-
-	touch /ran_once
-fi
+# Theme
+cp -r /theme /nodebb-theme-antergos
+cp -r /nodebb-theme-antergos /nodebb/node_modules
+rm -rf /nodebb/node_modules/nodebb-theme-antergos/.git
 
 ./nodebb upgrade || exit 1
 
 ./nodebb dev
+
+#while true
+#do
+#	sleep 10
+#done
 
 exit $?
