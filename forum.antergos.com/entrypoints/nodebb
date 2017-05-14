@@ -2,9 +2,9 @@
 set -e
 
 [[ -z "${NODE_ENV}" ]] && export NODE_ENV='development'
-[[ -z "${_DOMAIN}" ]] && export _DOMAIN='forum-staging.antergos.com'
+[[ -z "${DOMAIN}" ]] && export DOMAIN='forum-staging.antergos.com'
 
-_SECRET=$(cat /run/secrets/nodebb_secret)
+SECRET=$(cat /run/secrets/nodebb_secret)
 
 cd /nodebb
 
@@ -12,8 +12,8 @@ cd /nodebb
 cp /config/config.json .
 
 # Set Config Vars
-sed -i "s|<DOMAIN>|${_DOMAIN}|g;
-		s|<SECRET>|${_SECRET}|g" config.json
+sed -i "s|<DOMAIN>|${DOMAIN}|g;
+		s|<SECRET>|${SECRET}|g" config.json
 
 # Static Resources
 [[ -e build ]] || mkdir build
