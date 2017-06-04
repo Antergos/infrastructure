@@ -48,7 +48,7 @@ yarn add \
 	nodebb-plugin-emoji-static \
 	nodebb-plugin-sso-auth0 \
 	nodebb-plugin-topic-tags \
-	git@github.com:antergos/nodebb-plugin-blog-comments.git
+	https://github.com/antergos/nodebb-plugin-blog-comments
 
 # Theme
 ln -sf /theme /nodebb/node_modules/nodebb-theme-antergos
