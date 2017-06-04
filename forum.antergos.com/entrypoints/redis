@@ -5,8 +5,8 @@ cd /private/redis
 
 if [[ ! -e appendonly.aof ]]; then
 	# Extract database files
-	tar -xf appendonly.aof.tar.xz
-	tar -xf dump.rdb.tar.xz
+	unxz appendonly.aof.xz
+	unxz dump.rdb.xz
 fi
 
 
