@@ -38,7 +38,6 @@ yarn add \
 	nodebb-plugin-question-and-answer \
 	nodebb-plugin-composer-default \
 	nodebb-plugin-imgur \
-	nodebb-plugin-blog-comments \
 	nodebb-plugin-gravatar \
 	nodebb-plugin-ns-likes \
 	nodebb-plugin-codeinput \
@@ -48,13 +47,11 @@ yarn add \
 	nodebb-plugin-write-api \
 	nodebb-plugin-emoji-static \
 	nodebb-plugin-sso-auth0 \
-	nodebb-plugin-topic-tags
+	nodebb-plugin-topic-tags \
+	git@github.com:antergos/nodebb-plugin-blog-comments.git
 
 # Theme
 ln -sf /theme /nodebb/node_modules/nodebb-theme-antergos
-#cp -r /theme /nodebb-theme-antergos
-#cp -r /nodebb-theme-antergos /nodebb/node_modules
-#rm -rf /nodebb/node_modules/nodebb-theme-antergos/.git
 
 # Make sure database schema is up-to-date
 ./nodebb upgrade
@@ -62,10 +59,5 @@ ln -sf /theme /nodebb/node_modules/nodebb-theme-antergos
 
 # Run NodeBB!
 node loader.js --no-silent --no-daemon
-
-#while true
-#do
-#	sleep 10
-#done
 
 exit $?
