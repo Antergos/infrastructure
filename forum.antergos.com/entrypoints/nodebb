@@ -8,8 +8,6 @@ SECRET=$(cat /run/secrets/nodebb_secret)
 
 cd /nodebb
 
-[[ -n "${DO_GIT_PULL}" ]] && git pull
-
 # Copy config into place
 cp /config/config.json .
 
@@ -24,33 +22,8 @@ sed -i "s|<DOMAIN>|${DOMAIN}|g;
 # Give redis some time to come up
 sleep 10
 
-# Install NodeBB
+# Install NodeBB Deps From yarn.lock File
 yarn
-
-yarn add \
-	nodebb-plugin-dbsearch \
-	nodebb-plugin-emoji-extended \
-	nodebb-plugin-markdown \
-	nodebb-plugin-registration-question \
-	nodebb-plugin-soundpack-default \
-	nodebb-plugin-spam-be-gone \
-	nodebb-widget-essentials \
-	nodebb-plugin-emailer-mailgun \
-	nodebb-plugin-mentions \
-	nodebb-plugin-question-and-answer \
-	nodebb-plugin-composer-default \
-	nodebb-plugin-imgur \
-	nodebb-plugin-gravatar \
-	nodebb-plugin-ns-likes \
-	nodebb-plugin-codeinput \
-	nodebb-plugin-emoji-apple \
-	nodebb-plugin-ns-login \
-	nodebb-plugin-poll \
-	nodebb-plugin-write-api \
-	nodebb-plugin-emoji-static \
-	nodebb-plugin-sso-auth0 \
-	nodebb-plugin-topic-tags \
-	https://github.com/antergos/nodebb-plugin-blog-comments
 
 # Theme
 ln -sf /theme /nodebb/node_modules/nodebb-theme-antergos
