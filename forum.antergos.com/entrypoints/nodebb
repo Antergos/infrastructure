@@ -8,6 +8,8 @@ SECRET=$(cat /run/secrets/nodebb_secret)
 
 cd /nodebb
 
+[[ -n "${DO_GIT_PULL}" ]] && git pull
+
 # Copy config into place
 cp /config/config.json .
 
