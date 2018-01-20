@@ -15,22 +15,14 @@ cp /config/config.json .
 sed -i "s|<DOMAIN>|${DOMAIN}|g;
 		s|<SECRET>|${SECRET}|g" config.json
 
-# Static Resources
-[[ -e build ]] || mkdir build
-[[ -e build/public ]] || ln -s /public build/public
-
 # Give redis some time to come up
 sleep 10
 
-# Install NodeBB Deps From yarn.lock File
-yarn
-
-# Theme
-ln -sf /theme /nodebb/node_modules/nodebb-theme-antergos
+# Install Deps
+npm install
 
 # Make sure database schema is up-to-date
 ./nodebb upgrade
-
 
 # Run NodeBB!
 node loader.js --no-silent --no-daemon

@@ -16,9 +16,9 @@ services:
     volumes:
       - config:/config
       - entrypoints:/entrypoint
-      - public:/public
+      - public:/nodebb/build/public
       - private:/private
-      - theme:/theme
+      - theme:/nodebb/node_modules/nodebb-theme-antergos
 
   nginx:
     image: nginx:alpine
