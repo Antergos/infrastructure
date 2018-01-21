@@ -20,6 +20,7 @@ sleep 10
 
 # Install Deps
 npm install
+install-local --save /theme
 
 # Make sure database schema is up-to-date
 ./nodebb upgrade

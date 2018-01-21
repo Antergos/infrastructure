@@ -18,7 +18,7 @@ services:
       - entrypoints:/entrypoint
       - public:/nodebb/build/public
       - private:/private
-      - theme:/nodebb/node_modules/nodebb-theme-antergos
+      - theme:/theme
 
   nginx:
     image: nginx:alpine
