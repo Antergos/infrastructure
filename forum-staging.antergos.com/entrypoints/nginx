@@ -1,0 +1,17 @@
+#!/bin/sh
+set -e
+
+[[ -z "${NODE_ENV}" ]] && export NODE_ENV=development
+
+if [[ "${NODE_ENV}" = 'development' ]]; then
+	_URL='forum-staging.antergos.com'
+else
+	_URL='forum.antergos.com'
+fi
+
+cp /config/nginx.conf /etc/nginx
+
+sed -i "s|<URL>|${_URL}|g" /etc/nginx/nginx.conf
+
+exec "$@"
+

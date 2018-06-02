@@ -1,0 +1,63 @@
+#!/bin/sh
+set -e
+
+[[ -z "${NODE_ENV}" ]] && export NODE_ENV='development'
+[[ -z "${DOMAIN}" ]] && export DOMAIN='forum-staging.antergos.com'
+
+SECRET=$(cat /run/secrets/nodebb_secret)
+
+if ! [[ -e /tmp/.ran_once ]]; then	
+	apk add --no-cache git coreutils \
+		&& git clone https://github.com/nodebb/nodebb /nodebb \
+		&& cd /nodebb \
+		&& npm install -g install-local \
+		&& cp install/package.json . \
+		&& npm install \
+		&& npm install --save \
+			nodebb-plugin-dbsearch \
+			nodebb-plugin-emoji-extended \
+			nodebb-plugin-markdown \
+			nodebb-plugin-registration-question \
+			nodebb-plugin-soundpack-default \
+			nodebb-plugin-spam-be-gone \
+			nodebb-widget-essentials \
+			nodebb-plugin-emailer-mailgun \
+			nodebb-plugin-mentions \
+			nodebb-plugin-question-and-answer \
+			nodebb-plugin-composer-default \
+			nodebb-plugin-imgur \
+			nodebb-plugin-gravatar \
+			nodebb-plugin-ns-likes \
+			nodebb-plugin-codeinput \
+			nodebb-plugin-ns-login \
+			nodebb-plugin-poll \
+			nodebb-plugin-write-api \
+			nodebb-plugin-emoji-static \
+			nodebb-plugin-sso-auth0 \
+			nodebb-plugin-topic-tags \
+			https://github.com/antergos/nodebb-plugin-blog-comments \
+		&& touch /tmp/.ran_once
+fi
+
+cd /nodebb
+
+# Copy config into place
+cp /config/config.json .
+
+# Set Config Vars
+sed -i "s|<DOMAIN>|${DOMAIN}|g;
+		s|<SECRET>|${SECRET}|g" config.json
+
+# Give redis some time to come up
+sleep 10
+
+# Install Deps
+install-local --save /theme
+
+# Make sure database schema is up-to-date
+./nodebb upgrade
+
+# Run NodeBB!
+node loader.js --no-silent --no-daemon
+
+exit $?

@@ -1,0 +1,72 @@
+version: '3.1'
+
+services:
+  nodebb:
+    image: node:alpine
+    environment:
+      NODE_ENV: "${NODE_ENV}"
+      DOMAIN: "${DOMAIN}"
+    restart: always
+    secrets:
+      - nodebb_secret
+    volumes:
+      - config:/config
+      - entrypoints:/entrypoint
+      - nodebb:/nodebb
+      - private:/private
+      - theme:/theme
+    ports:
+      - '4567'
+
+  nginx:
+    image: nginx:alpine
+    environment:
+      NODE_ENV: "${NODE_ENV}"
+    restart: always
+    ports:
+      - '8081:80'
+    command: ["nginx", "-g", "daemon off;"]
+    entrypoint: /entrypoint/nginx
+    depends_on:
+      - nodebb
+    volumes:
+      - config:/config
+      - entrypoints:/entrypoint
+      - nodebb:/nodebb
+
+  redis:
+    image: redis:alpine
+    command: redis-server --appendonly yes
+    entrypoint: /entrypoint/redis
+    restart: always
+    volumes:
+      - config:/config
+      - entrypoints:/entrypoint
+      - private:/private
+
+secrets:
+  nodebb_secret:
+    file: ./private/nodebb/SECRET
+
+volumes:
+  nodebb:
+    driver: local-persist
+    driver_opts:
+      mountpoint: "${PWD}/nodebb"
+  config:
+    driver: local-persist
+    driver_opts:
+      mountpoint: "${PWD}/config"
+  entrypoints:
+    driver: local-persist
+    driver_opts:
+      mountpoint: "${PWD}/entrypoints"
+  private:
+    driver: local-persist
+    driver_opts:
+      mountpoint: "${PWD}/private"
+  theme:
+    driver: local-persist
+    driver_opts:
+      mountpoint: "${PWD}/theme"
+
