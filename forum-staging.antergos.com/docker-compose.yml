@@ -6,6 +6,7 @@ services:
     environment:
       NODE_ENV: "${NODE_ENV}"
       DOMAIN: "${DOMAIN}"
+    entrypoint: /entrypoint/node
     restart: always
     secrets:
       - nodebb_secret
