@@ -2,11 +2,7 @@ version: '3.1'
 
 services:
   nodebb:
-    build:
-      context: ./nodebb-alpine
-      args:
-        NODE_ENV: "${NODE_ENV}"
-    image: antergos/nodebb-alpine
+    image: node:alpine
     environment:
       NODE_ENV: "${NODE_ENV}"
       DOMAIN: "${DOMAIN}"
@@ -19,6 +15,8 @@ services:
       - nodebb:/nodebb
       - private:/private
       - theme:/theme
+    ports:
+      - '4567'
 
   nginx:
     image: nginx:alpine
@@ -26,7 +24,7 @@ services:
       NODE_ENV: "${NODE_ENV}"
     restart: always
     ports:
-      - '8081:80'
+      - '8080:80'
     command: ["nginx", "-g", "daemon off;"]
     entrypoint: /entrypoint/nginx
     depends_on:

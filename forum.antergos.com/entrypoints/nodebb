@@ -2,9 +2,9 @@
 set -e
 
 [[ -z "${NODE_ENV}" ]] && export NODE_ENV='development'
-[[ -z "${_DOMAIN}" ]] && export _DOMAIN='forum-staging.antergos.com'
+[[ -z "${DOMAIN}" ]] && export DOMAIN='forum-staging.antergos.com'
 
-_SECRET=$(cat /run/secrets/nodebb_secret)
+SECRET=$(cat /run/secrets/nodebb_secret)
 
 cd /nodebb
 
@@ -12,60 +12,20 @@ cd /nodebb
 cp /config/config.json .
 
 # Set Config Vars
-sed -i "s|<DOMAIN>|${_DOMAIN}|g;
-		s|<SECRET>|${_SECRET}|g" config.json
-
-# Static Resources
-[[ -e build ]] || mkdir build
-[[ -e build/public ]] || ln -s /public build/public
+sed -i "s|<DOMAIN>|${DOMAIN}|g;
+		s|<SECRET>|${SECRET}|g" config.json
 
 # Give redis some time to come up
 sleep 10
 
-# Install NodeBB
-yarn
-
-yarn add \
-	nodebb-plugin-dbsearch \
-	nodebb-plugin-emoji-extended \
-	nodebb-plugin-markdown \
-	nodebb-plugin-registration-question \
-	nodebb-plugin-soundpack-default \
-	nodebb-plugin-spam-be-gone \
-	nodebb-widget-essentials \
-	nodebb-plugin-emailer-mailgun \
-	nodebb-plugin-mentions \
-	nodebb-plugin-question-and-answer \
-	nodebb-plugin-composer-default \
-	nodebb-plugin-imgur \
-	nodebb-plugin-blog-comments \
-	nodebb-plugin-gravatar \
-	nodebb-plugin-ns-likes \
-	nodebb-plugin-codeinput \
-	nodebb-plugin-emoji-apple \
-	nodebb-plugin-ns-login \
-	nodebb-plugin-poll \
-	nodebb-plugin-write-api \
-	nodebb-plugin-emoji-static \
-	nodebb-plugin-sso-auth0 \
-	nodebb-plugin-topic-tags
-
-# Theme
-ln -s /theme /nodebb/node_modules/nodebb-theme-antergos
-#cp -r /theme /nodebb-theme-antergos
-#cp -r /nodebb-theme-antergos /nodebb/node_modules
-#rm -rf /nodebb/node_modules/nodebb-theme-antergos/.git
+# Install Deps
+npm install
+install-local --save /theme
 
 # Make sure database schema is up-to-date
 ./nodebb upgrade
 
-
 # Run NodeBB!
-./nodebb dev
-
-#while true
-#do
-#	sleep 10
-#done
+node loader.js --no-silent --no-daemon
 
 exit $?
